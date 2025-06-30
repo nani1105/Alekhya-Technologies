@@ -83,8 +83,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-blue-100">+91 98765 43210</p>
-                    <p className="text-blue-100">+91 87654 32109</p>
+                    <p className="text-blue-100">+91 95733 76389</p>
+                    <p className="text-blue-100">+91 86880 97202</p>
                   </div>
                 </div>
                 
@@ -94,8 +94,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-blue-100">info@techguardpro.com</p>
-                    <p className="text-blue-100">support@techguardpro.com</p>
+                    <p className="text-blue-100">alekhyatechnologies99@gmail.com</p>
+                    <p className="text-blue-100">girigedupuri@gmail.com</p>
                   </div>
                 </div>
                 
@@ -106,8 +106,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold">Address</h3>
                     <p className="text-blue-100">
-                      123 Technology Street<br />
-                      Tirupati, Andhra Pradesh 517501<br />
+                      123 SR Nagar<br />
+                      Hyderabad, Telangana 500008<br />
                       India
                     </p>
                   </div>
@@ -139,7 +139,7 @@ const Contact = () => {
                 className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 inline-flex items-center space-x-2"
               >
                 <Phone className="h-4 w-4" />
-                <span>Emergency: +91 98765 43210</span>
+                <span>Emergency: +91 95733 76389</span>
               </a>
             </div>
           </div>

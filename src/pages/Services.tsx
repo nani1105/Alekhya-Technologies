@@ -196,7 +196,7 @@ const Services = () => {
                     <li className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
                       <div>
-                        <strong>All Brand Repairs:</strong> HP, Canon, Epson, Brother, Samsung, and more
+                        <strong>All Brand Repairs:</strong> HP, Canon, Epson, Brother, Samsung, Konica Minolta and more
                       </div>
                     </li>
                     <li className="flex items-start space-x-3">
@@ -229,25 +229,27 @@ const Services = () => {
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Supported Brands</h3>
                   <div className="grid grid-cols-3 gap-4">
-                    <div className="bg-gray-50 p-3 rounded-lg text-center">
-                      <div className="font-semibold text-blue-600">HP</div>
+                  {[
+                    { name: "HP", src: "/logo/hp1.png" },
+                    { name: "Canon", src: "/logo/Canon.png" },
+                    { name: "Epson", src: "/logo/Epson_.png" },
+                    { name: "Brother", src: "/logo/brother-log.png" },
+                    { name: "Xerox", src: "/logo/Xerox-logo.jpg" },
+                    { name: "Konica", src: "/logo/konica1.png" },
+                  ].map((brand) => (
+                    <div
+                      key={brand.name}
+                      className="bg-white p-4 rounded-lg shadow flex justify-center items-center h-24"
+                    >
+                      <img
+                        src={brand.src}
+                        alt={brand.name}
+                        className="h-12 object-contain"
+                      />
                     </div>
-                    <div className="bg-gray-50 p-3 rounded-lg text-center">
-                      <div className="font-semibold text-red-600">Canon</div>
-                    </div>
-                    <div className="bg-gray-50 p-3 rounded-lg text-center">
-                      <div className="font-semibold text-blue-800">Epson</div>
-                    </div>
-                    <div className="bg-gray-50 p-3 rounded-lg text-center">
-                      <div className="font-semibold text-orange-600">Brother</div>
-                    </div>
-                    <div className="bg-gray-50 p-3 rounded-lg text-center">
-                      <div className="font-semibold text-blue-900">Samsung</div>
-                    </div>
-                    <div className="bg-gray-50 p-3 rounded-lg text-center">
-                      <div className="font-semibold text-gray-700">Others</div>
-                    </div>
-                  </div>
+                  ))}
+                </div>
+                
                   
                   <div className="mt-6 bg-purple-50 p-4 rounded-lg">
                     <h4 className="font-semibold text-purple-800 mb-2">Special Offers</h4>
@@ -262,6 +264,138 @@ const Services = () => {
             </div>
           </div>
         </div>
+        {/* Biometric Attendance Services */}
+<div className="mb-20">
+  <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="bg-gradient-to-r from-amber-600 to-amber-800 p-8 text-white">
+      <div className="flex items-center space-x-4">
+        <div className="bg-white/20 p-3 rounded-full">
+          <Shield className="h-8 w-8" />
+        </div>
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold">Biometric Attendance Systems</h2>
+          <p className="text-amber-100">Modern attendance tracking with biometric and RFID solutions</p>
+        </div>
+      </div>
+    </div>
+    
+    <div className="p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Features</h3>
+          <ul className="space-y-3">
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>Fingerprint & Face Recognition:</strong> Secure and fast identity verification
+              </div>
+            </li>
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>RFID Card Access:</strong> Touchless attendance options
+              </div>
+            </li>
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>Cloud Integration:</strong> Real-time data syncing with dashboards
+              </div>
+            </li>
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>SMS Alerts & Reports:</strong> Automated attendance reports and alerts
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Best For</h3>
+          <div className="space-y-4">
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-amber-600">Schools & Colleges</h4>
+              <p className="text-sm text-gray-600">Track staff and student attendance efficiently</p>
+            </div>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-green-700">Offices</h4>
+              <p className="text-sm text-gray-600">Ensure punctuality and maintain payroll accuracy</p>
+            </div>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-blue-700">Factories</h4>
+              <p className="text-sm text-gray-600">Shift-wise tracking and overtime calculation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Photocopy Machine Services */}
+<div className="mb-20">
+  <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+    <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-8 text-white">
+      <div className="flex items-center space-x-4">
+        <div className="bg-white/20 p-3 rounded-full">
+          <Printer className="h-8 w-8" />
+        </div>
+        <div>
+          <h2 className="text-2xl md:text-3xl font-bold">Photocopy Machines</h2>
+          <p className="text-gray-200">Sales and servicing for top photocopier brands</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h3 className="text-xl font-semibold mb-4">What We Provide</h3>
+          <ul className="space-y-3">
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>New Machine Sales:</strong> Authorized dealer of Canon, Xerox, Ricoh, and more
+              </div>
+            </li>
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>Rental & Leasing Options:</strong> Cost-effective plans for businesses
+              </div>
+            </li>
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>Repair Services:</strong> Fast service with original spare parts
+              </div>
+            </li>
+            <li className="flex items-start space-x-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+              <div>
+                <strong>Annual Maintenance:</strong> Scheduled service contracts to ensure uptime
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Brands We Handle</h3>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-gray-50 p-3 rounded-lg text-center text-blue-700 font-semibold">Canon</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center text-red-700 font-semibold">Xerox</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center text-green-700 font-semibold">Ricoh</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center text-gray-700 font-semibold">Sharp</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center text-indigo-700 font-semibold">Kyocera</div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center text-gray-800 font-semibold">Others</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         {/* Why Choose Us */}
         <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white p-8 rounded-2xl">
