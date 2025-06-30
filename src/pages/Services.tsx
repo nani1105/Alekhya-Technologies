@@ -1,0 +1,309 @@
+import React from 'react';
+import { Camera, Monitor, Printer, CheckCircle, Shield, Wrench, Clock, Phone } from 'lucide-react';
+
+const Services = () => {
+  return (
+    <div className="min-h-screen py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Our Professional Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions backed by 10+ years of expertise and trusted by government agencies
+          </p>
+        </div>
+
+        {/* CCTV Services */}
+        <div className="mb-20">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-white">
+              <div className="flex items-center space-x-4">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Camera className="h-8 w-8" />
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold">CCTV Security Systems</h2>
+                  <p className="text-blue-100">Complete surveillance solutions for maximum security</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">What We Offer</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>HD & 4K Camera Installation:</strong> High-resolution cameras for crystal clear footage
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Remote Monitoring Setup:</strong> Access your cameras from anywhere via mobile app
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Night Vision Systems:</strong> Advanced infrared technology for 24/7 surveillance
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Motion Detection & Alerts:</strong> Smart notifications for suspicious activities
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Cloud & Local Storage:</strong> Flexible recording options for your needs
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Perfect For</h3>
+                  <div className="space-y-4">
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-blue-600">Businesses</h4>
+                      <p className="text-sm text-gray-600">Offices, retail stores, warehouses, manufacturing units</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-green-600">Residential</h4>
+                      <p className="text-sm text-gray-600">Homes, apartments, gated communities</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-purple-600">Government</h4>
+                      <p className="text-sm text-gray-600">Offices, institutions, public spaces</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Computer Services */}
+        <div className="mb-20">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-gradient-to-r from-green-600 to-green-800 p-8 text-white">
+              <div className="flex items-center space-x-4">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Monitor className="h-8 w-8" />
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold">Computer Services</h2>
+                  <p className="text-green-100">Expert IT solutions for all your computing needs</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Our Expertise</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Hardware Repair & Upgrade:</strong> Motherboard, RAM, storage, and component repairs
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Software Solutions:</strong> OS installation, virus removal, software troubleshooting
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Network Setup:</strong> LAN/WAN configuration, WiFi setup, network security
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Data Recovery:</strong> Professional recovery from crashed drives and corrupted files
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>System Optimization:</strong> Performance tuning and maintenance services
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Service Areas</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-gray-50 p-4 rounded-lg text-center">
+                      <Wrench className="h-6 w-6 text-green-600 mx-auto mb-2" />
+                      <h4 className="font-semibold">Repair</h4>
+                      <p className="text-xs text-gray-600">Quick diagnosis & fix</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg text-center">
+                      <Shield className="h-6 w-6 text-blue-600 mx-auto mb-2" />
+                      <h4 className="font-semibold">Security</h4>
+                      <p className="text-xs text-gray-600">Antivirus & protection</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg text-center">
+                      <Clock className="h-6 w-6 text-purple-600 mx-auto mb-2" />
+                      <h4 className="font-semibold">Maintenance</h4>
+                      <p className="text-xs text-gray-600">Regular upkeep</p>
+                    </div>
+                    <div className="bg-gray-50 p-4 rounded-lg text-center">
+                      <Phone className="h-6 w-6 text-orange-600 mx-auto mb-2" />
+                      <h4 className="font-semibold">Support</h4>
+                      <p className="text-xs text-gray-600">24/7 assistance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Printer Services */}
+        <div className="mb-20">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-gradient-to-r from-purple-600 to-purple-800 p-8 text-white">
+              <div className="flex items-center space-x-4">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Printer className="h-8 w-8" />
+                </div>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-bold">Printer Solutions</h2>
+                  <p className="text-purple-100">Complete printer services for all major brands</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="p-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Comprehensive Services</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>All Brand Repairs:</strong> HP, Canon, Epson, Brother, Samsung, and more
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Toner & Cartridge Supply:</strong> Original and compatible cartridges available
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Preventive Maintenance:</strong> Regular cleaning and calibration services
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Network Printer Setup:</strong> Wireless and wired network configuration
+                      </div>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                      <div>
+                        <strong>Bulk Printing Solutions:</strong> High-volume printing services for businesses
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Supported Brands</h3>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="bg-gray-50 p-3 rounded-lg text-center">
+                      <div className="font-semibold text-blue-600">HP</div>
+                    </div>
+                    <div className="bg-gray-50 p-3 rounded-lg text-center">
+                      <div className="font-semibold text-red-600">Canon</div>
+                    </div>
+                    <div className="bg-gray-50 p-3 rounded-lg text-center">
+                      <div className="font-semibold text-blue-800">Epson</div>
+                    </div>
+                    <div className="bg-gray-50 p-3 rounded-lg text-center">
+                      <div className="font-semibold text-orange-600">Brother</div>
+                    </div>
+                    <div className="bg-gray-50 p-3 rounded-lg text-center">
+                      <div className="font-semibold text-blue-900">Samsung</div>
+                    </div>
+                    <div className="bg-gray-50 p-3 rounded-lg text-center">
+                      <div className="font-semibold text-gray-700">Others</div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 bg-purple-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-800 mb-2">Special Offers</h4>
+                    <ul className="text-sm text-purple-700 space-y-1">
+                      <li>• Free pickup & delivery within city limits</li>
+                      <li>• 10% discount on bulk cartridge orders</li>
+                      <li>• Annual maintenance contracts available</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white p-8 rounded-2xl">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Choose Alekhya Technologies ?</h2>
+            <p className="text-blue-100">Experience the difference that comes with 10+ years of expertise</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="bg-white/20 p-3 rounded-full w-fit mx-auto mb-4">
+                <Shield className="h-6 w-6" />
+              </div>
+              <h3 className="font-semibold mb-2">Trusted by Government</h3>
+              <p className="text-sm text-blue-100">NABARD and DRDO certified services</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-white/20 p-3 rounded-full w-fit mx-auto mb-4">
+                <Clock className="h-6 w-6" />
+              </div>
+              <h3 className="font-semibold mb-2">24/7 Support</h3>
+              <p className="text-sm text-blue-100">Round-the-clock assistance available</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-white/20 p-3 rounded-full w-fit mx-auto mb-4">
+                <CheckCircle className="h-6 w-6" />
+              </div>
+              <h3 className="font-semibold mb-2">Quality Guaranteed</h3>
+              <p className="text-sm text-blue-100">100% satisfaction guarantee</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-white/20 p-3 rounded-full w-fit mx-auto mb-4">
+                <Wrench className="h-6 w-6" />
+              </div>
+              <h3 className="font-semibold mb-2">Expert Technicians</h3>
+              <p className="text-sm text-blue-100">Certified and experienced professionals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Services;
