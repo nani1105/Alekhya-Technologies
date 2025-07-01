@@ -20,9 +20,13 @@ const Services = () => {
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-white">
               <div className="flex items-center space-x-4">
-                <div className="bg-white/20 p-3 rounded-full">
-                  <Camera className="h-8 w-8" />
-                </div>
+                <div
+                    className="bg-white/20 p-3 rounded-full bg-no-repeat bg-center bg-contain h-14 w-14"
+                    style={{ backgroundImage: "url('/logo/cctv.png')" }}
+                  >
+                    {/* Optionally keep icon for fallback */}
+                  </div>
+              
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold">CCTV Security Systems</h2>
                   <p className="text-blue-100">Complete surveillance solutions for maximum security</p>
@@ -183,7 +187,7 @@ const Services = () => {
                 </div>
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold">Printer Solutions</h2>
-                  <p className="text-purple-100">Complete printer services for all major brands</p>
+                  <p className="text-purple-100">Complete printer for all major brands</p>
                 </div>
               </div>
             </div>
@@ -269,8 +273,11 @@ const Services = () => {
   <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
     <div className="bg-gradient-to-r from-amber-600 to-amber-800 p-8 text-white">
       <div className="flex items-center space-x-4">
-        <div className="bg-white/20 p-3 rounded-full">
-          <Shield className="h-8 w-8" />
+        <div
+          className="bg-white/20 p-3 rounded-full bg-no-repeat bg-center bg-contain h-14 w-14"
+          style={{ backgroundImage: "url('/logo/Biometric.jpg')" }}
+        >
+          {/* Optionally keep icon for fallback */}
         </div>
         <div>
           <h2 className="text-2xl md:text-3xl font-bold">Biometric Attendance Systems</h2>
@@ -342,7 +349,7 @@ const Services = () => {
           <Printer className="h-8 w-8" />
         </div>
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold">Photocopy Machines</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">Photocopy Machines (Xerox Mahines)</h2>
           <p className="text-gray-200">Sales and servicing for top photocopier brands</p>
         </div>
       </div>
@@ -356,7 +363,7 @@ const Services = () => {
             <li className="flex items-start space-x-3">
               <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
               <div>
-                <strong>New Machine Sales:</strong> Authorized dealer of Canon, Xerox, Ricoh, and more
+                <strong>New Machine Sales:</strong> Authorized dealer of Canon, Xerox, Conica Minolta, and more
               </div>
             </li>
             <li className="flex items-start space-x-3">
@@ -383,13 +390,26 @@ const Services = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Brands We Handle</h3>
           <div className="grid grid-cols-3 gap-4">
-            <div className="bg-gray-50 p-3 rounded-lg text-center text-blue-700 font-semibold">Canon</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center text-red-700 font-semibold">Xerox</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center text-green-700 font-semibold">Ricoh</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center text-gray-700 font-semibold">Sharp</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center text-indigo-700 font-semibold">Kyocera</div>
-            <div className="bg-gray-50 p-3 rounded-lg text-center text-gray-800 font-semibold">Others</div>
-          </div>
+                  {[
+                    { name: "HP", src: "/logo/hp1.png" },
+                    { name: "Canon", src: "/logo/Canon.png" },
+                    { name: "Epson", src: "/logo/Epson_.png" },
+                    { name: "Brother", src: "/logo/brother-log.png" },
+                    { name: "Xerox", src: "/logo/Xerox-logo.jpg" },
+                    { name: "Konica", src: "/logo/konica1.png" },
+                  ].map((brand) => (
+                    <div
+                      key={brand.name}
+                      className="bg-white p-4 rounded-lg shadow flex justify-center items-center h-24"
+                    >
+                      <img
+                        src={brand.src}
+                        alt={brand.name}
+                        className="h-12 object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
         </div>
       </div>
     </div>

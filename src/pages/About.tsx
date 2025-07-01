@@ -245,7 +245,7 @@ const About = () => {
         {/* Why Choose Us */}
         <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white p-8 md:p-12 rounded-2xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Choose TechGuard Pro?</h2>
+            <h2 className="text-3xl font-bold mb-4">Why Choose Alekhya Technologies ?</h2>
             <p className="text-xl text-blue-100">
               The advantages that set us apart in the industry
             </p>

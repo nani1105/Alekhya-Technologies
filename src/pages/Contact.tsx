@@ -22,7 +22,7 @@ const Contact = () => {
   e.preventDefault();
 
   try {
-    const response = await fetch('http://localhost:5000/api/contact', {
+    const response = await fetch('http://localhost:3000/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -227,6 +227,8 @@ const Contact = () => {
                       <option value="cctv">CCTV Security Systems</option>
                       <option value="computer">Computer Services</option>
                       <option value="printer">Printer Solutions</option>
+                      <option value="Biometric">Biometric Attendance services</option>
+                      <option value="Photocopy">Photocopy Machines (Xerox Machines) </option>
                       <option value="multiple">Multiple Services</option>
                       <option value="consultation">Free Consultation</option>
                     </select>

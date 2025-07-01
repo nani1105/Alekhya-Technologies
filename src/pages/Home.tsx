@@ -79,8 +79,11 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-blue-100 p-3 rounded-full w-fit mb-6">
-                <Camera className="h-8 w-8 text-blue-600" />
+              <div
+                className="bg-white/20 p-3 rounded-full bg-no-repeat bg-center bg-contain h-14 w-14"
+                style={{ backgroundImage: "url('/logo/cctv.png')" }}
+              >
+                {/* Optionally keep icon for fallback */}
               </div>
               <h3 className="text-xl font-semibold mb-4">CCTV Security Systems</h3>
               <p className="text-gray-600 mb-6">
@@ -187,6 +190,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 p-4 rounded-full w-fit mx-auto mb-4">
+                
                 <Award className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="font-bold text-lg mb-2">NABARD</h3>

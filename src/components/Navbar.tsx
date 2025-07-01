@@ -53,7 +53,7 @@ const Navbar = () => {
               Contact
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+919573376389"
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
             >
               <Phone className="h-4 w-4" />
