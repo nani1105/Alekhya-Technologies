@@ -1,26 +1,17 @@
 import React from 'react';
 import {
-  Camera,
-  Monitor,
-  Printer,
-  CheckCircle,
-  Shield,
-  Wrench,
-  Clock,
-  Phone,
-  Fingerprint,
+  Camera, Monitor, Printer, CheckCircle, Shield, Wrench, Clock, Phone, Fingerprint
 } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
 
 
-import adobeImage from '../Logo/adobe2.jpg';
-import hpImage from '../Logo/Hp1.png';
-import canonImage from '../Logo/Canon.png';
-import epsonImage from '../Logo/Epson_.png';
-import brotherImage from '../Logo/brother-log.png';
-import xeroxImage from '../Logo/Xerox-logo.jpg';
-import konicaImage from '../Logo/Konica1.png';
-
+import adobeImage from '../logo/adobe2.jpg';
+import hpImage from '../logo/Hp1.png';
+import canonImage from '../logo/Canon.png';
+import epsonImage from '../logo/Epson_.png';
+import brotherImage from '../logo/brother-log.png';
+import xeroxImage from '../logo/Xerox-logo.jpg';
+import konicaImage from '../logo/Konica1.png';
 const Services = () => {
   const brandLogos = [
     { name: 'HP', src: hpImage },
