@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Shield, Phone } from 'lucide-react';
+import logo from '../Logo/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,14 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-blue-600" />
+              <div className="bg-white p-2 rounded-full">
+                  <img
+                    src={logo}
+                    alt="Alekhya Logo"
+                    className="h-12 w-12 object-contain"
+                  />
+                </div>
+
               <span className="text-xl font-bold text-gray-900">Alekhya Technologies</span>
             </Link>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import Logo from '../Logo/logo.png';
 
 const Footer = () => {
   return (
@@ -24,7 +25,14 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Shield className="h-8 w-8 text-blue-400" />
+              <div className="bg-white p-2 rounded-full">
+                <img
+                  src={Logo}
+                  alt="Alekhya Logo"
+                  className="h-12 w-12 object-contain"
+                />
+              </div>
+
               <span className="text-xl font-bold">Alekhya Technologies</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">

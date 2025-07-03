@@ -8,6 +8,7 @@ import adobe1Img from '../Logo/adobe1.jpg';
 import nabardImg from '../Logo/Nabard.png';
 import drdoImg from '../Logo/drdo.png';
 import tech1Img from '../Logo/Tech1.jpg';
+import Logo from '../Logo/Alekhya.png';
 
 const About = () => {
   return (
@@ -15,6 +16,16 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
+           <div className="flex justify-center mb-4">
+            <div className="bg-white p-1 rounded-full shadow-lg">
+              <img
+                src={Logo}
+                alt="Alekhya Logo"
+                className="h-32 w-32 object-cover rounded-full shadow-lg"
+              />
+            </div>
+          </div>
+
           <Fade direction="down" triggerOnce>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About <span className="text-blue-600">Alekhya Technologies</span>
