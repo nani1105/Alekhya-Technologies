@@ -78,7 +78,7 @@ const Contact = () => {
             <div>
               <div
                 className="relative text-white p-8 rounded-2xl mb-8 bg-cover bg-center overflow-hidden"
-                style={{ backgroundImage: `url(${heroImage})` }} // ✅ Correct Vite usage
+                style={{ backgroundImage: `url(${heroImage})` }} // 
               >
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
