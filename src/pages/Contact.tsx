@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
-import heroImage from '../logo/hero.jpg'; // ✅ Use correct relative path to src/logo/hero.jpg
+import heroImage from '/src/logo/hero.jpg'; 
 
 const Contact = () => {
   const [formData, setFormData] = useState({
