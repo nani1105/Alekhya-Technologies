@@ -7,8 +7,8 @@ import {
 
 import { Fade, Slide } from 'react-awesome-reveal';
 
-// ✅ Image imports
-import heroImg from '../logo/hero2.jpg';
+
+import heroImg from '../logo/Hero2.jpg';
 import cctvBg from '../logo/cctv1.jpg';
 import nabardLogo from '../logo/nabard1.png';
 import drdoLogo from '../logo/drdo.png';
