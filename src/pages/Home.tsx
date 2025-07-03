@@ -19,7 +19,7 @@ import heroImage from '../Logo/Hero2.jpg';
 import cctvImage from '../Logo/cctv1.jpg';
 import nabardLogo from '../Logo/NABARD1.png';
 import drdoLogo from '../Logo/drdo.png';
-import adobeImage from '../Logo/Adobe1.jpg';
+import adobeImage from '../Logo/adobe1.jpg';
 
 const Home = () => {
   return (
