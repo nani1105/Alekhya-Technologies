@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
-
+import heroImage from '../Logo/Hero.jpg'; 
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -77,8 +77,9 @@ const Contact = () => {
           <Slide direction="left" triggerOnce>
             <div>
               <div
-                  className="relative text-white p-8 rounded-2xl mb-8 bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900 overflow-hidden"
-                >
+                className="relative text-white p-8 rounded-2xl mb-8 bg-cover bg-center overflow-hidden"
+                style={{ backgroundImage: `url(${heroImage})` }} // 
+              >
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <Fade cascade damping={0.1} triggerOnce> 
