@@ -15,11 +15,11 @@ import {
 import { Fade, Slide } from 'react-awesome-reveal';
 
 // ✅ Import images correctly
-import heroImage from '../logo/hero2.jpg';
-import cctvImage from '../logo/cctv1.jpg';
-import nabardLogo from '../logo/nabard1.png';
-import drdoLogo from '../logo/drdo.png';
-import adobeImage from '../logo/Adobe1.jpg';
+import heroImage from '/src/logo/hero2.jpg';
+import cctvImage from '/src/logo/cctv1.jpg';
+import nabardLogo from '/src/logo/nabard1.png';
+import drdoLogo from '/src/logo/drdo.png';
+import adobeImage from '/src/logo/Adobe1.jpg';
 
 const Home = () => {
   return (
