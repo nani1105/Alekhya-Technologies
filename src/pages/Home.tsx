@@ -27,7 +27,7 @@ import Computer from '../Logo/computer.png';
 import printer from '../Logo/printer.webp';
 import photocopy from '../Logo/photocopy.webp';
 import biometric from '../Logo/biometric.webp';
-import laptop from '../logo/Laptop.jpeg';
+import laptop from '../Logo/Laptop.jpeg';
 import logo from '../Logo/logo.png';
 
 const Home = () => {
