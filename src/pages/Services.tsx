@@ -25,7 +25,7 @@ const Services = () => {
         <Slide direction="right" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
              <div  className="relative p-8 text-white bg-cover bg-center"
-             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
+             style={{ backgroundImage: "url('/src/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Camera className="h-8 w-8" />
@@ -101,7 +101,7 @@ const Services = () => {
         <Slide direction="left" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
              <div  className="relative p-8 text-white bg-cover bg-center"
-             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
+             style={{ backgroundImage: "url('/src/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Monitor className="h-8 w-8" />
@@ -185,7 +185,7 @@ const Services = () => {
         <Slide direction="right" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
              <div  className="relative p-8 text-white bg-cover bg-center"
-             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
+             style={{ backgroundImage: "url('/src/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Printer className="h-8 w-8" />
@@ -239,12 +239,12 @@ const Services = () => {
                   <h3 className="text-xl font-semibold mb-4">Supported Brands</h3>
                   <div className="grid grid-cols-3 gap-4">
                     {[
-                      { name: "HP", src: "/logo/hp1.png" },
-                      { name: "Canon", src: "/logo/Canon.png" },
-                      { name: "Epson", src: "/logo/Epson_.png" },
-                      { name: "Brother", src: "/logo/brother-log.png" },
-                      { name: "Xerox", src: "/logo/Xerox-logo.jpg" },
-                      { name: "Konica", src: "/logo/konica1.png" },
+                      { name: "HP", src: "/src/logo/hp1.png" },
+                      { name: "Canon", src: "/src/logo/Canon.png" },
+                      { name: "Epson", src: "/src/logo/Epson_.png" },
+                      { name: "Brother", src: "/src/logo/brother-log.png" },
+                      { name: "Xerox", src: "/src/logo/Xerox-logo.jpg" },
+                      { name: "Konica", src: "/src/logo/konica1.png" },
                     ].map((brand) => (
                       <div
                         key={brand.name}
@@ -277,7 +277,7 @@ const Services = () => {
         <Slide direction="left" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div  className="relative p-8 text-white bg-cover bg-center"
-             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
+             style={{ backgroundImage: "url('/src/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Fingerprint className="h-8 w-8" />
@@ -347,7 +347,7 @@ const Services = () => {
         <Slide direction="right" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div  className="relative p-8 text-white bg-cover bg-center"
-              style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
+              style={{ backgroundImage: "url('/src/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Printer className="h-8 w-8" />
@@ -395,12 +395,12 @@ const Services = () => {
                   <h3 className="text-xl font-semibold mb-4">Brands We Handle</h3>
                   <div className="grid grid-cols-3 gap-4">
                     {[
-                      { name: "HP", src: "/logo/hp1.png" },
-                      { name: "Canon", src: "/logo/Canon.png" },
-                      { name: "Epson", src: "/logo/Epson_.png" },
-                      { name: "Brother", src: "/logo/brother-log.png" },
-                      { name: "Xerox", src: "/logo/Xerox-logo.jpg" },
-                      { name: "Konica", src: "/logo/konica1.png" },
+                      { name: "HP", src: "/src/logo/hp1.png" },
+                      { name: "Canon", src: "/src/logo/Canon.png" },
+                      { name: "Epson", src: "/src/logo/Epson_.png" },
+                      { name: "Brother", src: "/src/logo/brother-log.png" },
+                      { name: "Xerox", src: "/src/logo/Xerox-logo.jpg" },
+                      { name: "Konica", src: "/src/logo/konica1.png" },
                     ].map((brand) => (
                       <div
                         key={brand.name}

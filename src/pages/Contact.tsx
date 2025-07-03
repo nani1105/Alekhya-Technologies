@@ -83,7 +83,7 @@ const Contact = () => {
             <div>
               <div
                   className="relative text-white p-8 rounded-2xl mb-8 bg-cover bg-center overflow-hidden"
-                  style={{ backgroundImage: "url('/logo/hero.jpg')" }}>
+                  style={{ backgroundImage: "url('src/logo/hero.jpg')" }}>
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <Fade cascade damping={0.1} triggerOnce> 

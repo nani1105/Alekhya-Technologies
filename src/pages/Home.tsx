@@ -13,7 +13,7 @@ const Home = () => {
       {/* Hero Section - No animation on hero as it's typically the first thing users see */}
       <section
         className="relative w-full h-[600px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url('/logo/hero2.jpg')` }}
+        style={{ backgroundImage: `url('/src/logo/hero2.jpg')` }}
 
       >
         <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
@@ -81,7 +81,7 @@ const Home = () => {
       {/* Services Preview - MODIFIED FOR ANIMATION AND FIXES */}
       <section
         className="relative py-20 bg-gray-900 text-gray-100 bg-cover bg-center"
-        style={{ backgroundImage: `url('/logo/cctv1.jpg')` }}
+        style={{ backgroundImage: `url('/src/logo/cctv1.jpg')` }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
@@ -258,7 +258,7 @@ const Home = () => {
        <Slide direction="left" triggerOnce delay={0} duration={1000}>
       <div className="bg-white p-6 rounded-lg shadow-md text-center">
        <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-      <img src="/logo/nabard1.png" alt="NABARD Logo" 
+      <img src="/src/logo/nabard1.png" alt="NABARD Logo" 
         className="w-full h-full object-cover" />
       </div>
       <h3 className="font-bold text-lg mb-2">NABARD</h3>
@@ -269,7 +269,7 @@ const Home = () => {
      <Slide direction="up" triggerOnce delay={200} duration={1000}>
        <div className="bg-white p-6 rounded-lg shadow-md text-center">
       <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-      <img src="/logo/drdo.png" alt="DRDO Logo" 
+      <img src="/src/logo/drdo.png" alt="DRDO Logo" 
         className="w-full h-full object-cover" />
        </div>
       <h3 className="font-bold text-lg mb-2">DRDO</h3>
@@ -293,7 +293,7 @@ const Home = () => {
 
       {/* CTA Section - Adding a simple Fade animation */}
       <section className="relative w-full h-[300px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-       style={{ backgroundImage: `url('/logo/Adobe1.jpg')` }}>
+       style={{ backgroundImage: `url('/src/logo/Adobe1.jpg')` }}>
         
       
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

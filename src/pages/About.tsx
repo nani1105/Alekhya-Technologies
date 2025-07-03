@@ -2,7 +2,7 @@ import React from 'react';
 import { Award, Users, Clock, Shield, CheckCircle, Star, Target, Heart } from 'lucide-react';
 // Import animation components
 import { Fade, Slide } from 'react-awesome-reveal';
-import corevalues from '/logo/values.avif';
+
 
 const About = () => {
   return (
@@ -25,7 +25,7 @@ const About = () => {
 
         {/* Our Story */}
         <Slide direction="left" triggerOnce cascade damping={0.1} className="mb-20">
-          <div className="relative text-white p-8 md:p-12 rounded-2xl bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/logo/journey.jpg')" }} >
+          <div className="relative text-white p-8 md:p-12 rounded-2xl bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/src/logo/journey.jpg')" }} >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Journey</h2>
@@ -140,7 +140,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Slide direction="left" triggerOnce cascade damping={0.1}>
               <div  className="relative text-white p-8 rounded-xl bg-cover bg-center overflow-hidden"
-              style={{ backgroundImage: "url('/logo/adobe1.jpg')" }}>
+              style={{ backgroundImage: "url('/src/logo/adobe1.jpg')" }}>
                 <h3 className="text-xl font-bold mb-4">Security Solutions</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center space-x-2">
@@ -165,7 +165,7 @@ const About = () => {
             
             <Slide direction="up" triggerOnce cascade damping={0.1} delay={100}>
               <div  className="relative text-white p-8 rounded-xl bg-cover bg-center overflow-hidden"
-              style={{ backgroundImage: "url('/logo/adobe1.jpg')" }}>
+              style={{ backgroundImage: "url('/src/logo/adobe1.jpg')" }}>
                 <h3 className="text-xl font-bold mb-4">IT Services</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center space-x-2">
@@ -190,7 +190,7 @@ const About = () => {
             
             <Slide direction="right" triggerOnce cascade damping={0.1} delay={200}>
               <div  className="relative text-white p-8 rounded-xl bg-cover bg-center overflow-hidden"
-              style={{ backgroundImage: "url('/logo/adobe1.jpg')" }}>
+              style={{ backgroundImage: "url('/src/logo/adobe1.jpg')" }}>
                 <h3 className="text-xl font-bold mb-4">Print Solutions</h3>
                 <ul className="space-y-2">
                   <li className="flex items-center space-x-2">
@@ -232,7 +232,7 @@ const About = () => {
             <Slide direction="left" triggerOnce cascade damping={0.1}>
               <div className="bg-white p-8 rounded-xl shadow-lg text-center">
                 <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                <img src="/logo/nabard.png" alt="NABARD Logo" 
+                <img src="/src/logo/nabard.png" alt="NABARD Logo" 
                   className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">NABARD</h3>
@@ -248,7 +248,7 @@ const About = () => {
             <Slide direction="up" triggerOnce cascade damping={0.1} delay={100}>
               <div className="bg-white p-8 rounded-xl shadow-lg text-center">
                 <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                <img src="/logo/drdo.png" alt="DRdo Logo" 
+                <img src="/src/logo/drdo.png" alt="DRdo Logo" 
                   className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">DRDO</h3>
@@ -282,7 +282,7 @@ const About = () => {
         <Fade direction="up" triggerOnce delay={200}>
           <div
             className="relative text-white p-8 md:p-12 rounded-2xl bg-cover bg-center overflow-hidden"
-            style={{ backgroundImage: "url('/logo/Tech1.jpg')" }}
+            style={{ backgroundImage: "url('/src/logo/Tech1.jpg')" }}
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Why Choose Alekhya Technologies ?</h2>
