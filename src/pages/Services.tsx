@@ -1,207 +1,246 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
-  ArrowRight, Shield, Users, Award, CheckCircle,
-  Camera, Monitor, Printer, Star, Fingerprint
+  Camera,
+  Monitor,
+  Printer,
+  CheckCircle,
+  Shield,
+  Wrench,
+  Clock,
+  Phone,
+  Fingerprint,
 } from 'lucide-react';
-
 import { Fade, Slide } from 'react-awesome-reveal';
 
 
-import heroImg from '../logo/Hero2.jpg';
-import cctvBg from '../logo/cctv1.jpg';
-import nabardLogo from '../logo/nabard1.png';
-import drdoLogo from '../logo/drdo.png';
-import adobeBg from '../logo/Adobe1.jpg';
+import adobeImage from '../Logo/adobe2.jpg';
+import hpImage from '../Logo/Hp1.png';
+import canonImage from '../Logo/Canon.png';
+import epsonImage from '../Logo/Epson_.png';
+import brotherImage from '../Logo/brother-log.png';
+import xeroxImage from '../Logo/Xerox-logo.jpg';
+import konicaImage from '../Logo/Konica1.png';
 
-const Home = () => {
+const Services = () => {
+  const brandLogos = [
+    { name: 'HP', src: hpImage },
+    { name: 'Canon', src: canonImage },
+    { name: 'Epson', src: epsonImage },
+    { name: 'Brother', src: brotherImage },
+    { name: 'Xerox', src: xeroxImage },
+    { name: 'Konica', src: konicaImage },
+  ];
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section
-        className="relative w-full h-[600px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImg})` }}
-      >
-        <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-blue-600 p-3 rounded-full">
-                <Shield className="h-12 w-12" />
+    <div className="min-h-screen py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <Fade direction="down" triggerOnce>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Our Professional Services
+            </h1>
+          </Fade>
+          <Fade direction="up" delay={200} triggerOnce>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive technology solutions backed by 10+ years of expertise and trusted by
+              government agencies
+            </p>
+          </Fade>
+        </div>
+
+        {/* Service Sections */}
+        {[
+          {
+            icon: <Camera className="h-8 w-8" />,
+            title: 'CCTV Security Systems',
+            subtitle: 'Complete surveillance solutions for maximum security',
+            audience: ['Businesses', 'Residential', 'Government'],
+            audienceColors: ['text-blue-600', 'text-green-600', 'text-purple-600'],
+            audienceDesc: [
+              'Offices, retail stores, warehouses, manufacturing units',
+              'Homes, apartments, gated communities',
+              'Offices, institutions, public spaces',
+            ],
+            points: [
+              'HD & 4K Camera Installation: High-resolution cameras for crystal clear footage',
+              'Remote Monitoring Setup: Access your cameras from anywhere via mobile app',
+              'Night Vision Systems: Advanced infrared technology for 24/7 surveillance',
+              'Motion Detection & Alerts: Smart notifications for suspicious activities',
+              'Cloud & Local Storage: Flexible recording options for your needs',
+            ],
+          },
+          {
+            icon: <Monitor className="h-8 w-8" />,
+            title: 'Computer Services',
+            subtitle: 'Expert IT solutions for all your computing needs',
+            expertise: [
+              'Hardware Repair & Upgrade: Motherboard, RAM, storage, and component repairs',
+              'Software Solutions: OS installation, virus removal, software troubleshooting',
+              'Network Setup: LAN/WAN configuration, WiFi setup, network security',
+              'Data Recovery: Professional recovery from crashed drives and corrupted files',
+              'System Optimization: Performance tuning and maintenance services',
+            ],
+          },
+          {
+            icon: <Printer className="h-8 w-8" />,
+            title: 'Printer Solutions',
+            subtitle: 'Complete printer for all major brands',
+            services: [
+              'All Brand Repairs: HP, Canon, Epson, Brother, Samsung, Konica Minolta and more',
+              'Toner & Cartridge Supply: Original and compatible cartridges available',
+              'Preventive Maintenance: Regular cleaning and calibration services',
+              'Network Printer Setup: Wireless and wired network configuration',
+              'Bulk Printing Solutions: High-volume printing services for businesses',
+            ],
+          },
+          {
+            icon: <Fingerprint className="h-8 w-8" />,
+            title: 'Biometric Attendance Systems',
+            subtitle: 'Modern attendance tracking with biometric and RFID solutions',
+            features: [
+              'Fingerprint & Face Recognition: Secure and fast identity verification',
+              'RFID Card Access: Touchless attendance options',
+              'Cloud Integration: Real-time data syncing with dashboards',
+              'SMS Alerts & Reports: Automated attendance reports and alerts',
+            ],
+          },
+          {
+            icon: <Printer className="h-8 w-8" />,
+            title: 'Photocopy Machines (Xerox Machines)',
+            subtitle: 'Sales and servicing for top photocopier brands',
+            highlights: [
+              'New Machine Sales: Authorized dealer of Canon, Xerox, Konica Minolta, and more',
+              'Rental & Leasing Options: Cost-effective plans for businesses',
+              'Repair Services: Fast service with original spare parts',
+              'Annual Maintenance: Scheduled service contracts to ensure uptime',
+            ],
+          },
+        ].map((service, index) => (
+          <Slide
+            key={service.title}
+            direction={index % 2 === 0 ? 'right' : 'left'}
+            triggerOnce
+            cascade
+            damping={0.1}
+            className="mb-20"
+          >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div
+                className="relative p-8 text-white bg-cover bg-center"
+                style={{ backgroundImage: `url(${adobeImage})` }}
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="bg-white/20 p-3 rounded-full">{service.icon}</div>
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold">{service.title}</h2>
+                    <p className="text-blue-100">{service.subtitle}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Left Column - Services */}
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">
+                      {service.points ? 'What We Offer' : service.expertise ? 'Our Expertise' : service.services ? 'Comprehensive Services' : service.features ? 'Features' : 'What We Provide'}
+                    </h3>
+                    <ul className="space-y-3">
+                      {(service.points ||
+                        service.expertise ||
+                        service.services ||
+                        service.features ||
+                        service.highlights
+                      )?.map((item) => {
+                        const [label, ...rest] = item.split(':');
+                        return (
+                          <li key={item} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                            <div>
+                              <strong>{label}:</strong> {rest.join(':').trim()}
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+
+                  {/* Right Column - Additional */}
+                  {index === 0 && (
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4">Perfect For</h3>
+                      <div className="space-y-4">
+                        {service.audience?.map((type, i) => (
+                          <div key={type} className="bg-gray-50 p-4 rounded-lg">
+                            <h4 className={`font-semibold ${service.audienceColors?.[i]}`}>{type}</h4>
+                            <p className="text-sm text-gray-600">{service.audienceDesc?.[i]}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {index === 2 || index === 4 ? (
+                    <div>
+                      <h3 className="text-xl font-semibold mb-4">Supported Brands</h3>
+                      <div className="grid grid-cols-3 gap-4">
+                        {brandLogos.map((brand) => (
+                          <div
+                            key={brand.name}
+                            className="bg-white p-4 rounded-lg shadow flex justify-center items-center h-24"
+                          >
+                            <img src={brand.src} alt={brand.name} className="h-12 object-contain" />
+                          </div>
+                        ))}
+                      </div>
+                      {index === 2 && (
+                        <div className="mt-6 bg-purple-50 p-4 rounded-lg">
+                          <h4 className="font-semibold text-purple-800 mb-2">Special Offers</h4>
+                          <ul className="text-sm text-purple-700 space-y-1">
+                            <li>• Free pickup & delivery within city limits</li>
+                            <li>• 10% discount on bulk cartridge orders</li>
+                            <li>• Annual maintenance contracts available</li>
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ) : null}
+                </div>
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Professional <span className="text-blue-300">Tech Solutions</span>
-              <br />You Can Trust
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              10+ years of excellence in CCTV security, computer services, and printer solutions.
-              Trusted by NABARD, DRDO, and high-profile clients across India.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <span>Get Free Quote</span>
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link to="/services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors duration-200">
-                View Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+          </Slide>
+        ))}
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <Fade direction="up" cascade triggerOnce delay={50} duration={800}>
+        {/* Why Choose Us */}
+        <Fade direction="up" triggerOnce delay={200}>
+          <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white p-8 rounded-2xl">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Choose Alekhya Technologies?</h2>
+              <p className="text-blue-100">Experience the difference that comes with 10+ years of expertise</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { value: '10+', label: 'Years Experience', color: 'blue' },
-                { value: '500+', label: 'Happy Clients', color: 'green' },
-                { value: '24/7', label: 'Support Available', color: 'purple' },
-                { value: '100%', label: 'Satisfaction Rate', color: 'orange' },
-              ].map((stat, i) => (
-                <div key={i} className="bg-white p-6 rounded-lg shadow-md">
-                  <div className={`text-3xl font-bold text-${stat.color}-600 mb-2`}>{stat.value}</div>
-                  <div className="text-gray-700">{stat.label}</div>
+                { icon: Shield, title: 'Trusted by Government', desc: 'NABARD and DRDO certified services' },
+                { icon: Clock, title: '24/7 Support', desc: 'Round-the-clock assistance available' },
+                { icon: CheckCircle, title: 'Quality Guaranteed', desc: '100% satisfaction guarantee' },
+                { icon: Wrench, title: 'Expert Technicians', desc: 'Certified and experienced professionals' },
+              ].map((item) => (
+                <div key={item.title} className="text-center">
+                  <div className="bg-white/20 p-3 rounded-full w-fit mx-auto mb-4">
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-semibold mb-2">{item.title}</h3>
+                  <p className="text-sm text-blue-100">{item.desc}</p>
                 </div>
               ))}
-            </Fade>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section
-        className="relative py-20 bg-gray-900 text-gray-100 bg-cover bg-center"
-        style={{ backgroundImage: `url(${cctvBg})` }}
-      >
-        <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Fade direction="down" triggerOnce cascade damping={0.2} duration={1000}>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Expert Services</h2>
-              <p className="text-xl text-white max-w-2xl mx-auto">
-                Comprehensive technology solutions for businesses and individuals
-              </p>
             </div>
-          </Fade>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: <Camera className="h-8 w-8 text-blue-600" />,
-                title: 'CCTV Security Systems',
-                features: ['HD & 4K Camera Installation', 'Remote Monitoring Setup', '24/7 Maintenance Support'],
-              },
-              {
-                icon: <Monitor className="h-8 w-8 text-blue-600" />,
-                title: 'Computer Services',
-                features: ['Hardware & Software Repair', 'Network Setup & Management', 'Data Recovery Services'],
-              },
-              {
-                icon: <Fingerprint className="h-8 w-8 text-blue-600" />,
-                title: 'Biometric Systems',
-                features: ['Installation & repair', 'Service and Maintenance', 'Fingerprint and RFID card Touchless Systems'],
-              },
-              {
-                icon: <Printer className="h-8 w-8 text-blue-600" />,
-                title: 'Printer Solutions',
-                features: ['All Brand Repair Services', 'Toner & Cartridge Supply', 'Preventive Maintenance'],
-              },
-            ].map((service, i) => (
-              <Slide key={i} direction="up" triggerOnce delay={i * 200} duration={1000}>
-                <div className="bg-white p-8 rounded-xl shadow-lg flex flex-col h-full">
-                  <div className="bg-blue-100 p-3 rounded-full w-fit mb-6">{service.icon}</div>
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
-                  <ul className="space-y-2 mb-6 flex-grow">
-                    {service.features.map((feat, j) => (
-                      <li key={j} className="flex items-start space-x-2">
-                        <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link to="/services" className="text-blue-600 font-semibold hover:text-blue-700 flex items-center space-x-2 mt-auto">
-                    <span>Learn More</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </Slide>
-            ))}
           </div>
-        </div>
-      </section>
-
-      {/* Trusted Clients Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Fade direction="down" triggerOnce cascade damping={0.2} duration={1000}>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Leading Organizations</h2>
-              <p className="text-xl text-gray-600">We're proud to serve government agencies, enterprises, and high-profile clients</p>
-            </div>
-          </Fade>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Slide direction="left" triggerOnce delay={0} duration={1000}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                  <img src={nabardLogo} alt="NABARD Logo" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">NABARD</h3>
-                <p className="text-gray-600">National Bank for Agriculture and Rural Development</p>
-              </div>
-            </Slide>
-
-            <Slide direction="up" triggerOnce delay={200} duration={1000}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                  <img src={drdoLogo} alt="DRDO Logo" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">DRDO</h3>
-                <p className="text-gray-600">Defence Research and Development Organisation</p>
-              </div>
-            </Slide>
-
-            <Slide direction="right" triggerOnce delay={400} duration={1000}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-yellow-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                  <Star className="h-10 w-10 text-yellow-600" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Celebrity Clients</h3>
-                <p className="text-gray-600">High-profile individuals and entertainment industry</p>
-              </div>
-            </Slide>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section
-        className="relative w-full h-[300px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${adobeBg})` }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Fade direction="up" triggerOnce duration={1000}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Secure Your Business?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-              Get expert consultation and customized solutions for your security and technology needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-200">
-                Get Free Consultation
-              </Link>
-              <a href="tel:+919573376389" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors duration-200">
-                Call: +91 9573376389
-              </a>
-            </div>
-          </Fade>
-        </div>
-      </section>
+        </Fade>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Services;
