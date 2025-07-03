@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+
 import heroImage from '../Logo/Hero.jpg'; 
 
 const Contact = () => {
