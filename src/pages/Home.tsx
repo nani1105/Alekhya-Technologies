@@ -5,11 +5,7 @@ import { ArrowRight, Shield, Users, Award, CheckCircle, Camera, Monitor, Printer
 // --- Import animation components from react-awesome-reveal ---
 import { Fade, Slide } from 'react-awesome-reveal';
 
-// --- IMPORTANT: Ensure these paths are correct relative to THIS file's location ---
-import heroImage from '/logo/hero2.jpg';
-import servicesBgImage from '/logo/cctv1.jpg';
-import nabardLogo from '/logo/nabard1.png';
-import drdologo from '/logo/Drdo.avif';
+
 
 const Home = () => {
   return (
@@ -17,7 +13,8 @@ const Home = () => {
       {/* Hero Section - No animation on hero as it's typically the first thing users see */}
       <section
         className="relative w-full h-[600px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url('/logo/hero2.jpg')` }}
+
       >
         <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -84,7 +81,7 @@ const Home = () => {
       {/* Services Preview - MODIFIED FOR ANIMATION AND FIXES */}
       <section
         className="relative py-20 bg-gray-900 text-gray-100 bg-cover bg-center"
-        style={{ backgroundImage: `url(${servicesBgImage})` }}
+        style={{ backgroundImage: `url('/logo/cctv1.jpg')` }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
@@ -261,7 +258,8 @@ const Home = () => {
        <Slide direction="left" triggerOnce delay={0} duration={1000}>
       <div className="bg-white p-6 rounded-lg shadow-md text-center">
        <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-       <img src={nabardLogo} alt="NABARD Logo" className="w-full h-full object-cover" />
+      <img src="/logo/nabard1.png" alt="NABARD Logo" 
+        className="w-full h-full object-cover" />
       </div>
       <h3 className="font-bold text-lg mb-2">NABARD</h3>
       <p className="text-gray-600">National Bank for Agriculture and Rural Development</p>
@@ -270,8 +268,9 @@ const Home = () => {
 
      <Slide direction="up" triggerOnce delay={200} duration={1000}>
        <div className="bg-white p-6 rounded-lg shadow-md text-center">
-      <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden"> {/* Consistent w-20 h-20 and bg-blue-100 */}
-       <img src={drdologo} alt="DRDO logo" className="w-full h-full object-cover" />
+      <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+      <img src="/logo/drdo.png" alt="DRDO Logo" 
+        className="w-full h-full object-cover" />
        </div>
       <h3 className="font-bold text-lg mb-2">DRDO</h3>
        <p className="text-gray-600">Defence Research and Development Organisation</p>
@@ -293,7 +292,10 @@ const Home = () => {
      </section>
 
       {/* CTA Section - Adding a simple Fade animation */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="relative w-full h-[300px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
+       style={{ backgroundImage: `url('/logo/Adobe1.jpg')` }}>
+        
+      
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Fade direction="up" triggerOnce duration={1000}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

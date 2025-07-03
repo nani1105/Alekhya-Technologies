@@ -81,10 +81,12 @@ const Contact = () => {
           {/* Contact Information */}
           <Slide direction="left" triggerOnce>
             <div>
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl mb-8">
+              <div
+                  className="relative text-white p-8 rounded-2xl mb-8 bg-cover bg-center overflow-hidden"
+                  style={{ backgroundImage: "url('/logo/hero.jpg')" }}>
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
-                  <Fade cascade damping={0.1} triggerOnce> {/* Cascade animation for contact details */}
+                  <Fade cascade damping={0.1} triggerOnce> 
                     <div className="flex items-center space-x-4">
                       <div className="bg-white/20 p-3 rounded-full">
                         <Phone className="h-6 w-6" />
@@ -306,22 +308,22 @@ const Contact = () => {
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <Fade direction="up" triggerOnce cascade damping={0.1}>
             <div className="bg-blue-50 p-6 rounded-xl text-center">
-              <h3 className="text-lg font-semibold text-blue-800 mb-2">Free Consultation</h3>
-              <p className="text-blue-700 text-sm">
+              <h3 className="text-lg font-bold text-blue-800 mb-2">Free Consultation</h3>
+              <p className="text-blue-700 font-semibold text-sm">
                 Get expert advice on your security and technology needs at no cost.
               </p>
             </div>
             
             <div className="bg-green-50 p-6 rounded-xl text-center">
-              <h3 className="text-lg font-semibold text-green-800 mb-2">Quick Response</h3>
-              <p className="text-green-700 text-sm">
+              <h3 className="text-lg font-bold text-green-800 mb-2">Quick Response</h3>
+              <p className="text-green-700 font-semibold text-sm">
                 We respond to all inquiries within 2 hours during business hours.
               </p>
             </div>
             
             <div className="bg-purple-50 p-6 rounded-xl text-center">
-              <h3 className="text-lg font-semibold text-purple-800 mb-2">Custom Solutions</h3>
-              <p className="text-purple-700 text-sm">
+              <h3 className="text-lg font-bold text-purple-800 mb-2">Custom Solutions</h3>
+              <p className="text-purple-700  font-semibold text-sm">
                 Every project is tailored to meet your specific requirements and budget.
               </p>
             </div>

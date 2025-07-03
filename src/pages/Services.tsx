@@ -24,7 +24,8 @@ const Services = () => {
         {/* CCTV Services */}
         <Slide direction="right" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-white">
+             <div  className="relative p-8 text-white bg-cover bg-center"
+             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Camera className="h-8 w-8" />
@@ -99,7 +100,8 @@ const Services = () => {
         {/* Computer Services */}
         <Slide direction="left" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-green-600 to-green-800 p-8 text-white">
+             <div  className="relative p-8 text-white bg-cover bg-center"
+             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Monitor className="h-8 w-8" />
@@ -182,7 +184,8 @@ const Services = () => {
         {/* Printer Services */}
         <Slide direction="right" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-purple-600 to-purple-800 p-8 text-white">
+             <div  className="relative p-8 text-white bg-cover bg-center"
+             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Printer className="h-8 w-8" />
@@ -273,7 +276,8 @@ const Services = () => {
         {/* Biometric Attendance Services */}
         <Slide direction="left" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-amber-600 to-amber-800 p-8 text-white">
+            <div  className="relative p-8 text-white bg-cover bg-center"
+             style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Fingerprint className="h-8 w-8" />
@@ -342,7 +346,8 @@ const Services = () => {
         {/* Photocopy Machine Services */}
         <Slide direction="right" triggerOnce cascade damping={0.1} className="mb-20">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-gray-700 to-gray-900 p-8 text-white">
+            <div  className="relative p-8 text-white bg-cover bg-center"
+              style={{ backgroundImage: "url('/logo/adobe2.jpg')" }}>
               <div className="flex items-center space-x-4">
                 <div className="bg-white/20 p-3 rounded-full">
                   <Printer className="h-8 w-8" />
