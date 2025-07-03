@@ -17,7 +17,7 @@ import { Fade, Slide } from 'react-awesome-reveal';
 
 import heroImage from '../logo/Hero2.jpg';
 import cctvImage from '../logo/cctv1.jpg';
-import nabardLogo from '../logo/nabard1.png';
+import nabardLogo from '../logo/NABARD1.png';
 import drdoLogo from '../logo/drdo.png';
 import adobeImage from '../logo/Adobe1.jpg';
 
