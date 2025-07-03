@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
-import heroImage from '/src/logo/Hero.jpg'; 
+import heroImage from '../logo/Hero.jpg'; 
 
 const Contact = () => {
   const [formData, setFormData] = useState({
