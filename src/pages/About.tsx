@@ -5,7 +5,7 @@ import { Fade, Slide } from 'react-awesome-reveal';
 // Import images
 import journeyImg from '../Logo/journey.jpg';
 import adobe1Img from '../Logo/adobe1.jpg';
-import nabardImg from '../Logo/nabard.png';
+import nabardImg from '../Logo/Nabard.png';
 import drdoImg from '../Logo/drdo.png';
 import tech1Img from '../Logo/Tech1.jpg';
 
