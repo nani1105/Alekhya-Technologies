@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-// Import animation components
 import { Fade, Slide } from 'react-awesome-reveal';
+import heroImage from '../logo/hero.jpg'; // ✅ Use correct relative path to src/logo/hero.jpg
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +36,6 @@ const Contact = () => {
 
       if (response.ok) {
         setIsSubmitted(true);
-        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -45,10 +44,7 @@ const Contact = () => {
           message: ''
         });
 
-        // Hide success message after 3 seconds
-        setTimeout(() => {
-          setIsSubmitted(false);
-        }, 3000);
+        setTimeout(() => setIsSubmitted(false), 3000);
       } else {
         alert(result.message || 'Submission failed. Please try again.');
       }
@@ -57,7 +53,6 @@ const Contact = () => {
       alert('Something went wrong. Please try again later.');
     }
   };
-
 
   return (
     <div className="min-h-screen py-20">
@@ -82,8 +77,9 @@ const Contact = () => {
           <Slide direction="left" triggerOnce>
             <div>
               <div
-                  className="relative text-white p-8 rounded-2xl mb-8 bg-cover bg-center overflow-hidden"
-                  style={{ backgroundImage: "url('src/logo/hero.jpg')" }}>
+                className="relative text-white p-8 rounded-2xl mb-8 bg-cover bg-center overflow-hidden"
+                style={{ backgroundImage: `url(${heroImage})` }} // ✅ Correct Vite usage
+              >
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <Fade cascade damping={0.1} triggerOnce> 
@@ -97,7 +93,7 @@ const Contact = () => {
                         <p className="text-blue-100">+91 86880 97202</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center space-x-4">
                       <div className="bg-white/20 p-3 rounded-full">
                         <Mail className="h-6 w-6" />
@@ -108,7 +104,7 @@ const Contact = () => {
                         <p className="text-blue-100">girigedupuri@gmail.com</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center space-x-4">
                       <div className="bg-white/20 p-3 rounded-full">
                         <MapPin className="h-6 w-6" />
@@ -122,7 +118,7 @@ const Contact = () => {
                         </p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center space-x-4">
                       <div className="bg-white/20 p-3 rounded-full">
                         <Clock className="h-6 w-6" />
@@ -139,7 +135,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Emergency Contact */}
               <Fade direction="up" delay={200} triggerOnce>
                 <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
                   <h3 className="text-lg font-semibold text-red-800 mb-2">Emergency Support</h3>
@@ -147,7 +142,7 @@ const Contact = () => {
                     Need urgent technical assistance? Our emergency support team is available 24/7.
                   </p>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+919573376389"
                     className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 inline-flex items-center space-x-2"
                   >
                     <Phone className="h-4 w-4" />
@@ -163,9 +158,9 @@ const Contact = () => {
             <div>
               <div className="bg-white p-8 rounded-2xl shadow-xl">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                
+
                 {isSubmitted ? (
-                  <Fade key="success-message" triggerOnce> {/* Add key for re-render animation */}
+                  <Fade key="success-message" triggerOnce>
                     <div className="text-center py-8">
                       <div className="bg-green-100 p-4 rounded-full w-fit mx-auto mb-4">
                         <CheckCircle className="h-12 w-12 text-green-600" />
@@ -177,7 +172,7 @@ const Contact = () => {
                     </div>
                   </Fade>
                 ) : (
-                  <Fade key="contact-form" triggerOnce> {/* Add key for re-render animation */}
+                  <Fade key="contact-form" triggerOnce>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -194,7 +189,7 @@ const Contact = () => {
                           placeholder="Enter your full name"
                         />
                       </div>
-                      
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -211,7 +206,7 @@ const Contact = () => {
                             placeholder="your@email.com"
                           />
                         </div>
-                        
+
                         <div>
                           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                             Phone Number *
@@ -228,7 +223,7 @@ const Contact = () => {
                           />
                         </div>
                       </div>
-                      
+
                       <div>
                         <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                           Service Interested In *
@@ -246,12 +241,12 @@ const Contact = () => {
                           <option value="computer">Computer Services</option>
                           <option value="printer">Printer Solutions</option>
                           <option value="Biometric">Biometric Attendance services</option>
-                          <option value="Photocopy">Photocopy Machines (Xerox Machines) </option>
+                          <option value="Photocopy">Photocopy Machines (Xerox Machines)</option>
                           <option value="multiple">Multiple Services</option>
                           <option value="consultation">Free Consultation</option>
                         </select>
                       </div>
-                      
+
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                           Message *
@@ -267,7 +262,7 @@ const Contact = () => {
                           placeholder="Please describe your requirements or any questions you have..."
                         />
                       </div>
-                      
+
                       <button
                         type="submit"
                         className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2"
@@ -280,7 +275,6 @@ const Contact = () => {
                 )}
               </div>
 
-              {/* Quick Contact Options */}
               <Fade direction="up" delay={300} triggerOnce>
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
                   <a
@@ -290,7 +284,7 @@ const Contact = () => {
                     <Phone className="h-5 w-5" />
                     <span className="font-semibold">Call Now</span>
                   </a>
-                  
+
                   <a
                     href="mailto:alekhyatechnologies99@gmail.com"
                     className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-3"
@@ -304,7 +298,7 @@ const Contact = () => {
           </Slide>
         </div>
 
-        {/* Additional Information */}
+        {/* Additional Info */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <Fade direction="up" triggerOnce cascade damping={0.1}>
             <div className="bg-blue-50 p-6 rounded-xl text-center">
@@ -313,17 +307,17 @@ const Contact = () => {
                 Get expert advice on your security and technology needs at no cost.
               </p>
             </div>
-            
+
             <div className="bg-green-50 p-6 rounded-xl text-center">
               <h3 className="text-lg font-bold text-green-800 mb-2">Quick Response</h3>
               <p className="text-green-700 font-semibold text-sm">
                 We respond to all inquiries within 2 hours during business hours.
               </p>
             </div>
-            
+
             <div className="bg-purple-50 p-6 rounded-xl text-center">
               <h3 className="text-lg font-bold text-purple-800 mb-2">Custom Solutions</h3>
-              <p className="text-purple-700  font-semibold text-sm">
+              <p className="text-purple-700 font-semibold text-sm">
                 Every project is tailored to meet your specific requirements and budget.
               </p>
             </div>
