@@ -3,11 +3,11 @@ import { Award, Users, Clock, Shield, CheckCircle, Star, Target, Heart } from 'l
 import { Fade, Slide } from 'react-awesome-reveal';
 
 // Import images
-import journeyImg from '/src/Logo/journey.jpg';
-import adobe1Img from '/src/Logo/adobe1.jpg';
-import nabardImg from '/src/Logo/nabard.png';
-import drdoImg from '/src/Logo/drdo.png';
-import tech1Img from '/src/Logo/Tech1.jpg';
+import journeyImg from '../Logo/journey.jpg';
+import adobe1Img from '../Logo/adobe1.jpg';
+import nabardImg from '../Logo/nabard.png';
+import drdoImg from '../Logo/drdo.png';
+import tech1Img from '../Logo/Tech1.jpg';
 
 const About = () => {
   return (
