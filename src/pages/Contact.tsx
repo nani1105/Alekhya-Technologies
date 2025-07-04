@@ -90,8 +90,14 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold">Phone</h3>
-                        <p className="text-blue-100">+91 95733 76389</p>
-                        <p className="text-blue-100">+91 89777 55173</p>
+                        <a href="tel:+919573376389" className="text-blue-100 hover:underline">
+                          +91 95733 76389
+                        </a>
+                        <br/>
+                        <a href="tel:+91 89777 55173" className="text-blue-100 hover:underline">
+                          +91 89777 55173
+                        </a>
+                        
                       </div>
                     </div>
 
@@ -101,8 +107,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold">Email</h3>
-                        <p className="text-blue-100">alekhyatechnologies7@gmail.com</p>
-                        <p className="text-blue-100">alekhyatechnologies@yahoo.com</p>
+                        <a  href="mailto:alekhyatechnologies7@gmail.com" className="text-blue-100 hover:underline">alekhyatechnologies7@gmail.com</a>
+                        <br/>
+                        <a  href="alekhyatechnologies@yahoo.com" className="text-blue-100 hover:underline">alekhyatechnologies@yahoo.com</a>
+                        
                       </div>
                     </div>
 
@@ -113,7 +121,9 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Address</h3>
                         <p className="text-blue-100">
-                          123 SR Nagar<br />
+                          # 8-3-167-11/A<br />
+                          Indraprastha, Siddarth Nagar, <br/>
+                          AG Colony, <br/>
                           Hyderabad, Telangana 500008<br />
                           India
                         </p>
@@ -287,7 +297,7 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="mailto:alekhyatechnologies99@gmail.com"
+                    href="mailto:alekhyatechnologies7@gmail.com"
                     className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-3"
                   >
                     <Mail className="h-5 w-5" />

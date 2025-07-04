@@ -35,9 +35,10 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative w-full h-[800px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+          className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+
         <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
@@ -366,7 +367,7 @@ const Home = () => {
 
       {/* CTA Section */}
       <section
-        className="relative w-full h-[300px] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
+        className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url(${adobeImage})` }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
