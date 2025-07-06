@@ -52,8 +52,8 @@ const Home = () => {
                 </div>
 
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Alekhya Technologoies</h1> <h2 className="text-blue-300 text-2xl md:text-4xl font-bold mb-6">Professional Tech Solutions</h2>
+            <h1 className="text-3xl sm:text-6xl font-bold">Alekhya Technologies</h1>
+            <h2 className="text-blue-300 text-2xl md:text-4xl font-bold mb-6">Professional Tech Solutions</h2>
              <h3 className='text-2xl md-text-3xl font-bold'>You Can Trust</h3>
             
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
@@ -63,18 +63,18 @@ const Home = () => {
 
             
             <div className="mb-10 flex flex-wrap justify-center gap-6">
-              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden"  >
+              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden hover:scale-105 shadow-[0_0_12px_rgba(96,165,250,0.8)]"  >
                <img
                 src={CCtv}
                 alt="CCTV"
-                className="w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-110 shadow-[0_0_12px_rgba(96,165,250,0.8)]"
               />
                 <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-xs p-2 text-center">
                   CCTV Installation & Monitoring
                 </div>
               </div>
 
-              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden hover:scale-105 shadow-[0_0_12px_rgba(96,165,250,0.8)]">
                 <img
                 src={Computer}
                 alt="computer"
@@ -85,7 +85,8 @@ const Home = () => {
                 </div>
               </div>
               
-              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden hover:scale-105 shadow-[0_0_12px_rgba(96,165,250,0.8)]
+">
                 <img
                 src={biometric}
                 alt="biometic"
@@ -96,7 +97,7 @@ const Home = () => {
                 </div>
               </div>
 
-               <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden">
+               <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden hover:scale-105 shadow-[0_0_12px_rgba(96,165,250,0.8)]">
                 <img
                 src={photocopy}
                 alt="photocopy"
@@ -107,7 +108,7 @@ const Home = () => {
                 </div>
               </div>
               
-                <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden">
+                <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden hover:scale-105 shadow-[0_0_12px_rgba(96,165,250,0.8)]">
                 <img
                 src={laptop}
                 alt="laptop"
@@ -118,13 +119,13 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="relative group w-32 h-32 bg-white rounded-xl shadow-md overflow-hidden hover:scale-105 shadow-[0_0_12px_rgba(96,165,250,0.8)]">
                 <img
                 src={printer}
                 alt="printer"
-                className="w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-contain p-4 transition-transform duration-300 group-hover:scale-110 "
               />
-                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-xs p-2 text-center">
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white text-xs p-2 text-center ">
                   Printer Sales, Service & Cartridge Supply
                 </div>
               </div>
@@ -133,15 +134,14 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
-                <span>Get Free Quote</span>
-                <ArrowRight className="h-5 w-5" />
-              </Link>
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-md hover:shadow-[0_0_12px_rgba(96,165,250,0.8)]
+                transition duration-300 ">
+                  Get Free Quote
+                </Link>
+
               <Link
                 to="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors duration-200"
-              >
+                className=" text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white bg-gradient-to-r from-amber-500 to-purple-600 hover:text-violet-900 transition-colors duration-200" >
                 View Services
               </Link>
             </div>
@@ -190,135 +190,85 @@ const Home = () => {
           </div>
 
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-               <div className="bg-blue-100 p-3 rounded-full w-fit mb-6">
-                <Camera className="h-8 w-8 text-blue-600" />
-                
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {/* CCTV Card */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-110 hover:z-10">
+                <div className="bg-white/10 backdrop-blur-md border border-white/10 p-3 rounded-full w-fit mb-6">
+                  <Camera className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">CCTV Security Systems</h3>
+                <p className="text-white mb-6 font-semibold">
+                  Complete surveillance solutions including installation, maintenance, and monitoring for homes and businesses.
+                </p>
+                <ul className="space-y-2 mb-6 text-white text-sm">
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>HD & 4K Camera Installation</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Remote Monitoring Setup</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>24/7 Maintenance Support</span></li>
+                </ul>
+                <Link to="/services#cctv" className="text-blue-400 hover:text-blue-500 font-semibold flex items-center space-x-2">
+                  <span>Learn More</span><ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold mb-4">CCTV Security Systems</h3>
-              <p className="text-gray-600 mb-6">
-                Complete surveillance solutions including installation, maintenance, and monitoring for homes and businesses.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">HD & 4K Camera Installation</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Remote Monitoring Setup</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">24/7 Maintenance Support</span>
-                </li>
-              </ul>
-              <Link
-                to="/services"
-                className="text-blue-600 font-semibold hover:text-blue-700 flex items-center space-x-2"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+
+              {/* Computer Card */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-110 hover:z-10">
+                <div className="bg-white/10 backdrop-blur-md border border-white/10 p-3 rounded-full w-fit mb-6">
+                  <Monitor className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">Computer Services</h3>
+                <p className="text-white mb-6 font-semibold">
+                  Expert computer repair, networking, and IT support services for all your technology needs.
+                </p>
+                <ul className="space-y-2 mb-6 text-white text-sm">
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Hardware & Software Repair</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Network Setup & Management</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Data Recovery Services</span></li>
+                </ul>
+                <Link to="/services#Computer" className="text-green-400 hover:text-green-500 font-semibold flex items-center space-x-2">
+                  <span>Learn More</span><ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
+              {/* Biometric Card */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-110 hover:z-10">
+                <div className="bg-white/10 backdrop-blur-md border border-white/10 p-3 rounded-full w-fit mb-6">
+                  <Fingerprint className="h-8 w-8 text-amber-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">Biometric Systems</h3>
+                <p className="text-white mb-6 font-semibold">
+                  Expert Biometric & RFID attendance systems installation, repair, and maintenance.
+                </p>
+                <ul className="space-y-2 mb-6 text-white text-sm">
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Installation and Repair</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Service & Maintenance</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Advanced Systems</span></li>
+                </ul>
+                <Link to="/services#biometric" className="text-amber-400 hover:text-amber-500 font-semibold flex items-center space-x-2">
+                  <span>Learn More</span><ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
+              {/* Printer Card */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 p-8 rounded-xl shadow-lg hover:shadow-xl transition-transform duration-300 hover:scale-110 hover:z-10">
+                <div className="bg-white/10 backdrop-blur-md border border-white/10 p-3 rounded-full w-fit mb-6">
+                  <Printer className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white">Printer Solutions</h3>
+                <p className="text-white mb-6 font-semibold">
+                  Complete printer services including repair, maintenance, and supplies for all major brands.
+                </p>
+                <ul className="space-y-2 mb-6 text-white text-sm">
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>All Brand Repair Services</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Toner & Cartridge Supply</span></li>
+                  <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-green-500" /><span>Preventive Maintenance</span></li>
+                </ul>
+                <Link to="/services#Printer" className="text-purple-400 hover:text-purple-500 font-semibold flex items-center space-x-2">
+                  <span>Learn More</span><ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-green-100 p-3 rounded-full w-fit mb-6">
-                <Monitor className="h-8 w-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Computer Services</h3>
-              <p className="text-gray-600 mb-6">
-                Expert computer repair, networking, and IT support services for all your technology needs.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Hardware & Software Repair</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Network Setup & Management</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Data Recovery Services</span>
-                </li>
-              </ul>
-              <Link
-                to="/services"
-                className="text-green-600 font-semibold hover:text-green-700 flex items-center space-x-2"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-amber-100 p-3 rounded-full w-fit mb-6">
-                <Monitor className="h-8 w-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Biometric Systems</h3>
-              <p className="text-gray-600 mb-6">
-                Expert Biometric & RFID attendance systems installation, repair, maintainance for schools, colleges, offices, and factories.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Installation and Repair</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Service & Maintainance</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Advanced systems</span>
-                </li>
-              </ul>
-              <Link
-                to="/services"
-                className="text-amber-600 font-semibold hover:text-green-700 flex items-center space-x-2"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>       
-
-            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="bg-purple-100 p-3 rounded-full w-fit mb-6">
-                <Printer className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Printer Solutions</h3>
-              <p className="text-gray-600 mb-6">
-                Complete printer services including repair, maintenance, and supplies for all major brands.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">All Brand Repair Services</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Toner & Cartridge Supply</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
-                  <span className="text-sm">Preventive Maintenance</span>
-                </li>
-              </ul>
-              <Link
-                to="/services"
-                className="text-purple-600 font-semibold hover:text-purple-700 flex items-center space-x-2"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </section>
       {/* Trusted Clients */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -334,7 +284,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Slide direction="left" triggerOnce delay={0} duration={1000}>
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden ">
                   <img src={nabardLogo} alt="NABARD Logo" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">NABARD</h3>
@@ -366,33 +316,36 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section
-        className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${adobeImage})` }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Fade direction="up" triggerOnce duration={1000}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Secure Your Business?</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-              Get expert consultation and customized solutions for your security and technology needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-200"
-              >
-                Get Free Consultation
-              </Link>
-              <a
-                href="tel:+919573376389"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-colors duration-200"
-              >
-                Call: +91 9573376389
-              </a>
-            </div>
-          </Fade>
-        </div>
-      </section>
+     <section
+          className="relative w-full min-h-[60vh] flex items-center justify-center text-white overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: `url(${adobeImage})` }}
+        >
+          <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
+            <Fade direction="up" triggerOnce duration={1000}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+                Ready to Secure Your Business?
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-blue-100 max-w-2xl mx-auto">
+                Get expert consultation and customized solutions for your security and technology needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-blue-50 transition-colors duration-200"
+                >
+                  Get Free Consultation
+                </Link>
+                <a
+                  href="tel:+919573376389"
+                  className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-blue-900 transition-colors duration-200"
+                >
+                  Call: +91 9573376389
+                </a>
+              </div>
+            </Fade>
+          </div>
+        </section>
+
     </div>
   );
 };

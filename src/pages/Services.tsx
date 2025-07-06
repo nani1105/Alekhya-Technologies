@@ -1,9 +1,20 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import {
   Camera, Monitor, Printer, CheckCircle, Shield, Wrench, Clock, Phone, Fingerprint
 } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
-
+const scrollToHash = (hash: string) => {
+  if (!hash) return;
+  const id = hash.replace('#', '');
+  const element = document.getElementById(id);
+  if (element) {
+    setTimeout(() => {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 200); // delay ensures section is mounted
+  }
+};
 
 import adobeImage from '../Logo/adobe2.jpg';
 import hpImage from '../Logo/Hp1.png';
@@ -13,6 +24,14 @@ import brotherImage from '../Logo/brother-log.png';
 import xeroxImage from '../Logo/Xerox-logo.jpg';
 import konicaImage from '../Logo/Konica1.png';
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      scrollToHash(location.hash);
+    }
+  }, [location]);
+
   const brandLogos = [
     { name: 'HP', src: hpImage },
     { name: 'Canon', src: canonImage },
@@ -21,6 +40,9 @@ const Services = () => {
     { name: 'Xerox', src: xeroxImage },
     { name: 'Konica', src: konicaImage },
   ];
+
+
+
 
   return (
     <div className="min-h-screen py-20">
@@ -44,6 +66,7 @@ const Services = () => {
         {[
           {
             icon: <Camera className="h-8 w-8" />,
+            id: "cctv",
             title: 'CCTV Security Systems',
             subtitle: 'Complete surveillance solutions for maximum security',
             audience: ['Businesses', 'Residential', 'Government'],
@@ -63,6 +86,7 @@ const Services = () => {
           },
           {
             icon: <Monitor className="h-8 w-8" />,
+            id:'Computer',
             title: 'Computer Services',
             subtitle: 'Expert IT solutions for all your computing needs',
             expertise: [
@@ -75,6 +99,7 @@ const Services = () => {
           },
           {
             icon: <Printer className="h-8 w-8" />,
+            id: 'Printer',
             title: 'Printer Solutions',
             subtitle: 'Complete printer for all major brands',
             services: [
@@ -87,6 +112,7 @@ const Services = () => {
           },
           {
             icon: <Fingerprint className="h-8 w-8" />,
+            id: 'biometric',
             title: 'Biometric Attendance Systems',
             subtitle: 'Modern attendance tracking with biometric and RFID solutions',
             features: [
@@ -98,6 +124,7 @@ const Services = () => {
           },
           {
             icon: <Printer className="h-8 w-8" />,
+            id: 'Photo',
             title: 'Photocopy Machines (Xerox Machines)',
             subtitle: 'Sales and servicing for top photocopier brands',
             highlights: [
@@ -116,7 +143,8 @@ const Services = () => {
             damping={0.1}
             className="mb-20"
           >
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div id={service.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
+
               <div
                 className="relative p-8 text-white bg-cover bg-center"
                 style={{ backgroundImage: `url(${adobeImage})` }}
