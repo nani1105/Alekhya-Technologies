@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Shield, Phone } from 'lucide-react';
 import logo from '../Logo/logo.png';
+import { GradientButton } from "../components/ui/gradient-button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,13 +61,12 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <a
-              href="tel:+919573376389"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center space-x-2"
-            >
-              <Phone className="h-4 w-4" />
-              <span>Call Now</span>
-            </a>
+            <GradientButton asChild className="flex items-center space-x-2">
+  <a href="tel:+919573376389">
+    <Phone className="h-4 w-4" />
+    <span>Call Now</span>
+  </a>
+</GradientButton>
           </div>
 
           <div className="md:hidden flex items-center">

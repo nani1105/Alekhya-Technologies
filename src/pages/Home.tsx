@@ -14,6 +14,10 @@ import {
   Cctv,
 } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import { GradientButton } from "../components/ui/gradient-button";
+import { GlowCard } from "../components/ui/spotlight-card";
+
+
 
 
 
@@ -132,19 +136,15 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-md hover:shadow-[0_0_12px_rgba(96,165,250,0.8)]
-                transition duration-300 ">
-                  Get Free Quote
-                </Link>
+            <Link to="/contact">
+              <GradientButton className="w-full sm:w-auto">Get Free Quote</GradientButton>
+            </Link>
 
-              <Link
-                to="/services"
-                className=" text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white bg-gradient-to-r from-amber-500 to-purple-600 hover:text-violet-900 transition-colors duration-200" >
-                View Services
-              </Link>
-            </div>
+            <Link to="/services">
+              <GradientButton variant="variant" className="w-full sm:w-auto">View Services</GradientButton>
+            </Link>
+          </div>
+
           </div>
         </div>
       </section>
@@ -155,19 +155,19 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <Fade direction="up" cascade triggerOnce delay={50} duration={800}>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:scale-110">
+                <div className="text-3xl font-bold text-blue-600 mb-2 ">10+</div>
                 <div className="text-gray-700">Years Experience</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:scale-110">
                 <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
                 <div className="text-gray-700">Happy Clients</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+              <div className="bg-white p-6 rounded-lg shadow-md hover:scale-110">
+                <div className="text-3xl font-bold text-purple-600 mb-2 ">24/7</div>
                 <div className="text-gray-700">Support Available</div>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="bg-white p-6 rounded-lg shadow-md hover:scale-110">
                 <div className="text-3xl font-bold text-orange-600 mb-2">100%</div>
                 <div className="text-gray-700">Satisfaction Rate</div>
               </div>
