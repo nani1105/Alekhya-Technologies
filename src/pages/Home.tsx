@@ -16,8 +16,7 @@ import {
 import { Fade, Slide } from 'react-awesome-reveal';
 import { GradientButton } from "../components/ui/gradient-button";
 import { GlowCard } from "../components/ui/spotlight-card";
-
-
+import { TextShimmer } from '../components/ui/text-shimmer';
 
 
 
@@ -44,19 +43,31 @@ const Home = () => {
         >
 
         <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative z-20 max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="bg-white p-2 rounded-full">
-                  <img
-                    src={logo}
-                    alt="Alekhya Logo"
-                    className="h-12 w-12 object-contain"
-                  />
-                </div>
+          <div className="bg-white p-3 sm:p-4 rounded-full">
+            <img
+              src={logo}
+              alt="Alekhya Logo"
+              className="h-16 w-16 sm:h-20 sm:w-20 object-contain"
+            />
+          </div>
+        </div>
 
-            </div>
-            <h1 className="text-3xl sm:text-6xl font-bold">Alekhya Technologies</h1>
+           <div className="text-3xl sm:text-6xl font-bold leading-tight overflow-visible">
+            <span className="inline-block align-baseline leading-[1.4]">
+              <TextShimmer
+                duration={3.2}
+                className="block [--base-color:theme(colors.blue.600)] [--base-gradient-color:theme(colors.blue.200)] dark:[--base-color:theme(colors.blue.700)] dark:[--base-gradient-color:theme(colors.blue.400)]">
+                Alekhya Technologies
+              </TextShimmer>
+            </span>
+          </div>
+
+
+
+
             <h2 className="text-blue-300 text-2xl md:text-4xl font-bold mb-6">Professional Tech Solutions</h2>
              <h3 className='text-2xl md-text-3xl font-bold'>You Can Trust</h3>
             
