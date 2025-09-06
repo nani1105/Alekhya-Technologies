@@ -14,9 +14,14 @@ import {
   Cctv,
 } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import ProductCarousel from "../components/ProductCarousel";
 import { GradientButton } from "../components/ui/gradient-button";
 import { GlowCard } from "../components/ui/spotlight-card";
 import { TextShimmer } from '../components/ui/text-shimmer';
+import GlassCard from "../components/ui/glass-card";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -33,7 +38,49 @@ import biometric from '../Logo/biometric.webp';
 import laptop from '../Logo/Laptop.jpeg';
 import logo from '../Logo/logo.png';
 
+const products = [
+  {
+    id: 1,
+    title: "Dell Latitude (Refurbished)",
+    desc: "Durable business laptops with 1 year warranty.",
+    image: laptop,
+  },
+  {
+    id: 2,
+    title: "HP ProBook (Used)",
+    desc: "Affordable professional laptops for students & offices.",
+    image: laptop,
+  },
+  {
+    id: 3,
+    title: "HP All-in-One PC 24”",
+    desc: "Sleek desktop solution for home & office use.",
+    image: Computer,
+  },
+  {
+    id: 4,
+    title: "Lenovo All-in-One 23.8”",
+    desc: "Powerful AIO with modern slim design.",
+    image: Computer,
+  },
+];
+
 const Home = () => {
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // tablets
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -159,7 +206,22 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+      <section className="py-16 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-10">Featured Products</h2>
+          <Slider {...carouselSettings}>
+            {products.map((p) => (
+              <div key={p.id}>
+                <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl shadow-lg p-6 mx-2 text-center hover:scale-105 transition-transform duration-300">
+                  <img src={p.image} alt={p.title} className="h-40 w-auto mx-auto mb-4 object-contain" />
+                  <h3 className="text-xl font-semibold">{p.title}</h3>
+                  <p className="text-sm text-gray-300">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
