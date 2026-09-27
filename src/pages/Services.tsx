@@ -57,8 +57,7 @@ const Services = () => {
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions backed by 10+ years of expertise and trusted by
-              government agencies
+              Comprehensive technology solutions backed by 15+ years of industry expertise. Trusted by government agencies, defense labs, educational institutions, financial firms, and tech startups.
             </p>
           </Fade>
         </div>
@@ -66,16 +65,63 @@ const Services = () => {
         {/* Service Sections */}
         {[
           {
+            icon: <Shield className="h-8 w-8" />,
+            id: "amc",
+            title: 'Annual Maintenance Contracts (AMC)',
+            subtitle: 'End-to-End SLA-driven AMC contracts for electronics, computers, and office equipment',
+            audience: ['Government Organizations', 'Educational Institutions & Schools', 'CA & Financial Firms', 'Software Startups'],
+            audienceColors: ['text-blue-600', 'text-green-600', 'text-purple-600', 'text-amber-600'],
+            audienceDesc: [
+              'State & Central Govt offices, Defense labs (DRDO), Meteorological Dept',
+              'Air Force Schools, Private & Govt Schools, Colleges & Universities',
+              'Chartered Accountant firms, Banks (NABARD, National Banks)',
+              'Growing IT startups, enterprise offices, retail operations',
+            ],
+            points: [
+              'Comprehensive Computer & Server AMC: Preventive care, hardware repair & zero-downtime support',
+              'Photocopy & Xerox Machine AMC: Regular maintenance, toner supply & part replacements',
+              'Note & Currency Counting Machines AMC: Precision servicing and repair for banking & office units',
+              'Complete Server & Networking AMC: Routers, switches, rack servers, and firewall management',
+              'SLA-Backed Response Times: On-site emergency technician dispatch for uninterrupted workflow',
+            ],
+          },
+          {
+            icon: <Monitor className="h-8 w-8" />,
+            id: "refurbished",
+            title: 'A-Grade Refurbished Laptops & Custom PCs',
+            subtitle: 'Enterprise-grade refurbished laptops & customized All-in-One (AIO) desktop solutions',
+            points: [
+              'A-Grade Refurbished Laptops: Thoroughly tested, premium condition business laptops (Dell, HP, Lenovo ThinkPad, Apple MacBook) with warranty',
+              'Customized PC Configurations: Built to specific workstation requirements for CAD, software development, accounting & administrative use',
+              'All-in-One (AIO) PC Solutions: Space-saving, high-performance desktop solutions ideal for schools & office desks',
+              'Cost-Effective Upgrades: Save up to 50-70% on CapEx compared to brand new retail pricing',
+              'Post-Sales Support: Comprehensive hardware warranty and hassle-free replacements',
+            ],
+          },
+          {
+            icon: <Wrench className="h-8 w-8" />,
+            id: "networking",
+            title: 'Complete Server & Networking Solutions',
+            subtitle: 'Robust enterprise network setup, server management, and structured cabling',
+            points: [
+              'Server Installation & Management: Windows Server, Linux Server, domain controllers, and backup systems',
+              'Structured LAN & Fiber Cabling: Neat, high-speed office networking setup and rack wiring',
+              'Router, Switch & Firewall Config: Cisco, MicroTik, TP-Link network hardware deployment',
+              'WiFi & Mesh Solutions: Seamless connectivity across multi-floor offices and school campuses',
+              'Network Security Audit: Firewall protection, VPN setup, and data backup protocols',
+            ],
+          },
+          {
             icon: <Camera className="h-8 w-8" />,
             id: "cctv",
             title: 'CCTV Security Systems',
             subtitle: 'Complete surveillance solutions for maximum security',
-            audience: ['Businesses', 'Residential', 'Government'],
+            audience: ['Businesses', 'Residential', 'Government & Defense'],
             audienceColors: ['text-blue-600', 'text-green-600', 'text-purple-600'],
             audienceDesc: [
               'Offices, retail stores, warehouses, manufacturing units',
               'Homes, apartments, gated communities',
-              'Offices, institutions, public spaces',
+              'Offices, institutions, defense facilities, schools',
             ],
             points: [
               'HD & 4K Camera Installation: High-resolution cameras for crystal clear footage',
@@ -88,7 +134,7 @@ const Services = () => {
           {
             icon: <Monitor className="h-8 w-8" />,
             id:'Computer',
-            title: 'Computer Services',
+            title: 'Computer & Hardware Repair Services',
             subtitle: 'Expert IT solutions for all your computing needs',
             expertise: [
               'Hardware Repair & Upgrade: Motherboard, RAM, storage, and component repairs',
@@ -101,8 +147,8 @@ const Services = () => {
           {
             icon: <Printer className="h-8 w-8" />,
             id: 'Printer',
-            title: 'Printer Solutions',
-            subtitle: 'Complete printer for all major brands',
+            title: 'Printer Solutions & Cartridge Supply',
+            subtitle: 'Complete printer repair & supply for all major brands',
             services: [
               'All Brand Repairs: HP, Canon, Epson, Brother, Samsung, Konica Minolta and more',
               'Toner & Cartridge Supply: Original and compatible cartridges available',
@@ -126,13 +172,13 @@ const Services = () => {
           {
             icon: <Printer className="h-8 w-8" />,
             id: 'Photo',
-            title: 'Photocopy Machines (Xerox Machines)',
-            subtitle: 'Sales and servicing for top photocopier brands',
+            title: 'Photocopy Machines & Counting Machines',
+            subtitle: 'Sales, rental, and AMC for top photocopier and currency counting machine brands',
             highlights: [
-              'New Machine Sales: Authorized dealer of Canon, Xerox, Konica Minolta, and more',
-              'Rental & Leasing Options: Cost-effective plans for businesses',
-              'Repair Services: Fast service with original spare parts',
-              'Annual Maintenance: Scheduled service contracts to ensure uptime',
+              'New & Refurbished Photocopiers: Authorized sales/rental of Canon, Xerox, Konica Minolta',
+              'Currency & Note Counting Machines: Sales and quick repair/servicing for high-accuracy counting units',
+              'Rental & Leasing Options: Cost-effective plans for schools, startups & government offices',
+              'Annual Maintenance (AMC): Scheduled service contracts to ensure maximum operational uptime',
             ],
           },
         ].map((service, index) => (

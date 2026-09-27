@@ -95,8 +95,8 @@ const Home = () => {
              <h3 className='text-2xl md-text-3xl font-bold'>You Can Trust</h3>
             
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              10+ years of excellence in CCTV security, computer services, and printer solutions.
-              Trusted by NABARD, DRDO, and high-profile clients across India.
+              15+ years of industry excellence in Enterprise IT AMC Contracts, Server & Networking, CCTV Security, and A-Grade Refurbished Laptops.
+              Trusted by DRDO, Meteorological Dept, Air Force School, NABARD & National Banks.
             </p>
 
             
@@ -194,7 +194,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <Fade direction="up" cascade triggerOnce delay={50} duration={800}>
               <div className="bg-white p-6 rounded-lg shadow-md hover:scale-110">
-                <div className="text-3xl font-bold text-blue-600 mb-2 ">10+</div>
+                <div className="text-3xl font-bold text-blue-600 mb-2 ">15+</div>
                 <div className="text-gray-700">Years Experience</div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md hover:scale-110">
@@ -319,34 +319,44 @@ const Home = () => {
             </div>
           </Fade>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <Slide direction="left" triggerOnce delay={0} duration={1000}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden ">
-                  <img src={nabardLogo} alt="NABARD Logo" className="w-full h-full object-cover" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">NABARD</h3>
-                <p className="text-gray-600">National Bank for Agriculture and Rural Development</p>
-              </div>
-            </Slide>
-
-            <Slide direction="up" triggerOnce delay={200} duration={1000}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div className="bg-white p-6 rounded-lg shadow-md text-center h-full">
                 <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
                   <img src={drdoLogo} alt="DRDO Logo" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">DRDO</h3>
-                <p className="text-gray-600">Defence Research and Development Organisation</p>
+                <h3 className="font-bold text-lg mb-2">DRDO & Defense</h3>
+                <p className="text-gray-600 text-sm">Defence Research & Development Organisation AMC & Tech Partner</p>
               </div>
             </Slide>
 
-            <Slide direction="right" triggerOnce delay={400} duration={1000}>
-              <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="bg-yellow-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                  <Star className="h-10 w-10 text-yellow-600" />
+            <Slide direction="up" triggerOnce delay={150} duration={1000}>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center h-full">
+                <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                  <img src={nabardLogo} alt="NABARD Logo" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Celebrity Clients</h3>
-                <p className="text-gray-600">High-profile individuals and entertainment industry</p>
+                <h3 className="font-bold text-lg mb-2">NABARD & National Banks</h3>
+                <p className="text-gray-600 text-sm">National Banks & Financial Institutions Infrastructure Contracts</p>
+              </div>
+            </Slide>
+
+            <Slide direction="up" triggerOnce delay={300} duration={1000}>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center h-full">
+                <div className="bg-blue-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                  <Award className="h-10 w-10 text-blue-600" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Meteorological Dept</h3>
+                <p className="text-gray-600 text-sm">India Meteorological Department Electronics & Server AMC Contracts</p>
+              </div>
+            </Slide>
+
+            <Slide direction="right" triggerOnce delay={450} duration={1000}>
+              <div className="bg-white p-6 rounded-lg shadow-md text-center h-full">
+                <div className="bg-green-100 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                  <Users className="h-10 w-10 text-green-600" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Air Force School & Edu</h3>
+                <p className="text-gray-600 text-sm">Schools, Educational Institutions, CA Firms & Software Startups</p>
               </div>
             </Slide>
           </div>

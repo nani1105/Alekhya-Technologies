@@ -33,8 +33,7 @@ const About = () => {
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A decade of excellence in technology solutions, trusted by government agencies, 
-              enterprises, and high-profile clients across India.
+              15 years of industry excellence in enterprise technology solutions, IT AMC contracts, and security infrastructure. Trusted by DRDO, Meteorological Dept, Air Force School, NABARD & National Banks.
             </p>
           </Fade>
         </div>
@@ -47,25 +46,20 @@ const About = () => {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Journey</h2>
                 <div className="space-y-4 text-gray-700">
                   <p>
-                    Founded over a decade ago, Alekhya Technologies began with a simple mission: to provide 
-                    reliable, professional technology solutions that businesses and individuals can trust.
+                    With 15 years in the IT industry, Alekhya Technologies provides end-to-end technology infrastructure, Annual Maintenance Contracts (AMC), server & networking deployments, CCTV security, and premium A-grade refurbished laptops.
                   </p>
                   <p>
-                    What started as a small local service has grown into a trusted partner for some of 
-                    India's most prestigious organizations, including NABARD and DRDO. Our commitment 
-                    to excellence and customer satisfaction has earned us a reputation that spans 
-                    across various industries.
+                    We proudly serve State & Central Government Organizations, Educational Institutions & Schools, CA & Financial Firms, and Software Startups. Our track record includes key contracts with defense & government entities like DRDO, Meteorological Dept, Air Force School, NABARD, and National Banks.
                   </p>
                   <p>
-                    Today, we continue to evolve with technology while maintaining our core values: 
-                    integrity, reliability, and exceptional service quality.
+                    Today, we continue to deliver high-uptime AMC SLAs, budget-friendly customized PCs, printer/photocopy solutions, and top-tier refurbished IT hardware across India.
                   </p>
                 </div>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-2">10+</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
                     <div className="text-sm text-gray-600">Years of Excellence</div>
                   </div>
                   <div className="text-center">

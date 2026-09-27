@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Shield, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Logo from '../Logo/logo.png';
 
@@ -23,7 +24,7 @@ const Footer = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="bg-white p-2 rounded-full">
                 <img
@@ -35,29 +36,38 @@ const Footer = () => {
 
               <span className="text-xl font-bold">Alekhya Technologies</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Your trusted partner for CCTV security, computer solutions, and printer services. 
-              Serving businesses and individuals with 10+ years of excellence.
+            <p className="text-gray-300 text-sm mb-4">
+              Your trusted enterprise partner for IT AMC contracts, A-Grade refurbished laptops, custom PCs, server & networking setups, photocopiers, currency counting machines, and CCTV security.
             </p>
-            <div className="flex space-x-4">
-              <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                10+ Years Experience
+            <div className="flex flex-wrap gap-2">
+              <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                15+ Years Experience
               </div>
-              <div className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                24/7 Support
+              <div className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                SLA Support
               </div>
             </div>
           </div>
 
+          {/* Key Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Our Key Solutions</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li><Link to="/amc" className="hover:text-blue-400 transition-colors">Enterprise AMC Contracts</Link></li>
+              <li><Link to="/refurbished-laptops" className="hover:text-blue-400 transition-colors">A-Grade Refurbished Laptops</Link></li>
+              <li><Link to="/pc-solutions" className="hover:text-blue-400 transition-colors">Custom & All-in-One PCs</Link></li>
+              <li><Link to="/services#cctv" className="hover:text-blue-400 transition-colors">CCTV & Surveillance Systems</Link></li>
+              <li><Link to="/services#Photo" className="hover:text-blue-400 transition-colors">Photocopier & Counting Machines</Link></li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Contact Info</h3>
+            <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-400" />
-                
-                <span className="text-gray-300"><a
-              href="tel:+919573376389">+91 95733 76389</a> </span>
+                <span className="text-gray-300"><a href="tel:+919573376389">+91 95733 76389</a></span>
               </div>
               <div className="flex items-center space-x-2 break-all">
                 <Mail className="h-4 w-4 text-blue-400" />
@@ -77,8 +87,8 @@ const Footer = () => {
 
           {/* Business Hours */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
-            <div className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Business Hours</h3>
+            <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4 text-blue-400" />
                 <div>
@@ -92,8 +102,8 @@ const Footer = () => {
 
         {/* Footer bottom */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2025 Alekhya Technologies. All rights reserved. Trusted by government agencies and enterprises.
+          <p className="text-gray-400 text-sm">
+            © 2026 Alekhya Technologies. All rights reserved. Trusted by DRDO, Meteorological Dept, Air Force School, NABARD & National Banks.
           </p>
         </div>
       </div>
