@@ -1,112 +1,90 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Globe } from 'lucide-react';
 import Logo from '../Logo/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gray-900 text-white mt-20 overflow-hidden">
-      {/* Wave Animation Top */}
-      <div className="absolute -top-16 left-0 w-full overflow-hidden leading-none rotate-180 z-0">
-        <svg
-          className="relative block w-[calc(200%+1.3px)] h-16"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.27C188.15,69.4,93.84,101.35,0,120V0H1200V120c-110.52-27.65-221.05-55.29-332.61-56.27C747.17,63.18,634.53,100.33,500,100.33S252.83,63.18,321.39,56.27Z"
-            fill="#1f2937"
-          ></path>
-        </svg>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative bg-slate-950 border-t border-slate-800 text-slate-300 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand Info */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-white p-2 rounded-full">
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="bg-white p-2 rounded-full shadow-md">
                 <img
                   src={Logo}
                   alt="Alekhya Logo"
-                  className="h-12 w-12 object-contain"
+                  className="h-10 w-10 object-contain"
                 />
               </div>
-
-              <span className="text-xl font-bold">Alekhya Technologies</span>
+              <span className="text-xl font-bold text-white">Alekhya Technologies</span>
             </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Your trusted enterprise partner for IT AMC contracts, A-Grade refurbished laptops, custom PCs, server & networking setups, photocopiers, currency counting machines, and CCTV security.
+            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+              Pan-India System Integrator bringing diverse technologies together into cohesive, secure environments where everything connects and performs effortlessly—covering PRO AV, Unified Collaboration, IT Infrastructure, Surveillance, and Print.
             </p>
-            <div className="flex flex-wrap gap-2">
-              <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                15+ Years Experience
-              </div>
-              <div className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                SLA Support
-              </div>
+            <div className="flex items-center space-x-3 text-xs text-slate-400">
+              <span className="flex items-center space-x-1"><Globe className="w-4 h-4 text-blue-400" /><span>ISO Certified System Integrator</span></span>
             </div>
           </div>
 
-          {/* Key Solutions */}
+          {/* Solutions Column */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Enterprise Solutions</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link to="/enterprise-solutions#it-infrastructure" className="hover:text-blue-400 transition-colors">IT Infrastructure & Networking</Link></li>
-              <li><Link to="/enterprise-solutions#av-infrastructure" className="hover:text-blue-400 transition-colors">Audio-Visual (AV) Infrastructure</Link></li>
-              <li><Link to="/enterprise-solutions#voice-telephony" className="hover:text-blue-400 transition-colors">IP Telephony & Unified Collaboration</Link></li>
-              <li><Link to="/enterprise-solutions#ip-surveillance" className="hover:text-blue-400 transition-colors">IP Surveillance & Security</Link></li>
-              <li><Link to="/enterprise-solutions#system-integration" className="hover:text-blue-400 transition-colors">End-to-End System Integration</Link></li>
-              <li><Link to="/enterprise-solutions#implementation-support" className="hover:text-blue-400 transition-colors">SLA Managed AMC & Support</Link></li>
-              <li><Link to="/enterprise-solutions#oem-ecosystem" className="hover:text-blue-400 transition-colors">OEM Technology Partnerships</Link></li>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-blue-400 mb-4">Solutions</h3>
+            <ul className="space-y-2.5 text-xs">
+              <li><Link to="/solutions/pro-av-smart-workplaces" className="hover:text-white transition-colors">PRO AV & Smart Workplaces</Link></li>
+              <li><Link to="/solutions/unified-collaboration" className="hover:text-white transition-colors">Unified Collaboration (UCC)</Link></li>
+              <li><Link to="/solutions/secured-it-infrastructure" className="hover:text-white transition-colors">Secured IT Infrastructure</Link></li>
+              <li><Link to="/solutions/secured-surveillance" className="hover:text-white transition-colors">Secured Surveillance</Link></li>
+              <li><Link to="/solutions/print-solutions" className="hover:text-white transition-colors">Print Solutions</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Services Column */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Contact Info</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300"><a href="tel:+919573376389">+91 95733 76389</a></span>
-              </div>
-              <div className="flex items-center space-x-2 break-all">
-                <Mail className="h-4 w-4 text-blue-400" />
-                <a
-                  href="mailto:alekhyatechnologies7@gmail.com"
-                  className="text-gray-300 hover:underline"
-                >
-                  alekhyatechnologies7@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">Hyderabad, Telangana</span>
-              </div>
-            </div>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-blue-400 mb-4">Services</h3>
+            <ul className="space-y-2.5 text-xs">
+              <li><Link to="/services/professional-services" className="hover:text-white transition-colors">Professional Services</Link></li>
+              <li><Link to="/services/managed-services" className="hover:text-white transition-colors">Managed Services</Link></li>
+              <li><Link to="/services/support-maintenance" className="hover:text-white transition-colors">Support & Maintenance</Link></li>
+              <li><Link to="/enterprise-solutions#oem-ecosystem" className="hover:text-white transition-colors">OEM Technology Partners</Link></li>
+            </ul>
           </div>
 
-          {/* Business Hours */}
+          {/* Navigation & Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Business Hours</h3>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4 text-blue-400" />
-                <div>
-                  <div className="text-gray-300">Mon - Sat: 9:00 AM - 8:00 PM</div>
-                  <div className="text-gray-300">Sun: 10:00 AM - 6:00 PM</div>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-blue-400 mb-4">Company & Media</h3>
+            <ul className="space-y-2.5 text-xs">
+              <li><Link to="/about-us/who-we-are" className="hover:text-white transition-colors">Who We Are</Link></li>
+              <li><Link to="/about-us/awards" className="hover:text-white transition-colors">Awards & Achievements</Link></li>
+              <li><Link to="/about-us/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/resources/blog" className="hover:text-white transition-colors">Resource Blog</Link></li>
+              <li><Link to="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/events" className="hover:text-white transition-colors">Events</Link></li>
+              <li><Link to="/contact-us" className="hover:text-white transition-colors">Contact Us</Link></li>
+            </ul>
           </div>
         </div>
 
-        {/* Footer bottom */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2026 Alekhya Technologies. All rights reserved. Trusted by DRDO, Meteorological Dept, Air Force School, NABARD & National Banks.
-          </p>
+        {/* Contact Strip */}
+        <div className="border-t border-slate-800 pt-8 pb-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-400">
+          <div className="flex items-center space-x-2">
+            <Phone className="w-4 h-4 text-blue-400" />
+            <span><a href="tel:+919573376389" className="hover:text-white">+91 95733 76389</a></span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <Mail className="w-4 h-4 text-blue-400" />
+            <span><a href="mailto:alekhyatechnologies7@gmail.com" className="hover:text-white">alekhyatechnologies7@gmail.com</a></span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <MapPin className="w-4 h-4 text-blue-400" />
+            <span>Hyderabad, Telangana, India (Pan-India Support)</span>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-slate-900 mt-6 pt-6 text-center text-xs text-slate-500">
+          © 2026 Alekhya Technologies Private Limited. All rights reserved. Built for enterprise scale across India.
         </div>
       </div>
     </footer>
