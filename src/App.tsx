@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import AmcServices from './pages/AmcServices';
 import RefurbishedLaptops from './pages/RefurbishedLaptops';
 import PcSolutions from './pages/PcSolutions';
+import EnterpriseSolutions from './pages/EnterpriseSolutions';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/enterprise-solutions" element={<EnterpriseSolutions />} />
           <Route path="/services" element={<Services />} />
           <Route path="/amc" element={<AmcServices />} />
           <Route path="/refurbished-laptops" element={<RefurbishedLaptops />} />

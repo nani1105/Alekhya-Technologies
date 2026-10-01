@@ -38,6 +38,15 @@ const Navbar = () => {
               Home
             </Link>
             <Link
+              to="/enterprise-solutions"
+              className={`${
+                isActive('/enterprise-solutions') ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600 font-semibold'
+              } px-2 py-2 text-sm font-medium transition-colors duration-200 flex items-center space-x-1`}
+            >
+              <span>Enterprise Solutions</span>
+              <span className="bg-blue-100 text-blue-800 text-[10px] font-bold px-1.5 py-0.5 rounded">IT & AV</span>
+            </Link>
+            <Link
               to="/amc"
               className={`${
                 isActive('/amc') ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600'
@@ -59,7 +68,7 @@ const Navbar = () => {
                 isActive('/pc-solutions') ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600'
               } px-2 py-2 text-sm font-medium transition-colors duration-200`}
             >
-              PC & AIO Solutions
+              PC Solutions
             </Link>
             <Link
               to="/services"
@@ -75,7 +84,7 @@ const Navbar = () => {
                 isActive('/about') ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-700 hover:text-blue-600'
               } px-2 py-2 text-sm font-medium transition-colors duration-200`}
             >
-              About Us
+              About
             </Link>
             <Link
               to="/contact"
@@ -113,6 +122,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Home
+            </Link>
+            <Link
+              to="/enterprise-solutions"
+              className="block px-3 py-2 text-base font-medium text-blue-600 font-semibold hover:text-blue-800"
+              onClick={() => setIsOpen(false)}
+            >
+              Enterprise Solutions (IT, AV & Security)
             </Link>
             <Link
               to="/amc"

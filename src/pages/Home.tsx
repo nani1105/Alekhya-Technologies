@@ -12,6 +12,13 @@ import {
   Star,
   Fingerprint,
   Cctv,
+  Network,
+  Tv,
+  PhoneCall,
+  ShieldCheck,
+  Cpu,
+  Wrench,
+  Sparkles,
 } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
 import ProductCarousel from "../components/product_corousel";
@@ -170,18 +177,131 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <GradientButton className="w-full sm:w-auto">Get Free Quote</GradientButton>
-            </Link>
+              <Link to="/enterprise-solutions">
+                <GradientButton className="w-full sm:w-auto flex items-center justify-center space-x-2">
+                  <Sparkles className="h-4 w-4" />
+                  <span>Enterprise Solutions (IT, AV & Security)</span>
+                </GradientButton>
+              </Link>
 
-            <Link to="/services">
-              <GradientButton variant="variant" className="w-full sm:w-auto">View Services</GradientButton>
-            </Link>
-          </div>
+              <Link to="/contact">
+                <GradientButton variant="variant" className="w-full sm:w-auto">Get Free Quote</GradientButton>
+              </Link>
+
+              <Link to="/services">
+                <GradientButton variant="variant" className="w-full sm:w-auto">View All Services</GradientButton>
+              </Link>
+            </div>
 
           </div>
         </div>
       </section>
+
+      {/* Enterprise Verticals Grid Section */}
+      <section className="py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Turnkey Enterprise Integration</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-extrabold mb-4">
+              Enterprise System Integration & Infrastructure Solutions
+            </h2>
+            <p className="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg">
+              Empowering corporate workplaces, defense laboratories, banking facilities, and educational campuses with resilient IT networks, AV automation, IP telephony, 4K security, and SLA-backed AMC contracts.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Network,
+                title: 'IT Infrastructure & Networking',
+                desc: 'Enterprise L2/L3 switching, Wi-Fi 6/6E, structured fiber cabling, data center racks, and next-gen firewalls.',
+                link: '/enterprise-solutions#it-infrastructure',
+                tag: 'Network Core'
+              },
+              {
+                icon: Tv,
+                title: 'Audio-Visual (AV) Infrastructure',
+                desc: 'Executive boardroom automation, fine-pitch LED video walls, interactive flat panels, and DSP audio setups.',
+                link: '/enterprise-solutions#av-infrastructure',
+                tag: 'AV Automation'
+              },
+              {
+                icon: PhoneCall,
+                title: 'IP Telephony & Unified Voice (UCC)',
+                desc: 'Enterprise IP PBX systems, cloud telephony, Microsoft Teams / Zoom Room integrations, and SIP endpoints.',
+                link: '/enterprise-solutions#voice-telephony',
+                tag: 'Unified Voice'
+              },
+              {
+                icon: ShieldCheck,
+                title: 'IP Surveillance & Security',
+                desc: '4K AI IP CCTV cameras, thermal vision, biometric access control (Face ID & Fingerprint), and perimeter barriers.',
+                link: '/enterprise-solutions#ip-surveillance',
+                tag: '4K Security'
+              },
+              {
+                icon: Cpu,
+                title: 'End-to-End System Integration',
+                desc: 'Turnkey convergence of multi-vendor hardware, unified central monitoring dashboards, and middleware.',
+                link: '/enterprise-solutions#system-integration',
+                tag: 'System Integration'
+              },
+              {
+                icon: Wrench,
+                title: 'Implementation & SLA Support',
+                desc: 'Pre-deployment OEM staging, 24/7 SLA-backed AMC contracts, resident technicians, and rapid repair dispatch.',
+                link: '/enterprise-solutions#implementation-support',
+                tag: 'SLA Support'
+              }
+            ].map((vertical, idx) => (
+              <div
+                key={idx}
+                className="bg-slate-950 border border-slate-800 hover:border-blue-500/50 p-8 rounded-2xl flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 shadow-xl"
+              >
+                <div>
+                  <div className="flex justify-between items-center mb-6">
+                    <div className="bg-blue-600/20 text-blue-400 p-3.5 rounded-xl border border-blue-500/30">
+                      <vertical.icon className="w-7 h-7" />
+                    </div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 bg-slate-900 border border-slate-800 px-3 py-1 rounded-full">
+                      {vertical.tag}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                    {vertical.title}
+                  </h3>
+                  <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                    {vertical.desc}
+                  </p>
+                </div>
+
+                <Link
+                  to={vertical.link}
+                  className="inline-flex items-center space-x-2 text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors pt-4 border-t border-slate-800/80"
+                >
+                  <span>Explore Architecture</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/enterprise-solutions"
+              className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3.5 rounded-xl transition-colors shadow-lg shadow-blue-600/30"
+            >
+              <span>View Full Enterprise Portfolio & OEM Partners</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <div className="bg-gray-100 py-20">
         <Fade triggerOnce direction="up">
           <ProductCarousel />

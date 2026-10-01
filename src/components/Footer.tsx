@@ -51,13 +51,15 @@ const Footer = () => {
 
           {/* Key Solutions */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Our Key Solutions</h3>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Enterprise Solutions</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link to="/amc" className="hover:text-blue-400 transition-colors">Enterprise AMC Contracts</Link></li>
-              <li><Link to="/refurbished-laptops" className="hover:text-blue-400 transition-colors">A-Grade Refurbished Laptops</Link></li>
-              <li><Link to="/pc-solutions" className="hover:text-blue-400 transition-colors">Custom & All-in-One PCs</Link></li>
-              <li><Link to="/services#cctv" className="hover:text-blue-400 transition-colors">CCTV & Surveillance Systems</Link></li>
-              <li><Link to="/services#Photo" className="hover:text-blue-400 transition-colors">Photocopier & Counting Machines</Link></li>
+              <li><Link to="/enterprise-solutions#it-infrastructure" className="hover:text-blue-400 transition-colors">IT Infrastructure & Networking</Link></li>
+              <li><Link to="/enterprise-solutions#av-infrastructure" className="hover:text-blue-400 transition-colors">Audio-Visual (AV) Infrastructure</Link></li>
+              <li><Link to="/enterprise-solutions#voice-telephony" className="hover:text-blue-400 transition-colors">IP Telephony & Unified Collaboration</Link></li>
+              <li><Link to="/enterprise-solutions#ip-surveillance" className="hover:text-blue-400 transition-colors">IP Surveillance & Security</Link></li>
+              <li><Link to="/enterprise-solutions#system-integration" className="hover:text-blue-400 transition-colors">End-to-End System Integration</Link></li>
+              <li><Link to="/enterprise-solutions#implementation-support" className="hover:text-blue-400 transition-colors">SLA Managed AMC & Support</Link></li>
+              <li><Link to="/enterprise-solutions#oem-ecosystem" className="hover:text-blue-400 transition-colors">OEM Technology Partnerships</Link></li>
             </ul>
           </div>
 
