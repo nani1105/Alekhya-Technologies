@@ -12,11 +12,23 @@ import {
   Sparkles,
   Headphones,
   Award,
-  Globe,
 } from 'lucide-react';
 import { Fade } from 'react-awesome-reveal';
 import ParticlesBackground from '../components/ParticlesBackground';
 import { GradientButton } from '../components/ui/gradient-button';
+import ciscoLogo from '../Logo/Cisco_logo.svg.webp';
+import arubaLogo from '../Logo/HPE-aruba-networking-logo.webp';
+import dellLogo from '../Logo/Dell.webp';
+import polyLogo from '../Logo/hppoly.jpg';
+import yealinkLogo from '../Logo/Yealink_logo.png';
+import grandstreamLogo from '../Logo/Grandstream.png';
+import hikvisionLogo from '../Logo/Hikvision_logo.svg';
+import dahuaLogo from '../Logo/Dahua_Technology_logo.svg';
+import honeywellLogo from '../Logo/Honeywell.jpeg';
+import canonLogo from '../Logo/Canon.png';
+import epsonLogo from '../Logo/Epson_.png';
+import xeroxLogo from '../Logo/Xerox-logo.jpg';
+import konicaLogo from '../Logo/Konica1.png';
 
 interface SolutionCategory {
   id: string;
@@ -32,6 +44,7 @@ interface SolutionCategory {
     details: string[];
   }[];
   oems: string[];
+  partnerIds: string[];
   deploymentDomains: string[];
 }
 
@@ -83,6 +96,7 @@ const enterpriseCategories: SolutionCategory[] = [
       }
     ],
     oems: ['Cisco', 'HPE Aruba', 'Dell Technologies', 'MicroTik', 'TP-Link Omada', 'Fortinet', 'Schneider / APC'],
+    partnerIds: ['cisco', 'aruba', 'dell'],
     deploymentDomains: ['Corporate HQ Offices', 'Defense & Aerospace Labs', 'Banking Data Centers', 'Educational Campuses']
   },
   {
@@ -132,6 +146,7 @@ const enterpriseCategories: SolutionCategory[] = [
       }
     ],
     oems: ['Poly', 'Logitech', 'Samsung', 'LG Commercial', 'Epson', 'Crestron', 'Kramer', 'Bose Professional'],
+    partnerIds: ['poly', 'epson'],
     deploymentDomains: ['Executive Boardrooms', 'Command & Control Rooms', 'University Auditoriums', 'Training Institutes']
   },
   {
@@ -181,6 +196,7 @@ const enterpriseCategories: SolutionCategory[] = [
       }
     ],
     oems: ['Yealink', 'Grandstream', 'Poly', 'Cisco Webex', 'Avaya', 'Fanvil', 'Jabra'],
+    partnerIds: ['yealink', 'grandstream', 'poly'],
     deploymentDomains: ['BPOs & Call Centers', 'Multi-Branch Enterprises', 'Government Offices', 'Healthcare Facilities']
   },
   {
@@ -230,6 +246,7 @@ const enterpriseCategories: SolutionCategory[] = [
       }
     ],
     oems: ['Hikvision', 'Dahua', 'Honeywell', 'CP Plus', 'Matrix Comsec', 'ZKTeco', 'Bosch'],
+    partnerIds: ['hikvision', 'dahua', 'honeywell'],
     deploymentDomains: ['High-Security Govt Facilities', 'Gated Communities', 'Manufacturing Plants', 'Retail Chains']
   },
   {
@@ -269,6 +286,7 @@ const enterpriseCategories: SolutionCategory[] = [
       }
     ],
     oems: ['Multi-Vendor Ecosystem Integrations across Cisco, Poly, Hikvision, Dell, HP & Honeywell'],
+    partnerIds: ['cisco', 'aruba', 'dell', 'poly', 'hikvision', 'honeywell'],
     deploymentDomains: ['Smart Campus Projects', 'Government Institutions', 'Enterprise HQs', 'Infrastructure Hubs']
   },
   {
@@ -308,25 +326,25 @@ const enterpriseCategories: SolutionCategory[] = [
       }
     ],
     oems: ['All Major OEM Partners (HP, Dell, Canon, Epson, Xerox, Cisco, Yealink, Hikvision)'],
+    partnerIds: ['dell', 'canon', 'epson', 'xerox', 'konica', 'yealink', 'hikvision'],
     deploymentDomains: ['Defense Facilities (DRDO)', 'Banks & NABARD', 'Government Departments', 'Software Companies']
   }
 ];
 
 const oemPartners = [
-  { name: 'Cisco Systems', category: 'Networking & Telephony', logo: 'Cisco' },
-  { name: 'HPE Aruba', category: 'Enterprise Wi-Fi & Switching', logo: 'Aruba' },
-  { name: 'Dell Technologies', category: 'Servers, Storage & Workstations', logo: 'Dell' },
-  { name: 'Lenovo Enterprise', category: 'Workstations & Laptops', logo: 'Lenovo' },
-  { name: 'Poly (HP)', category: 'Video Conferencing & Headsets', logo: 'Poly' },
-  { name: 'Yealink', category: 'IP Phones & Zoom/Teams Rooms', logo: 'Yealink' },
-  { name: 'Grandstream', category: 'IP PBX & VoIP Solutions', logo: 'Grandstream' },
-  { name: 'Hikvision', category: 'AI IP CCTV & Security', logo: 'Hikvision' },
-  { name: 'Dahua Technology', category: '4K CCTV & Video Analytics', logo: 'Dahua' },
-  { name: 'Honeywell', category: 'Security & Access Control', logo: 'Honeywell' },
-  { name: 'Canon', category: 'Photocopiers & Commercial Print', logo: 'Canon' },
-  { name: 'Epson', category: 'Laser Projectors & Printers', logo: 'Epson' },
-  { name: 'Xerox', category: 'Enterprise MFP & Production', logo: 'Xerox' },
-  { name: 'Konica Minolta', category: 'Digital Printing & Scanning', logo: 'Konica' }
+  { id: 'cisco', name: 'Cisco Systems', category: 'Networking & Telephony', image: ciscoLogo },
+  { id: 'aruba', name: 'HPE Aruba', category: 'Enterprise Wi-Fi & Switching', image: arubaLogo },
+  { id: 'dell', name: 'Dell Technologies', category: 'Servers, Storage & Workstations', image: dellLogo },
+  { id: 'poly', name: 'Poly (HP)', category: 'Video Conferencing & Headsets', image: polyLogo },
+  { id: 'yealink', name: 'Yealink', category: 'IP Phones & Zoom/Teams Rooms', image: yealinkLogo },
+  { id: 'grandstream', name: 'Grandstream', category: 'IP PBX & VoIP Solutions', image: grandstreamLogo },
+  { id: 'hikvision', name: 'Hikvision', category: 'AI IP CCTV & Security', image: hikvisionLogo },
+  { id: 'dahua', name: 'Dahua Technology', category: '4K CCTV & Video Analytics', image: dahuaLogo },
+  { id: 'honeywell', name: 'Honeywell', category: 'Security & Access Control', image: honeywellLogo },
+  { id: 'canon', name: 'Canon', category: 'Photocopiers & Commercial Print', image: canonLogo },
+  { id: 'epson', name: 'Epson', category: 'Laser Projectors & Printers', image: epsonLogo },
+  { id: 'xerox', name: 'Xerox', category: 'Enterprise MFP & Production', image: xeroxLogo },
+  { id: 'konica', name: 'Konica Minolta', category: 'Digital Printing & Scanning', image: konicaLogo }
 ];
 
 const EnterpriseSolutions: React.FC = () => {
@@ -367,6 +385,7 @@ const EnterpriseSolutions: React.FC = () => {
   }, [location]);
 
   const activeCategory = enterpriseCategories.find((c) => c.id === activeTab) || enterpriseCategories[0];
+  const activePartners = oemPartners.filter((partner) => activeCategory.partnerIds.includes(partner.id));
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 overflow-hidden">
@@ -536,7 +555,15 @@ const EnterpriseSolutions: React.FC = () => {
             {/* Footer Row: OEMs & Deployments */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-slate-700/60">
               <div>
-                <span className="text-xs uppercase tracking-wider text-slate-400 font-bold block mb-2">Primary OEM Technologies</span>
+                <span className="text-xs uppercase tracking-wider text-slate-400 font-bold block mb-3">Featured Technology Alliances</span>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-3">
+                  {activePartners.map((partner) => (
+                    <div key={partner.id} className="h-16 bg-white rounded-md p-2 flex items-center justify-center" title={partner.name}>
+                      <img src={partner.image} alt={`${partner.name} logo`} className="max-h-full max-w-full object-contain" />
+                    </div>
+                  ))}
+                </div>
+                <span className="text-xs uppercase tracking-wider text-slate-500 font-bold block mb-2">Additional Compatible OEMs</span>
                 <div className="flex flex-wrap gap-2">
                   {activeCategory.oems.map((oem, oIdx) => (
                     <span key={oIdx} className="bg-slate-900 text-blue-300 border border-slate-700 text-xs px-3 py-1 rounded-md font-semibold">
@@ -576,13 +603,13 @@ const EnterpriseSolutions: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {oemPartners.map((oem, idx) => (
+            {oemPartners.map((oem) => (
               <div
-                key={idx}
+                key={oem.id}
                 className="bg-slate-950 border border-slate-800 hover:border-blue-500/50 p-4 rounded-xl flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-105"
               >
-                <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center mb-3 group-hover:bg-blue-600/20 transition-colors">
-                  <Globe className="w-6 h-6 text-blue-400" />
+                <div className="w-full h-16 bg-white rounded-md p-2 flex items-center justify-center mb-3">
+                  <img src={oem.image} alt={`${oem.name} logo`} className="max-h-full max-w-full object-contain" />
                 </div>
                 <h4 className="text-sm font-bold text-white mb-1">{oem.name}</h4>
                 <p className="text-[10px] text-slate-400 leading-tight">{oem.category}</p>
