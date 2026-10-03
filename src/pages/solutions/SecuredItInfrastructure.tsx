@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Network, Server, Shield, Radio, CheckCircle2, ArrowRight, Lock, Cpu } from 'lucide-react';
+import { Network, Server, Shield, Radio, Lock, Cpu } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import cctvImage from '../../Logo/cctv1.jpg';

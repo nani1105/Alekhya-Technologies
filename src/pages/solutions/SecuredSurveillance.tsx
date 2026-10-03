@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Camera, Eye, Lock, Fingerprint, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Camera, Eye, Lock, Fingerprint } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import cctvImage from '../../Logo/cctv1.jpg';

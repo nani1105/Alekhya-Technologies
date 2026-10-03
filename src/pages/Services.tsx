@@ -1,9 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import ParticlesBackground from '../components/ParticlesBackground';
 import {
-  Camera, Monitor, Printer, CheckCircle, Shield, Wrench, Clock, Phone, Fingerprint
+  Camera, Monitor, Printer, CheckCircle, Shield, Wrench, Clock, Fingerprint
 } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
 const scrollToHash = (hash: string) => {

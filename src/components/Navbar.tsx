@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Shield } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import logo from '../Logo/logo.png';
 import { GradientButton } from "../components/ui/gradient-button";
 

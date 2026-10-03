@@ -2,16 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  Shield,
   Users,
   Award,
   CheckCircle,
   Camera,
   Monitor,
   Printer,
-  Star,
   Fingerprint,
-  Cctv,
   Network,
   Tv,
   PhoneCall,
@@ -23,10 +20,7 @@ import {
 import { Fade, Slide } from 'react-awesome-reveal';
 import ProductCarousel from "../components/product_corousel";
 import { GradientButton } from "../components/ui/gradient-button";
-import { GlowCard } from "../components/ui/spotlight-card";
 import { TextShimmer } from '../components/ui/text-shimmer';
-import GlassCard from "../components/ui/glass-card";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -44,26 +38,10 @@ import photocopy from '../Logo/photocopy.webp';
 import biometric from '../Logo/biometric.webp';
 import laptop from '../Logo/Laptop.jpeg';
 import logo from '../Logo/logo.png';
-import lenovo from '../Logo/lenovo-t480.jpg'
 
 
 
 const Home = () => {
-  const carouselSettings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024, // tablets
-        settings: { slidesToShow: 1 },
-      },
-    ],
-  };
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

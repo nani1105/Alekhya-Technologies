@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import {
   Network,
   Tv,
@@ -7,38 +7,16 @@ import {
   ShieldCheck,
   Cpu,
   Wrench,
-  Building2,
   CheckCircle2,
   ArrowRight,
-  Server,
-  Radio,
-  Lock,
-  Eye,
-  Layers,
   Sparkles,
   Headphones,
   Award,
-  Zap,
   Globe,
-  Video,
-  FileCheck
 } from 'lucide-react';
-import { Fade, Slide } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import ParticlesBackground from '../components/ParticlesBackground';
-import GlassCard from '../components/ui/glass-card';
 import { GradientButton } from '../components/ui/gradient-button';
-import { TextShimmer } from '../components/ui/text-shimmer';
-
-// Logos
-import hpImage from '../Logo/Hp1.png';
-import canonImage from '../Logo/Canon.png';
-import epsonImage from '../Logo/Epson_.png';
-import brotherImage from '../Logo/brother-log.png';
-import xeroxImage from '../Logo/Xerox-logo.jpg';
-import konicaImage from '../Logo/Konica1.png';
-import drdoLogo from '../Logo/drdo.png';
-import nabardLogo from '../Logo/NABARD1.png';
-import dellLogo from '../Logo/Dell.webp';
 
 interface SolutionCategory {
   id: string;
@@ -353,7 +331,29 @@ const oemPartners = [
 
 const EnterpriseSolutions: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('it-infrastructure');
+  const [rfqOrg, setRfqOrg] = useState('');
+  const [rfqPhone, setRfqPhone] = useState('');
+  const [rfqEmail, setRfqEmail] = useState('');
+  const [rfqRequirement, setRfqRequirement] = useState('it-networking');
+  const [rfqScope, setRfqScope] = useState('');
   const location = useLocation();
+
+  const handleRfqWhatsApp = (e: React.FormEvent) => {
+    e.preventDefault();
+    const whatsappNumber = "919573376389";
+    const textMessage = `*SYSTEM INTEGRATION PROPOSAL REQUEST - ALEKHYA TECHNOLOGIES*
+---------------------------------------
+🏢 *Organization / Contact:* ${rfqOrg || 'Not provided'}
+📱 *Phone Number:* ${rfqPhone}
+📧 *Work Email:* ${rfqEmail}
+⚙️ *Primary Requirement:* ${rfqRequirement}
+📝 *Project Scope Brief:* ${rfqScope || 'N/A'}
+---------------------------------------`;
+
+    const encodedText = encodeURIComponent(textMessage);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -646,14 +646,16 @@ const EnterpriseSolutions: React.FC = () => {
               </div>
             </div>
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={handleRfqWhatsApp}>
               <div>
                 <label className="block text-xs font-semibold text-slate-300 mb-1">Organization / Contact Person *</label>
                 <input
                   type="text"
-                  placeholder="e.g. Acme Corp / Admin Officer"
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
                   required
+                  value={rfqOrg}
+                  onChange={(e) => setRfqOrg(e.target.value)}
+                  placeholder="e.g. Acme Corp / Admin Officer"
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-400 cursor-text hover:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
                 />
               </div>
 
@@ -662,31 +664,39 @@ const EnterpriseSolutions: React.FC = () => {
                   <label className="block text-xs font-semibold text-slate-300 mb-1">Phone Number *</label>
                   <input
                     type="tel"
-                    placeholder="+91 95733 76389"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
                     required
+                    value={rfqPhone}
+                    onChange={(e) => setRfqPhone(e.target.value)}
+                    placeholder="+91 95733 76389"
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500"
                   />
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">Work Email *</label>
                   <input
                     type="email"
-                    placeholder="name@company.com"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
                     required
+                    value={rfqEmail}
+                    onChange={(e) => setRfqEmail(e.target.value)}
+                    placeholder="name@company.com"
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500"
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-semibold text-slate-300 mb-1">Primary Solution Requirement *</label>
-                <select className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-blue-500">
-                  <option value="it-networking">IT Infrastructure & Enterprise Networking</option>
-                  <option value="av-boardroom">Audio-Visual (AV) Boardroom Automation</option>
-                  <option value="ucc-telephony">IP Telephony & Unified Communications (UCC)</option>
-                  <option value="ip-surveillance">IP CCTV Surveillance & Access Control</option>
-                  <option value="turnkey-integration">End-to-End System Integration</option>
-                  <option value="amc-support">SLA Managed AMC Support Contract</option>
+                <select
+                  value={rfqRequirement}
+                  onChange={(e) => setRfqRequirement(e.target.value)}
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500"
+                >
+                  <option value="IT Infrastructure & Enterprise Networking">IT Infrastructure & Enterprise Networking</option>
+                  <option value="Audio-Visual (AV) Boardroom Automation">Audio-Visual (AV) Boardroom Automation</option>
+                  <option value="IP Telephony & Unified Communications (UCC)">IP Telephony & Unified Communications (UCC)</option>
+                  <option value="IP CCTV Surveillance & Access Control">IP CCTV Surveillance & Access Control</option>
+                  <option value="End-to-End System Integration">End-to-End System Integration</option>
+                  <option value="SLA Managed AMC Support Contract">SLA Managed AMC Support Contract</option>
                 </select>
               </div>
 
@@ -694,14 +704,19 @@ const EnterpriseSolutions: React.FC = () => {
                 <label className="block text-xs font-semibold text-slate-300 mb-1">Project Details / Scope Brief</label>
                 <textarea
                   rows={3}
+                  value={rfqScope}
+                  onChange={(e) => setRfqScope(e.target.value)}
                   placeholder="Describe your site locations, user count, or desired technology stack..."
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500"
                 ></textarea>
               </div>
 
-              <GradientButton type="submit" className="w-full py-3 font-semibold text-sm">
-                Submit Consultation Request
-              </GradientButton>
+              <button
+                type="submit"
+                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg shadow-emerald-950/50"
+              >
+                <span>Submit Request via WhatsApp</span>
+              </button>
             </form>
           </div>
         </div>

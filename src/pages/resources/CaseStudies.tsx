@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, Building, CheckCircle2 } from 'lucide-react';
+import { Layers } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 
 const CaseStudies: React.FC = () => {

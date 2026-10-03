@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Printer, FileText, CheckCircle2, ArrowRight, Shield } from 'lucide-react';
+import { Printer, FileText, Shield } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import adobeImage from '../../Logo/adobe2.jpg';

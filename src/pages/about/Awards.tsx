@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Trophy, Star } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 
 const Awards: React.FC = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Tv, Monitor, Mic, CheckCircle2, ArrowRight, Sparkles, Building, Layers, Volume2, Shield } from 'lucide-react';
+import { Tv, Monitor, ArrowRight, Sparkles, Building, Layers, Volume2 } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import adobeImage from '../../Logo/adobe2.jpg';

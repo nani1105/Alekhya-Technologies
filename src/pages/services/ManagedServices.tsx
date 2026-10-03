@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Clock, Users, Server, CheckCircle2 } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 
 const ManagedServices: React.FC = () => {

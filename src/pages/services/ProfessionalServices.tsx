@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Wrench, CheckCircle2, ArrowRight, Shield, Cpu, FileCheck } from 'lucide-react';
+import { Wrench } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
-import { GradientButton } from '../../components/ui/gradient-button';
 
 const ProfessionalServices: React.FC = () => {
   return (

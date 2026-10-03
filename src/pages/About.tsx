@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Users, Clock, Shield, CheckCircle, Star, Target, Heart } from 'lucide-react';
+import { Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
 
 // Import images

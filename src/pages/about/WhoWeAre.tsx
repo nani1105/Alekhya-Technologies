@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Award, ShieldCheck, Users, CheckCircle2 } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 
 const WhoWeAre: React.FC = () => {

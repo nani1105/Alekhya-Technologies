@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Clock, ShieldCheck, Wrench, CheckCircle2 } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 
 const SupportMaintenance: React.FC = () => {

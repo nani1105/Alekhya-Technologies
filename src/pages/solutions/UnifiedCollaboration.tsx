@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PhoneCall, Video, Headphones, CheckCircle2, ArrowRight, Shield, Globe, Users } from 'lucide-react';
+import { PhoneCall, Video, Headphones, Shield, Globe, Users } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import adobeImage from '../../Logo/adobe1.jpg';
