@@ -27,7 +27,7 @@ import SupportMaintenance from './pages/services/SupportMaintenance';
 
 import Blog from './pages/resources/Blog';
 import CaseStudies from './pages/resources/CaseStudies';
-import Events from './pages/Events';
+
 import ContactUs from './pages/ContactUs';
 
 import Footer from './components/Footer';
@@ -63,7 +63,7 @@ function App() {
           {/* Resources & Events Routes */}
           <Route path="/resources/blog" element={<Blog />} />
           <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/events" element={<Events />} />
+          
           <Route path="/contact-us" element={<ContactUs />} />
 
           {/* Legacy Routes */}

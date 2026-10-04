@@ -76,12 +76,12 @@ const Home = () => {
 
 
 
-            <h2 className="text-blue-300 text-2xl md:text-4xl font-bold mb-6">Professional Tech Solutions</h2>
-             <h3 className='text-2xl md-text-3xl font-bold'>You Can Trust</h3>
+            <h2 className="text-blue-300 text-2xl md:text-4xl font-bold mb-6">Technology That Works Together</h2>
+             <h3 className='text-2xl md-text-3xl font-bold'>Designed for connected operations</h3>
             
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              15+ years of industry excellence in Enterprise IT AMC Contracts, Server & Networking, CCTV Security, and A-Grade Refurbished Laptops.
-              Trusted by DRDO, Meteorological Dept, Air Force School, NABARD & National Banks.
+              We bring AV, unified communications, secured IT infrastructure, surveillance, print, and managed support together into one dependable technology ecosystem.
+              Trusted by public-sector, education, banking, and enterprise teams.
             </p>
 
             
@@ -184,10 +184,10 @@ const Home = () => {
               <span>Turnkey Enterprise Integration</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold mb-4">
-              Enterprise System Integration & Infrastructure Solutions
+              Solutions that adapt to your needs and scale with you
             </h2>
             <p className="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg">
-              Empowering corporate workplaces, defense laboratories, banking facilities, and educational campuses with resilient IT networks, AV automation, IP telephony, 4K security, and SLA-backed AMC contracts.
+              From collaboration spaces and voice platforms to secure networks, surveillance, and print workflows, we design technology around how your teams operate.
             </p>
           </div>
 
@@ -195,29 +195,29 @@ const Home = () => {
             {[
               {
                 icon: Network,
-                title: 'IT Infrastructure & Networking',
-                desc: 'Enterprise L2/L3 switching, Wi-Fi 6/6E, structured fiber cabling, data center racks, and next-gen firewalls.',
+                title: 'Secured IT Infrastructure',
+                desc: 'Network access, connectivity, monitoring, structured cabling, enterprise switching, Wi-Fi, and secure optimization.',
                 link: '/enterprise-solutions#it-infrastructure',
                 tag: 'Network Core'
               },
               {
                 icon: Tv,
-                title: 'Audio-Visual (AV) Infrastructure',
-                desc: 'Executive boardroom automation, fine-pitch LED video walls, interactive flat panels, and DSP audio setups.',
+                title: 'PRO AV & Smart Workplaces',
+                desc: 'AI-enabled meeting spaces, hybrid boardrooms and classrooms, digital signage, control rooms, and auditoriums.',
                 link: '/enterprise-solutions#av-infrastructure',
                 tag: 'AV Automation'
               },
               {
                 icon: PhoneCall,
-                title: 'IP Telephony & Unified Voice (UCC)',
-                desc: 'Enterprise IP PBX systems, cloud telephony, Microsoft Teams / Zoom Room integrations, and SIP endpoints.',
+                title: 'Unified Collaboration',
+                desc: 'On-premise, cloud, and hybrid calling with enterprise voice, video collaboration, and contact-center solutions.',
                 link: '/enterprise-solutions#voice-telephony',
                 tag: 'Unified Voice'
               },
               {
                 icon: ShieldCheck,
-                title: 'IP Surveillance & Security',
-                desc: '4K AI IP CCTV cameras, thermal vision, biometric access control (Face ID & Fingerprint), and perimeter barriers.',
+                title: 'Secured Surveillance',
+                desc: 'IP video surveillance, AI-enabled analytics, access control, centralized monitoring, and protected storage.',
                 link: '/enterprise-solutions#ip-surveillance',
                 tag: '4K Security'
               },
@@ -318,10 +318,10 @@ const Home = () => {
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Expert Services
+              Services That Keep Technology Performing
             </h2>
             <p className="text-xl text-white max-w-2xl mx-auto">
-              Comprehensive technology solutions for businesses and individuals
+              Practical design, delivery, and lifecycle support for connected enterprise environments
             </p>
           </div>
 
@@ -469,10 +469,10 @@ const Home = () => {
           <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
             <Fade direction="up" triggerOnce duration={1000}>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
-                Ready to Secure Your Business?
+                Ready to Connect Your Technology Ecosystem?
               </h2>
               <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-blue-100 max-w-2xl mx-auto">
-                Get expert consultation and customized solutions for your security and technology needs.
+                Get a clear plan for collaboration, infrastructure, security, print, and ongoing support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
