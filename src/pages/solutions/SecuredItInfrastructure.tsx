@@ -4,6 +4,7 @@ import { Network, Server, Shield, Radio, Lock, Cpu } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import switchingImg from '../../Logo/Enterprise L2L3 Switching  SD-WAN.jpg';
 import wifiImg from '../../Logo/Wifi 6.jpg';
@@ -15,6 +16,12 @@ import storageImg from '../../Logo/Storage solutions.jpg';
 const SecuredItInfrastructure: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Structured Cabling, Cisco Networking & Firewalls in Hyderabad"
+        description="Design and deployment of Enterprise L2/L3 campus switching, Wi-Fi 6/6E wireless access, structured fiber cabling, data center server racks, and Next-Gen Firewall defense in Hyderabad."
+        keywords="Structured Cabling Hyderabad, Cisco network setup Hyderabad, Enterprise WiFi installation HITEC City, Firewall audit Telangana, Data center rack cabling Gachibowli, Network switch installation Madhapur"
+        canonicalPath="/solutions/secured-it-infrastructure"
+      />
       <ParticlesBackground />
 
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">

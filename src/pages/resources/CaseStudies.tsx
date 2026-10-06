@@ -3,6 +3,7 @@ import { Layers, CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 import cctvImg from '../../Logo/4k cctv.jpg';
 import datacenterImg from '../../Logo/Data Center Racks.jpg';
 import smartClassImg from '../../Logo/Interactive display.jpg';
@@ -11,6 +12,12 @@ import boardroomImg from '../../Logo/Executive boardroom.jpg';
 const CaseStudies: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Enterprise Case Studies & Deployments in Hyderabad | DRDO, NABARD & Institutions"
+        description="Explore real-world case studies of mission-critical IT infrastructure, surveillance, and smart boardroom deployments for DRDO, NABARD, Air Force School, and national enterprises."
+        keywords="IT case studies Hyderabad, DRDO IT projects Hyderabad, NABARD system integration Telangana, Boardroom installation case study, CCTV deployment success stories"
+        canonicalPath="/case-studies"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

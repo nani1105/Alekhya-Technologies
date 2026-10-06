@@ -4,6 +4,7 @@ import { PhoneCall, Video, Headphones, Shield, Globe, Users } from 'lucide-react
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import ipbxImg from '../../Logo/ipbx.jpg';
 import teamsZoomImg from '../../Logo/Teams  Zoom Room Systems.jpg';
@@ -15,6 +16,12 @@ import voiceSecurityImg from '../../Logo/Voice Security & SBC.jpg';
 const UnifiedCollaboration: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="IP PBX Telephony, VoIP & Video Collaboration in Hyderabad"
+        description="Enterprise IP PBX telephony, VoIP SIP gateways, Yealink desk phones, Grandstream communication servers, and MS Teams / Zoom Rooms for enterprises in Hyderabad & Cyberabad."
+        keywords="IP PBX Hyderabad, VoIP phone system Hyderabad, Grandstream PBX Telangana, Yealink phones HITEC City, Contact center setup Hyderabad, Enterprise voice communication Gachibowli"
+        canonicalPath="/solutions/unified-collaboration"
+      />
       <ParticlesBackground />
 
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">

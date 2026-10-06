@@ -2,6 +2,7 @@ import React from 'react';
 import { Shield } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import residentEngineersImg from '../../Logo/TEch.jpg';
 import nocMonitoringImg from '../../Logo/FIrewalls audits.jpg';
@@ -10,6 +11,12 @@ import assetMgmtImg from '../../Logo/Data Center Racks.jpg';
 const ManagedServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Managed IT Services & 24/7 NOC Monitoring in Hyderabad"
+        description="Dedicated on-site resident IT engineers, 24/7 NOC monitoring, automated alert management, and proactive asset maintenance for businesses in Hyderabad & Cyberabad."
+        keywords="Managed IT services Hyderabad, Resident engineers Hyderabad, 24/7 NOC monitoring Telangana, IT facility management HITEC City, Outsourced IT team Gachibowli"
+        canonicalPath="/services/managed-services"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

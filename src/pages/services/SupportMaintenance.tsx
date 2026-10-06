@@ -2,6 +2,7 @@ import React from 'react';
 import { Clock } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import amcContractsImg from '../../Logo/Technical Consultancy  Audits.jpg';
 import bufferStockImg from '../../Logo/Storage solutions.jpg';
@@ -10,6 +11,12 @@ import preventiveCareImg from '../../Logo/Tech1.jpg';
 const SupportMaintenance: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Enterprise Support & IT AMC Maintenance in Hyderabad"
+        description="Comprehensive IT AMC contracts with guaranteed SLAs, fast hardware replacement, standby buffer equipment, and periodic preventive health checks across Hyderabad."
+        keywords="IT AMC support Hyderabad, Hardware maintenance contract Hyderabad, Computer repair AMC HITEC City, Server emergency maintenance Gachibowli, Annual maintenance SLA Telangana"
+        canonicalPath="/services/support-maintenance"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

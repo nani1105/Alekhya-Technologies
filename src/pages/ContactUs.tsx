@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Headphones } from 'lucide-react';
 import ParticlesBackground from '../components/ParticlesBackground';
 import { TextShimmer } from '../components/ui/text-shimmer';
+import SEO from '../components/SEO';
 import { SERVICES_CATALOG } from './Contact';
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
@@ -46,6 +47,12 @@ const ContactUs: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Contact Enterprise Solution Architects in Hyderabad | Alekhya Technologies"
+        description="Get in touch with Alekhya Technologies in Hyderabad for on-site IT audits, CCTV survey, PRO AV boardroom integration BOQ, or 24/7 SLA IT AMC contracts. Call +91 95733 76389."
+        keywords="Contact Alekhya Technologies Hyderabad, IT AMC quote Hyderabad, CCTV technician Hyderabad, System integrator contact Madhapur, IT hardware enquiry HITEC City"
+        canonicalPath="/contact-us"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

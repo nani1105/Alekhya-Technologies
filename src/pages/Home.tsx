@@ -48,6 +48,8 @@ import computerHomeImg from '../Logo/computer.png';
 import biometricHomeImg from '../Logo/Biometric access control.jpg';
 import printerHomeImg from '../Logo/printer.webp';
 
+import SEO from '../components/SEO';
+
 const Home = () => {
   const { scrollY } = useScroll();
   const heroLogoY = useTransform(scrollY, [0, 90], [0, -38]);
@@ -60,6 +62,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-transparent">
+      <SEO 
+        title="Enterprise System Integrator, IT AMC & CCTV Solutions in Hyderabad"
+        description="Alekhya Technologies is Hyderabad's leading Enterprise System Integrator providing IT AMC contracts, 4K CCTV surveillance, boardroom AV, IP telephony, refurbished laptops, and networking across HITEC City, Gachibowli, Madhapur, Secunderabad & Pan-India."
+        keywords="Enterprise System Integrator Hyderabad, IT AMC Services Hyderabad, Computer AMC Hyderabad, CCTV installation Hyderabad, Refurbished Laptops Hyderabad, Photocopier machine rental Hyderabad, Structured Cabling Hyderabad"
+        canonicalPath="/"
+      />
       {/* Hero Section */}
      <section className="relative w-full min-h-[60vh] sm:min-h-[85vh] flex items-start justify-center text-white overflow-hidden pt-6 sm:pt-8 pb-8">
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

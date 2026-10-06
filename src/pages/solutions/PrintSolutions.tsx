@@ -4,6 +4,7 @@ import { Printer, FileText, Shield } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import mfpImg from '../../Logo/Multifunction Photocopiers.jpg';
 import mpsImg from '../../Logo/Managed print services.jpg';
@@ -15,6 +16,12 @@ import copierRentalImg from '../../Logo/copier rental.jpg';
 const PrintSolutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Photocopier AMC, Rental & Managed Print Services in Hyderabad"
+        description="Multifunction A3/A4 digital photocopiers, Managed Print Services (MPS), commercial laser printers, note counting machines, OEM toner cartridges, and corporate copier rentals in Hyderabad."
+        keywords="Photocopier AMC Hyderabad, Copier rental Hyderabad, Konica Minolta dealers Hyderabad, Canon photocopier repair HITEC City, Managed print services Telangana, Note counting machine service Hyderabad"
+        canonicalPath="/solutions/print-solutions"
+      />
       <ParticlesBackground />
 
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Wrench } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import techConsultancyImg from '../../Logo/Technical Consultancy  Audits.jpg';
 import solutionArchImg from '../../Logo/solution architecture.jpg';
@@ -10,6 +11,12 @@ import turnkeyImplImg from '../../Logo/Tech1.jpg';
 const ProfessionalServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Enterprise Professional Services & IT Consultancy in Hyderabad"
+        description="Engineering design, technical audits, site assessments, BOQ scoping, staging, and turnkey installation commissioning for enterprise IT & AV projects in Hyderabad."
+        keywords="IT consultancy Hyderabad, IT project management Hyderabad, Network site audit HITEC City, Professional IT services Telangana, System integration consultancy Madhapur"
+        canonicalPath="/services/professional-services"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

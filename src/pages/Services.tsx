@@ -30,6 +30,7 @@ import computerServiceImg from '../Logo/computer.png';
 import printerServiceImg from '../Logo/printer.webp';
 import biometricServiceImg from '../Logo/Biometric access control.jpg';
 import photocopierServiceImg from '../Logo/Multifunction Photocopiers.jpg';
+import SEO from '../components/SEO';
 
 const Services = () => {
   const location = useLocation();
@@ -51,6 +52,12 @@ const Services = () => {
 
   return (
     <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-100">
+      <SEO 
+        title="Enterprise IT, CCTV, Computer Repair & AMC Services in Hyderabad"
+        description="Comprehensive IT services in Hyderabad: Computer & server repairs, structured networking, CCTV camera installation, photocopier rental/AMC, and biometric attendance systems."
+        keywords="IT services Hyderabad, Computer repair service Hyderabad, CCTV repair technician Hyderabad, Photocopier service HITEC City, Biometric machine installation Gachibowli, Annual Maintenance Contracts Telangana"
+        canonicalPath="/services"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10">

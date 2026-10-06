@@ -4,6 +4,7 @@ import { Shield, CheckCircle, Server, Monitor, Printer, FileCheck, Phone, Users,
 import gsap from 'gsap';
 import { GradientButton } from '../components/ui/gradient-button';
 import { TextShimmer } from '../components/ui/text-shimmer';
+import SEO from '../components/SEO';
 import drdoLogo from '../Logo/drdo.png';
 import nabardLogo from '../Logo/NABARD1.png';
 import pcSystemImg from '../Logo/computer.png';
@@ -57,6 +58,12 @@ const AmcServices = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Enterprise IT AMC Services in Hyderabad | Computer, Server & CCTV AMC"
+        description="Comprehensive & Non-Comprehensive Enterprise IT AMC Services in Hyderabad. Guaranteed 2-4 hr SLA response, buffer spare parts, resident engineers for computers, servers, printers & CCTV."
+        keywords="IT AMC Services Hyderabad, Computer AMC Hyderabad, Server maintenance Hyderabad, CCTV AMC HITEC City, Printer Copier AMC Gachibowli, Annual Maintenance Contract Telangana"
+        canonicalPath="/amc"
+      />
       {/* Hero Section */}
       <section ref={heroRef} className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

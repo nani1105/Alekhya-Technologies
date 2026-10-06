@@ -4,6 +4,7 @@ import { ShieldCheck, Cpu, Battery, Star, Award, Phone, Filter, CheckCircle2 } f
 import gsap from 'gsap';
 import { GradientButton } from '../components/ui/gradient-button';
 import { TextShimmer } from '../components/ui/text-shimmer';
+import SEO from '../components/SEO';
 import lenovoT480 from '../Logo/lenovo-t480.jpg';
 import laptopImg from '../Logo/Laptop.jpeg';
 import ThinkpadImg from '../Logo/Thinkpad.jpg';
@@ -100,6 +101,12 @@ const RefurbishedLaptops = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="A-Grade Refurbished Laptops in Hyderabad | ThinkPad, Dell, HP & Apple"
+        description="Buy certified A-grade commercial refurbished laptops in Hyderabad. Bulk discounts for startups, IT companies, and schools. 1-Year Warranty on Lenovo ThinkPad, Dell Latitude, HP EliteBook & MacBook."
+        keywords="Refurbished Laptops Hyderabad, Second hand laptops Hyderabad, Used ThinkPad Hyderabad, Dell Latitude refurbished HITEC City, Used laptops Madhapur, Commercial laptops bulk Hyderabad"
+        canonicalPath="/refurbished-laptops"
+      />
       {/* Hero Section */}
       <section className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

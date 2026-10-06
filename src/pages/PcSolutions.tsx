@@ -4,6 +4,7 @@ import { Cpu, Server, CheckCircle, Phone, Layout } from 'lucide-react';
 import gsap from 'gsap';
 import { GradientButton } from '../components/ui/gradient-button';
 import { TextShimmer } from '../components/ui/text-shimmer';
+import SEO from '../components/SEO';
 import aioPcImg from '../Logo/computer.png';
 import customPcImg from '../Logo/TEch.jpg';
 import serverRackImg from '../Logo/Data Center Racks.jpg';
@@ -55,6 +56,12 @@ const PcSolutions = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Custom Assembled Desktops & All-in-One PC Solutions in Hyderabad"
+        description="Custom desktop PCs, high-performance CAD workstations, space-saving All-in-One (AIO) computers, and server rigging for enterprises, schools, and offices across Hyderabad."
+        keywords="Custom PC Hyderabad, Assembled computers Hyderabad, All in one PC Hyderabad, CAD workstation Gachibowli, Computer hardware vendor HITEC City, Office desktop setups Telangana"
+        canonicalPath="/pc-solutions"
+      />
       {/* Hero Section */}
       <section className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

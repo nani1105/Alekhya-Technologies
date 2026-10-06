@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen, Calendar, ArrowRight } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 import wifiBlogImg from '../../Logo/Wifi 6.jpg';
 import cctvBlogImg from '../../Logo/Deep video analysis.jpg';
 import teamsBlogImg from '../../Logo/Teams  Zoom Room Systems.jpg';
@@ -9,6 +10,12 @@ import teamsBlogImg from '../../Logo/Teams  Zoom Room Systems.jpg';
 const Blog: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="IT & Enterprise Technology Blog | Alekhya Technologies Hyderabad"
+        description="Latest insights, technology comparisons, and enterprise guides on Wi-Fi 6, AI CCTV analytics, Microsoft Teams room systems, and IT infrastructure best practices in Hyderabad."
+        keywords="IT blog Hyderabad, Enterprise tech insights, Wi-Fi 6 guide, AI CCTV trends, Teams rooms setup tips, IT hardware maintenance advice"
+        canonicalPath="/resources/blog"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

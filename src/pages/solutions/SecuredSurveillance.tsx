@@ -4,6 +4,7 @@ import { ShieldCheck, Camera, Eye, Lock, Fingerprint } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import cctv4kImg from '../../Logo/4k cctv.jpg';
 import deepVideoAnalysisImg from '../../Logo/Deep video analysis.jpg';
@@ -15,6 +16,12 @@ import thermalSecurityImg from '../../Logo/Thermal perimeter security.jpg';
 const SecuredSurveillance: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="4K AI CCTV Camera Installation & Maintenance in Hyderabad"
+        description="Professional 4K Ultra-HD CCTV surveillance, Hikvision & Dahua AI cameras, ANPR, biometric access control, boom barrier automation, and central VMS storage systems in Hyderabad."
+        keywords="CCTV installation Hyderabad, CCTV maintenance Hyderabad, Hikvision CCTV dealers Hyderabad, Biometric attendance machine Hyderabad, Boom barrier installation HITEC City, Security surveillance Gachibowli"
+        canonicalPath="/solutions/secured-surveillance"
+      />
       <ParticlesBackground />
 
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">

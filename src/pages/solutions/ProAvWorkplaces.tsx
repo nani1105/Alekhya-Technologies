@@ -4,6 +4,7 @@ import { Tv, Monitor, ArrowRight, Sparkles, Building, Layers, Volume2 } from 'lu
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 import executiveBoardroomImg from '../../Logo/Executive boardroom.jpg';
 import interactiveDisplayImg from '../../Logo/Interactive display.jpg';
@@ -15,6 +16,12 @@ import techClassroomsImg from '../../Logo/TEch.jpg';
 const ProAvWorkplaces: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="PRO AV & Smart Boardroom Solutions in Hyderabad | Video Walls & Audio DSP"
+        description="Transform corporate meeting spaces, auditoriums, and executive boardrooms in Hyderabad with Microsoft Teams / Zoom rooms, active LED video walls, acoustic DSP engineering, and 4K interactive flat panels."
+        keywords="PRO AV solutions Hyderabad, Boardroom AV system Hyderabad, Video wall installation Hyderabad, Teams room systems HITEC City, Smart conference room Gachibowli, Interactive displays Telangana"
+        canonicalPath="/solutions/pro-av-smart-workplaces"
+      />
       <ParticlesBackground />
 
       {/* Hero Banner */}

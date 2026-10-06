@@ -2,12 +2,19 @@ import React from 'react';
 import { Building2, Compass, ShieldCheck, Target } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 import journeyImg from '../../Logo/journey.jpg';
 import valuesImg from '../../Logo/Values.avif';
 
 const WhoWeAre: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="About Alekhya Technologies | Premier System Integrator in Hyderabad"
+        description="Learn about Alekhya Technologies' 30+ year legacy as a trusted Pan-India Enterprise System Integrator based in Hyderabad. Serving DRDO, NABARD, defense, banking, and commercial institutions."
+        keywords="About Alekhya Technologies, System integrator company Hyderabad, IT leadership Telangana, Enterprise IT contractor Hyderabad"
+        canonicalPath="/about-us/who-we-are"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

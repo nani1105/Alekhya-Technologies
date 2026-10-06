@@ -18,6 +18,7 @@ import { Fade } from 'react-awesome-reveal';
 import ParticlesBackground from '../components/ParticlesBackground';
 import { GradientButton } from '../components/ui/gradient-button';
 import { TextShimmer } from '../components/ui/text-shimmer';
+import SEO from '../components/SEO';
 import ciscoLogo from '../Logo/Cisco_logo.svg.webp';
 import arubaLogo from '../Logo/HPE-aruba-networking-logo.webp';
 import dellLogo from '../Logo/Dell.webp';
@@ -491,6 +492,12 @@ const EnterpriseSolutions: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+      <SEO 
+        title="Enterprise IT Solutions & Strategic OEM System Integrator in Hyderabad"
+        description="Full-lifecycle enterprise system integration across Hyderabad and India. Cisco networking, Poly AV automation, Grandstream telephony, Hikvision AI CCTV, Canon MPS, and SLA AMC maintenance."
+        keywords="Enterprise System Integrator Hyderabad, IT Infrastructure vendor HITEC City, OEM hardware partner Hyderabad, Cisco partner Telangana, Poly AV partner Hyderabad, Dell enterprise servers Gachibowli"
+        canonicalPath="/enterprise-solutions"
+      />
       {/* Background Effect */}
       <ParticlesBackground />
 
