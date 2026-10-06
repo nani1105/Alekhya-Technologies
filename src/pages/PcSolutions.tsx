@@ -50,20 +50,20 @@ const PcSolutions = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-screen py-12 bg-transparent text-slate-100 overflow-hidden">
+    <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-100 overflow-hidden">
       {/* Hero Section */}
-      <section className="bg-transparent text-white py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <span className="gsap-pc-badge bg-blue-600/30 border border-blue-500/40 text-blue-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-4 tracking-wider shadow-md">
+          <span className="gsap-pc-badge bg-blue-600/30 border border-blue-500/40 text-blue-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-md">
             Customized Hardware Architecture
           </span>
-          <h1 className="gsap-pc-title text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+          <h1 className="gsap-pc-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
             Custom & <span className="text-blue-400">All-in-One PC Solutions</span>
           </h1>
-          <p className="gsap-pc-subtitle text-lg sm:text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8">
+          <p className="gsap-pc-subtitle text-base sm:text-lg md:text-xl text-slate-300 max-w-4xl mx-auto mb-6">
             Tailored Desktop Workstations, Space-Saving All-in-One (AIO) PCs, and Rack Server Installations for Government Offices, Schools, CA Firms & Startups.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link to="/contact" className="gsap-pc-cta">
               <GradientButton className="w-full sm:w-auto">Build Custom PC Quote</GradientButton>
             </Link>
@@ -76,20 +76,20 @@ const PcSolutions = () => {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-10 sm:space-y-12">
         {/* Solution Categories */}
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Card 1: All-in-One PCs */}
-          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-8 shadow-xl border border-slate-800 flex flex-col justify-between transition-shadow hover:border-blue-500/50">
+          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-6 sm:p-7 shadow-xl border border-slate-800 flex flex-col justify-between transition-shadow hover:border-blue-500/50">
             <div>
-              <div className="bg-blue-600/20 border border-blue-500/30 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
-                <Layout className="h-8 w-8 text-blue-400" />
+              <div className="bg-blue-600/20 border border-blue-500/30 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                <Layout className="h-6 w-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-3">All-in-One (AIO) PCs</h2>
-              <p className="text-slate-300 mb-6 text-sm">
+              <h2 className="text-xl font-bold text-white mb-2">All-in-One (AIO) PCs</h2>
+              <p className="text-slate-300 mb-4 text-xs sm:text-sm">
                 Sleek, cable-free desktop solutions combining display & CPU in a single unit. Ideal for reception desks, school computer labs & CA offices.
               </p>
-              <ul className="space-y-2.5 text-sm text-slate-300 mb-8">
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> 21.5" & 23.8" Full HD IPS Displays</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Intel Core i3 / i5 / i7 Processors</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Built-in HD Camera, Mic & Speakers</li>
@@ -102,19 +102,19 @@ const PcSolutions = () => {
           </div>
 
           {/* Card 2: Custom PC Assemblies */}
-          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-8 shadow-xl border-2 border-blue-500/70 relative flex flex-col justify-between transition-shadow">
+          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-6 sm:p-7 shadow-xl border-2 border-blue-500/70 relative flex flex-col justify-between transition-shadow">
             <span className="absolute -top-3.5 right-6 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow">
               Most Popular
             </span>
             <div>
-              <div className="bg-blue-600/20 border border-blue-500/30 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
-                <Cpu className="h-8 w-8 text-blue-400" />
+              <div className="bg-blue-600/20 border border-blue-500/30 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                <Cpu className="h-6 w-6 text-blue-400" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-3">Custom Assembled PCs</h2>
-              <p className="text-slate-300 mb-6 text-sm">
+              <h2 className="text-xl font-bold text-white mb-2">Custom Assembled PCs</h2>
+              <p className="text-slate-300 mb-4 text-xs sm:text-sm">
                 Specially configured desktop towers for high-performance workloads such as CAD, video editing, software compilation, and heavy database work.
               </p>
-              <ul className="space-y-2.5 text-sm text-slate-300 mb-8">
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Custom Intel & AMD Ryzen configurations</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> High-speed NVMe SSDs + DDR4/DDR5 RAM</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Dedicated NVIDIA GPU options for rendering</li>
@@ -127,16 +127,16 @@ const PcSolutions = () => {
           </div>
 
           {/* Card 3: Server & Networking */}
-          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-8 shadow-xl border border-slate-800 flex flex-col justify-between transition-shadow hover:border-purple-500/50">
+          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-6 sm:p-7 shadow-xl border border-slate-800 flex flex-col justify-between transition-shadow hover:border-purple-500/50">
             <div>
-              <div className="bg-purple-600/20 border border-purple-500/30 w-14 h-14 rounded-xl flex items-center justify-center mb-6">
-                <Server className="h-8 w-8 text-purple-400" />
+              <div className="bg-purple-600/20 border border-purple-500/30 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                <Server className="h-6 w-6 text-purple-400" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-3">Server & Network Rigging</h2>
-              <p className="text-slate-300 mb-6 text-sm">
+              <h2 className="text-xl font-bold text-white mb-2">Server & Network Rigging</h2>
+              <p className="text-slate-300 mb-4 text-xs sm:text-sm">
                 Complete server infrastructure for multi-user office environments, central file storage, Tally server hosting, and security firewalls.
               </p>
-              <ul className="space-y-2.5 text-sm text-slate-300 mb-8">
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Windows & Linux Tower/Rack Servers</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> RAID storage setups & automated backups</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Structured CAT6 & Fiber LAN Cabling</li>
@@ -150,22 +150,22 @@ const PcSolutions = () => {
         </section>
 
         {/* Process Flow */}
-        <section className="bg-slate-900/80 p-8 sm:p-12 rounded-2xl shadow-xl border border-slate-800">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Customized Build & Deployment Process</h2>
-            <p className="text-slate-300 text-lg">How we deliver turnkey PC solutions for institutions and offices</p>
+        <section className="bg-slate-900/80 p-6 sm:p-8 rounded-2xl shadow-xl border border-slate-800">
+          <div className="text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Our Customized Build & Deployment Process</h2>
+            <p className="text-slate-300 text-base">How we deliver turnkey PC solutions for institutions and offices</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 text-center">
             {[
               { step: '01', title: 'Requirement Audit', desc: 'We assess software requirements, performance needs & budget constraints.' },
               { step: '02', title: 'Component Selection', desc: 'Hand-picked certified motherboards, CPUs, RAM & SSDs for maximum synergy.' },
               { step: '03', title: 'Stress Testing & Burn-In', desc: '48-hour hardware benchmark & temperature testing before delivery.' },
               { step: '04', title: 'On-Site Deployment', desc: 'Complete installation, networking setup & ongoing AMC support.' },
             ].map(proc => (
-              <div key={proc.step} className="gsap-step-card p-6 bg-slate-950/60 rounded-xl border border-slate-800 hover:border-blue-500/40 transition-colors">
-                <span className="text-3xl font-extrabold text-blue-400 block mb-2">{proc.step}</span>
-                <h3 className="font-bold text-white mb-2">{proc.title}</h3>
-                <p className="text-slate-400 text-sm">{proc.desc}</p>
+              <div key={proc.step} className="gsap-step-card p-5 bg-slate-950/60 rounded-xl border border-slate-800 hover:border-blue-500/40 transition-colors">
+                <span className="text-2xl sm:text-3xl font-extrabold text-blue-400 block mb-1.5">{proc.step}</span>
+                <h3 className="font-bold text-white text-base mb-1.5">{proc.title}</h3>
+                <p className="text-slate-400 text-xs sm:text-sm">{proc.desc}</p>
               </div>
             ))}
           </div>

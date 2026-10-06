@@ -194,91 +194,95 @@ export default function HorizontalParallax({
   subtitle = 'Explore the full spectrum of enterprise hardware, certified refurbished laptops, smart AV, network infrastructure, and surveillance solutions by Alekhya Technologies.',
   badge = 'Product & Solutions Ecosystem',
 }: HorizontalParallaxProps) {
-  const sectionRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
+  // Track vertical scroll progress strictly through this section container
   const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
+    target: containerRef,
+    offset: ['start start', 'end end'],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  // Smooth inclination to straight effect
+  const rotate = useTransform(scrollYProgress, [0, 0.25], [-3.5, 0]);
+  const skewX = useTransform(scrollYProgress, [0, 0.25], [-2, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.25], [0.96, 1]);
 
-  // Smooth inclination to straight effect:
-  // Starts smaller and inclined to the left (-5.5deg, skewX -3deg, scale 0.88)
-  // and smoothly straightens out to (0deg, 0deg, 1.0) around 40%-45% scroll
-  const rotate = useTransform(scrollYProgress, [0, 0.42], [-5, 0]);
-  const skewX = useTransform(scrollYProgress, [0, 0.42], [-2.5, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.42], [0.88, 1]);
+  // Translate each row horizontally based on vertical scroll so EVERY card in the row passes through the viewport
+  // Row 1: moves left from 0 to -1400px (or percentage)
+  const translateRow1 = useTransform(scrollYProgress, [0, 1], ['0%', '-55%']);
+  // Row 2: moves right from -55% to 0%
+  const translateRow2 = useTransform(scrollYProgress, [0, 1], ['-52%', '0%']);
+  // Row 3: moves left from 0% to -58%
+  const translateRow3 = useTransform(scrollYProgress, [0, 1], ['0%', '-58%']);
 
-  // Horizontal row transforms
-  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -280]);
-  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 280]);
-  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -240]);
-  const translators = [translateFirst, translateSecond, translateThird];
+  const translators = [translateRow1, translateRow2, translateRow3];
 
   return (
-    <section className="hparallax" ref={sectionRef}>
-      {/* Header Info */}
-      <div className="hparallax__header">
-        {badge && (
-          <div className="hparallax__badge">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{badge}</span>
-          </div>
-        )}
-        {title && <h2 className="hparallax__title">{title}</h2>}
-        {subtitle && <p className="hparallax__subtitle">{subtitle}</p>}
-      </div>
+    <div className="hparallax-pin-wrapper" ref={containerRef}>
+      <div className="hparallax-sticky">
+        {/* Header Info */}
+        <div className="hparallax__header">
+          {badge && (
+            <div className="hparallax__badge">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>{badge}</span>
+            </div>
+          )}
+          {title && <h2 className="hparallax__title">{title}</h2>}
+          {subtitle && <p className="hparallax__subtitle">{subtitle}</p>}
+        </div>
 
-      <motion.div
-        className="hparallax__inner"
-        style={{
-          opacity,
-          rotate,
-          skewX,
-          scale,
-          transformOrigin: 'left center',
-        }}
-      >
-        {rows.map((row, i) => (
-          <motion.div
-            className="hparallax__row"
-            key={i}
-            style={{ x: translators[i % translators.length] }}
-          >
-            {row.map((card, idx) => (
-              <Link
-                to={card.link}
-                key={`${card.label}-${idx}`}
-                className="hparallax__card group block no-underline"
+        {/* Animated Parallax Rows driven strictly by vertical scrolling */}
+        <motion.div
+          className="hparallax__inner"
+          style={{
+            rotate,
+            skewX,
+            scale,
+            transformOrigin: 'left center',
+          }}
+        >
+          {rows.map((row, i) => (
+            <div className="hparallax__row-wrapper" key={i}>
+              <motion.div
+                className="hparallax__row"
+                style={{ x: translators[i % translators.length] }}
               >
-                <div>
-                  <div className="hparallax__card-top">
-                    <span className="designator mono">{card.tag}</span>
-                    {card.badge && (
-                      <span className="hparallax__card-badge mono">{card.badge}</span>
-                    )}
-                  </div>
-                  <div className="hparallax__card-body mt-3">
-                    <p className="hparallax__card-label group-hover:text-blue-400 transition-colors">
-                      {card.label}
-                    </p>
-                    {card.desc && <p className="hparallax__card-desc">{card.desc}</p>}
-                  </div>
-                </div>
+                {row.map((card, idx) => (
+                  <Link
+                    to={card.link}
+                    key={`${card.label}-${idx}`}
+                    className="hparallax__card group/card block no-underline"
+                  >
+                    <div>
+                      <div className="hparallax__card-top">
+                        <span className="designator mono">{card.tag}</span>
+                        {card.badge && (
+                          <span className="hparallax__card-badge mono">{card.badge}</span>
+                        )}
+                      </div>
+                      <div className="hparallax__card-body mt-2.5">
+                        <p className="hparallax__card-label group-hover/card:text-blue-400 transition-colors">
+                          {card.label}
+                        </p>
+                        {card.desc && <p className="hparallax__card-desc">{card.desc}</p>}
+                      </div>
+                    </div>
 
-                <div className="hparallax__card-footer mono">
-                  <span className="flex items-center text-blue-400 font-semibold group-hover:underline">
-                    View Product Details
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                  <span className="text-slate-500">● Active Supply</span>
-                </div>
-              </Link>
-            ))}
-          </motion.div>
-        ))}
-      </motion.div>
-    </section>
+                    <div className="hparallax__card-footer mono">
+                      <span className="flex items-center text-blue-400 font-semibold group-hover/card:underline">
+                        View Product Details
+                        <ArrowRight className="w-3 h-3 ml-1 group-hover/card:translate-x-1 transition-transform" />
+                      </span>
+                      <span className="text-slate-500">● Active Supply</span>
+                    </div>
+                  </Link>
+                ))}
+              </motion.div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </div>
   );
 }

@@ -8,21 +8,126 @@ const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" 
   </svg>
 );
 
+export const SERVICES_CATALOG = [
+  {
+    name: 'CCTV & Security Surveillance',
+    subServices: [
+      'Dome, Bullet & PTZ 4K AI Cameras',
+      'ColorVu & Night Vision Surveillance',
+      'ANPR & Perimeter Intrusion Detection',
+      'Centralized NVR & VMS Storage Setup',
+      'CCTV Repair, Relocation & Maintenance'
+    ]
+  },
+  {
+    name: 'Access Control & Biometrics',
+    subServices: [
+      'Face Recognition & Touchless Attendance',
+      'Fingerprint & RFID Smart Card Systems',
+      'Multi-Door Access Controllers & EM Locks',
+      'Boom Barriers & Flap Turnstiles',
+      'Visitor Management Systems (VMS)'
+    ]
+  },
+  {
+    name: 'Computers, Laptops & Servers',
+    subServices: [
+      'Certified A-Grade Refurbished Laptops',
+      'Custom CAD & Video Editing Workstations',
+      'All-in-One (AIO) PCs & Desktop Setup',
+      'Enterprise Tower & Rack Server Deployments',
+      'Chip-Level Motherboard Diagnostics & Upgrades'
+    ]
+  },
+  {
+    name: 'Secured IT & Networking',
+    subServices: [
+      'Enterprise Cisco L2/L3 Switching & VLANs',
+      'Wi-Fi 6 / 6E Wireless Access Points',
+      'Structured CAT6 & Fiber Optic Cabling',
+      'Next-Gen Firewalls (Fortinet/SonicWall) & VPN',
+      'Online Smart UPS & Server Rack Cabinets'
+    ]
+  },
+  {
+    name: 'PRO AV & Smart Workplaces',
+    subServices: [
+      '4K Interactive Flat Panels (IFPD / Smart Boards)',
+      'Executive Boardroom Touch Automation',
+      'High-Definition LED & LCD Video Walls',
+      'Acoustic DSP & Beamforming Ceiling Mics',
+      'Smart Classrooms & Laser Projectors'
+    ]
+  },
+  {
+    name: 'Unified Telephony & UCC',
+    subServices: [
+      'Grandstream Enterprise IP PBX & IVR Systems',
+      'MS Teams & Zoom Certified Video Conferencing Bars',
+      'Executive VoIP SIP Desk Phones',
+      'Call Center Solutions & Voice Recording',
+      'Session Border Controllers (SBC) & Gateways'
+    ]
+  },
+  {
+    name: 'Commercial Printers & Copiers',
+    subServices: [
+      'Multifunction Photocopier (MFP) Sales & Rentals',
+      'Commercial Laser & EcoTank Printers',
+      'Managed Print Services (MPS) & Cost-Per-Page',
+      'Toner Cartridges & Consumable Supply',
+      'Currency & Note Counting Machines'
+    ]
+  },
+  {
+    name: 'Annual Maintenance Contracts (AMC)',
+    subServices: [
+      'Comprehensive IT AMC (Parts + Labor Included)',
+      'Non-Comprehensive IT AMC (Preventive + Labor)',
+      'Govt & Defense Sector AMC (DRDO, NABARD, IMD)',
+      'School, College & University Lab AMC',
+      'Resident On-Site SLA Engineers'
+    ]
+  },
+  {
+    name: 'General / Turnkey Solutions',
+    subServices: [
+      'Complete Office IT Turnkey Setup',
+      'Custom Technology Consultation',
+      'Emergency On-Site Technical Support',
+      'Multi-Service Integration Package'
+    ]
+  }
+];
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     service: '',
+    subService: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const selectedServiceObj = SERVICES_CATALOG.find((s) => s.name === formData.service);
+  const currentSubServices = selectedServiceObj ? selectedServiceObj.subServices : [];
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    if (name === 'service') {
+      setFormData(prev => ({
+        ...prev,
+        service: value,
+        subService: ''
+      }));
+    } else {
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -34,8 +139,9 @@ const Contact = () => {
 👤 *Customer Name:* ${formData.name || 'Not provided'}
 📧 *Email Address:* ${formData.email}
 📱 *Phone Number:* ${formData.phone}
-🛠️ *Service:* ${formData.service || 'General Consultation'}
-📝 *Message:* ${formData.message || 'N/A'}
+🛠️ *Primary Service:* ${formData.service || 'General Consultation'}
+🎯 *Sub-Service / Need:* ${formData.subService || 'All / General Requirement'}
+📝 *Message / Scope:* ${formData.message || 'N/A'}
 ---------------------------------------`;
 
     const encodedText = encodeURIComponent(textMessage);
@@ -47,24 +153,24 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen py-20 bg-transparent text-slate-100">
+    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-10">
           <Fade direction="down" triggerOnce>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
               Get In Touch
             </h1>
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
               Ready to secure your business with professional technology solutions? 
               Contact us for a free consultation and customized quote.
             </p>
           </Fade>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
           <Slide direction="left" triggerOnce>
             <div>
@@ -224,27 +330,55 @@ const Contact = () => {
                         </div>
                       </div>
 
-                      <div>
-                        <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
-                          Service Interested In *
-                        </label>
-                        <select
-                          id="service"
-                          name="service"
-                          required
-                          value={formData.service}
-                          onChange={handleChange}
-                          className="w-full px-4 py-3 bg-slate-950 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        >
-                          <option value="">Select a service</option>
-                          <option value="cctv">CCTV Security Systems</option>
-                          <option value="computer">Computer Services</option>
-                          <option value="printer">Printer Solutions</option>
-                          <option value="Biometric">Biometric Attendance services</option>
-                          <option value="Photocopy">Photocopy Machines (Xerox Machines)</option>
-                          <option value="multiple">Multiple Services</option>
-                          <option value="consultation">Free Consultation</option>
-                        </select>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
+                            Primary Service *
+                          </label>
+                          <select
+                            id="service"
+                            name="service"
+                            required
+                            value={formData.service}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 bg-slate-950 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                          >
+                            <option value="">Select a Primary Service</option>
+                            {SERVICES_CATALOG.map((s) => (
+                              <option key={s.name} value={s.name}>
+                                {s.name}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+
+                        <div>
+                          <label htmlFor="subService" className="block text-sm font-medium text-slate-300 mb-2">
+                            Specific Sub-Service / Need
+                          </label>
+                          <select
+                            id="subService"
+                            name="subService"
+                            disabled={!formData.service}
+                            value={formData.subService}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 bg-slate-950 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            <option value="">
+                              {formData.service ? '-- Select Specific Sub-Service --' : '-- Choose Service First --'}
+                            </option>
+                            {currentSubServices.map((sub, idx) => (
+                              <option key={idx} value={sub}>
+                                {sub}
+                              </option>
+                            ))}
+                            {formData.service && (
+                              <option value="Other / Custom Need under this category">
+                                Other / Custom Need under this category
+                              </option>
+                            )}
+                          </select>
+                        </div>
                       </div>
 
                       <div>
@@ -299,25 +433,25 @@ const Contact = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           <Fade direction="up" triggerOnce cascade damping={0.1}>
-            <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl text-center">
-              <h3 className="text-lg font-bold text-blue-400 mb-2">Free Consultation</h3>
-              <p className="text-slate-300 text-sm">
+            <div className="bg-slate-900/80 border border-slate-800 p-5 rounded-xl text-center">
+              <h3 className="text-base font-bold text-blue-400 mb-1.5">Free Consultation</h3>
+              <p className="text-slate-300 text-xs sm:text-sm">
                 Get expert advice on your security and technology needs at no cost.
               </p>
             </div>
 
-            <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl text-center">
-              <h3 className="text-lg font-bold text-emerald-400 mb-2">Quick Response</h3>
-              <p className="text-slate-300 text-sm">
+            <div className="bg-slate-900/80 border border-slate-800 p-5 rounded-xl text-center">
+              <h3 className="text-base font-bold text-emerald-400 mb-1.5">Quick Response</h3>
+              <p className="text-slate-300 text-xs sm:text-sm">
                 We respond to all inquiries within 2 hours during business hours.
               </p>
             </div>
 
-            <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl text-center">
-              <h3 className="text-lg font-bold text-purple-400 mb-2">Custom Solutions</h3>
-              <p className="text-slate-300 text-sm">
+            <div className="bg-slate-900/80 border border-slate-800 p-5 rounded-xl text-center">
+              <h3 className="text-base font-bold text-purple-400 mb-1.5">Custom Solutions</h3>
+              <p className="text-slate-300 text-xs sm:text-sm">
                 Every project is tailored to meet your specific requirements and budget.
               </p>
             </div>

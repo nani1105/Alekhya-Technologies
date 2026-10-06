@@ -30,6 +30,7 @@ import canonLogo from '../Logo/Canon.png';
 import epsonLogo from '../Logo/Epson_.png';
 import xeroxLogo from '../Logo/Xerox-logo.jpg';
 import konicaLogo from '../Logo/Konica1.png';
+import { SERVICES_CATALOG } from './Contact';
 
 interface SolutionCategory {
   id: string;
@@ -403,9 +404,18 @@ const EnterpriseSolutions: React.FC = () => {
   const [rfqOrg, setRfqOrg] = useState('');
   const [rfqPhone, setRfqPhone] = useState('');
   const [rfqEmail, setRfqEmail] = useState('');
-  const [rfqRequirement, setRfqRequirement] = useState('it-networking');
+  const [rfqRequirement, setRfqRequirement] = useState('IT Infrastructure & Enterprise Networking');
+  const [rfqSubService, setRfqSubService] = useState('');
   const [rfqScope, setRfqScope] = useState('');
   const location = useLocation();
+
+  const selectedServiceObj = SERVICES_CATALOG.find((s) => s.name === rfqRequirement);
+  const currentSubServices = selectedServiceObj ? selectedServiceObj.subServices : [];
+
+  const handleRequirementChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setRfqRequirement(e.target.value);
+    setRfqSubService('');
+  };
 
   const handleRfqWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
@@ -416,6 +426,7 @@ const EnterpriseSolutions: React.FC = () => {
 📱 *Phone Number:* ${rfqPhone}
 📧 *Work Email:* ${rfqEmail}
 ⚙️ *Primary Requirement:* ${rfqRequirement}
+🎯 *Specific Sub-Service / Need:* ${rfqSubService || 'All / General Requirement'}
 📝 *Project Scope Brief:* ${rfqScope || 'N/A'}
 ---------------------------------------`;
 
@@ -444,17 +455,17 @@ const EnterpriseSolutions: React.FC = () => {
       <ParticlesBackground />
 
       {/* Hero Header Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-transparent">
+      <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
           <Fade direction="down" triggerOnce>
-            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-sm font-semibold mb-6">
+            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs sm:text-sm font-semibold mb-4">
               <Sparkles className="w-4 h-4 text-blue-400" />
               <span>Enterprise Technology Integration & Infrastructure</span>
             </div>
           </Fade>
 
           <Fade direction="up" delay={100} triggerOnce>
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
               End-to-End Enterprise <br />
               <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
                 IT, AV, Telephony, Print & Security Solutions
@@ -463,14 +474,14 @@ const EnterpriseSolutions: React.FC = () => {
           </Fade>
 
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300 leading-relaxed mb-8">
+            <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
               Alekhya Technologies architects, builds, and maintains robust digital ecosystems. From high-density IT networks and AV boardroom automation to IP telephony, 4K security, print solutions, and SLA-backed AMC support—we deliver turn-key integration engineered for enterprise scale.
             </p>
           </Fade>
 
           <Fade direction="up" delay={300} triggerOnce>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <GradientButton asChild className="text-base px-6 py-3">
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+              <GradientButton asChild className="text-sm sm:text-base px-6 py-2.5 sm:py-3">
                 <a href="#quote-form" className="flex items-center space-x-2">
                   <span>Request Technical Proposal</span>
                   <ArrowRight className="w-4 h-4" />
@@ -479,7 +490,7 @@ const EnterpriseSolutions: React.FC = () => {
 
               <a
                 href="#oem-ecosystem"
-                className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-700 transition-colors"
+                className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-6 py-2.5 sm:py-3 rounded-lg font-semibold border border-slate-700 transition-colors text-sm sm:text-base"
               >
                 <Award className="w-4 h-4 text-blue-400" />
                 <span>Explore OEM Partners</span>
@@ -488,35 +499,35 @@ const EnterpriseSolutions: React.FC = () => {
           </Fade>
 
           {/* Quick Metrics */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-10">
+          <div className="mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto pt-4 sm:pt-6">
             <div>
-              <div className="text-3xl font-extrabold text-blue-400">15+</div>
-              <div className="text-sm text-slate-400 mt-1">Years Industry Expertise</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-blue-400">15+</div>
+              <div className="text-xs sm:text-sm text-slate-400 mt-1">Years Industry Expertise</div>
             </div>
             <div>
-              <div className="text-3xl font-extrabold text-indigo-400">500+</div>
-              <div className="text-sm text-slate-400 mt-1">Enterprise & Govt Deployments</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-indigo-400">500+</div>
+              <div className="text-xs sm:text-sm text-slate-400 mt-1">Enterprise & Govt Deployments</div>
             </div>
             <div>
-              <div className="text-3xl font-extrabold text-purple-400">100%</div>
-              <div className="text-sm text-slate-400 mt-1">SLA Contract Compliance</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-purple-400">100%</div>
+              <div className="text-xs sm:text-sm text-slate-400 mt-1">SLA Contract Compliance</div>
             </div>
             <div>
-              <div className="text-3xl font-extrabold text-emerald-400">24/7</div>
-              <div className="text-sm text-slate-400 mt-1">Managed Technical Support</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400">24/7</div>
+              <div className="text-xs sm:text-sm text-slate-400 mt-1">Managed Technical Support</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Solutions Category Navigation Tabs */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-10">
+      <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Our Core Practice Verticals</h2>
-          <p className="text-slate-400 text-sm sm:text-base">Select a domain to inspect detailed solutions, OEM architectures, and deployment capabilities.</p>
+          <p className="text-slate-400 text-xs sm:text-base">Select a domain to inspect detailed solutions, OEM architectures, and deployment capabilities.</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 mb-8">
           {enterpriseCategories.map((cat) => {
             const IconComp = cat.icon;
             const isSelected = activeTab === cat.id;
@@ -640,29 +651,29 @@ const EnterpriseSolutions: React.FC = () => {
       </section>
 
       {/* OEM Strategic Ecosystem & Partnerships */}
-      <section id="oem-ecosystem" className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
+      <section id="oem-ecosystem" className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-sm font-semibold mb-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-xs sm:text-sm font-semibold mb-3">
               <Award className="w-4 h-4" />
               <span>Technology Ecosystem</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Strategic OEM & Technology Alliances</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-base">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-white mb-2">Strategic OEM & Technology Alliances</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-xs sm:text-base">
               We partner with global technology pioneers to deliver certified, enterprise-grade hardware, warranties, and direct implementation support.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
             {oemPartners.map((oem) => (
               <div
                 key={oem.id}
-                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 p-4 rounded-xl flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
-                <div className="w-full h-16 bg-white rounded-md p-2 flex items-center justify-center mb-3">
+                <div className="w-full h-14 sm:h-16 bg-white rounded-md p-2 flex items-center justify-center mb-2 sm:mb-3">
                   <img src={oem.image} alt={`${oem.name} logo`} className="max-h-full max-w-full object-contain" />
                 </div>
-                <h4 className="text-sm font-bold text-white mb-1">{oem.name}</h4>
+                <h4 className="text-xs sm:text-sm font-bold text-white mb-1">{oem.name}</h4>
                 <p className="text-[10px] text-slate-400 leading-tight">{oem.category}</p>
               </div>
             ))}
@@ -671,13 +682,13 @@ const EnterpriseSolutions: React.FC = () => {
       </section>
 
       {/* Turnkey Engineering Process */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">Our Turnkey Implementation Lifecycle</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">Structured methodologies guaranteeing zero project friction, rigorous testing, and seamless operational handover.</p>
+      <section className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-white mb-2">Our Turnkey Implementation Lifecycle</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto text-xs sm:text-base">Structured methodologies guaranteeing zero project friction, rigorous testing, and seamless operational handover.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 sm:gap-6">
           {[
             { step: '01', title: 'Site Assessment', desc: 'Detailed physical audit, bandwidth analysis, and requirement scoping.' },
             { step: '02', title: 'Architecture Design', desc: 'Custom network topology, BOQ preparation, and OEM selection.' },
@@ -685,9 +696,9 @@ const EnterpriseSolutions: React.FC = () => {
             { step: '04', title: 'Deployment & QC', desc: 'Professional cabling, rack mounting, IP configuration, and safety QA.' },
             { step: '05', title: 'Commissioning & AMC', desc: 'Handover, admin training, documentation, and SLA support kickoff.' }
           ].map((item, idx) => (
-            <div key={idx} className="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl relative backdrop-blur-sm">
-              <div className="text-4xl font-black text-blue-500/20 mb-4">{item.step}</div>
-              <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+            <div key={idx} className="bg-slate-900/80 border border-slate-800 p-5 rounded-2xl relative backdrop-blur-sm">
+              <div className="text-3xl font-black text-blue-500/20 mb-3">{item.step}</div>
+              <h3 className="text-base font-bold text-white mb-1.5">{item.title}</h3>
               <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -695,8 +706,8 @@ const EnterpriseSolutions: React.FC = () => {
       </section>
 
       {/* Contact & RFQ Form Section */}
-      <section id="quote-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
-        <div className="max-w-5xl mx-auto bg-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl">
+      <section id="quote-form" className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 bg-transparent">
+        <div className="max-w-5xl mx-auto bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-3 py-1 rounded-full text-blue-400 text-xs font-semibold mb-4">
@@ -762,20 +773,38 @@ const EnterpriseSolutions: React.FC = () => {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 mb-1">Primary Solution Requirement *</label>
-                <select
-                  value={rfqRequirement}
-                  onChange={(e) => setRfqRequirement(e.target.value)}
-                  className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500"
-                >
-                  <option value="IT Infrastructure & Enterprise Networking">IT Infrastructure & Enterprise Networking</option>
-                  <option value="Audio-Visual (AV) Boardroom Automation">Audio-Visual (AV) Boardroom Automation</option>
-                  <option value="IP Telephony & Unified Communications (UCC)">IP Telephony & Unified Communications (UCC)</option>
-                  <option value="IP CCTV Surveillance & Access Control">IP CCTV Surveillance & Access Control</option>
-                  <option value="End-to-End System Integration">End-to-End System Integration</option>
-                  <option value="SLA Managed AMC Support Contract">SLA Managed AMC Support Contract</option>
-                </select>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Primary Requirement *</label>
+                  <select
+                    value={rfqRequirement}
+                    onChange={handleRequirementChange}
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+                  >
+                    {SERVICES_CATALOG.map((s) => (
+                      <option key={s.name} value={s.name}>
+                        {s.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Specific Sub-Service / Need</label>
+                  <select
+                    value={rfqSubService}
+                    onChange={(e) => setRfqSubService(e.target.value)}
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+                  >
+                    <option value="">-- Select Specific Need (Optional) --</option>
+                    {currentSubServices.map((sub, idx) => (
+                      <option key={idx} value={sub}>
+                        {sub}
+                      </option>
+                    ))}
+                    <option value="Custom / Complete Enterprise Setup">Custom / Complete Enterprise Setup</option>
+                  </select>
+                </div>
               </div>
 
               <div>

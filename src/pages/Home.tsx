@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-transparent">
       {/* Hero Section */}
-     <section className="relative w-full min-h-[70vh] sm:min-h-screen flex items-start justify-center text-white overflow-hidden pt-12 sm:pt-16 pb-12">
+     <section className="relative w-full min-h-[60vh] sm:min-h-[85vh] flex items-start justify-center text-white overflow-hidden pt-6 sm:pt-8 pb-8">
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
           {/* Desktop & Tablet Layout: 2 Columns (Left: Brand/Description/CTAs, Right: Glass Product Carousel)
@@ -131,22 +131,22 @@ const Home = () => {
       </section>
 
       {/* Enterprise Verticals Grid Section */}
-      <section className="py-20 bg-transparent text-white">
+      <section className="py-10 sm:py-12 bg-transparent text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold mb-4">
+          <div className="text-center mb-8 sm:mb-10">
+            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Turnkey Enterprise Integration</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold mb-4">
+            <h2 className="text-2xl sm:text-4xl font-extrabold mb-3">
               Solutions that adapt to your needs and scale with you
             </h2>
-            <p className="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg">
+            <p className="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base">
               From collaboration spaces and voice platforms to secure networks, surveillance, and print workflows, we design technology around how your teams operate.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: Network,
@@ -200,28 +200,28 @@ const Home = () => {
             ].map((vertical, idx) => (
               <div
                 key={idx}
-                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 p-8 rounded-2xl flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 shadow-xl backdrop-blur-sm"
+                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 p-6 sm:p-7 rounded-2xl flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 shadow-xl backdrop-blur-sm"
               >
                 <div>
-                  <div className="flex justify-between items-center mb-6">
-                    <div className="bg-blue-600/20 text-blue-400 p-3.5 rounded-xl border border-blue-500/30">
-                      <vertical.icon className="w-7 h-7" />
+                  <div className="flex justify-between items-center mb-5">
+                    <div className="bg-blue-600/20 text-blue-400 p-3 rounded-xl border border-blue-500/30">
+                      <vertical.icon className="w-6 h-6" />
                     </div>
                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 bg-slate-900 border border-slate-800 px-3 py-1 rounded-full">
                       {vertical.tag}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                     {vertical.title}
                   </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
                     {vertical.desc}
                   </p>
                 </div>
 
                 <Link
                   to={vertical.link}
-                  className="inline-flex items-center space-x-2 text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors pt-4"
+                  className="inline-flex items-center space-x-2 text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors pt-3"
                 >
                   <span>Explore Architecture</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -230,13 +230,13 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-8 text-center">
             <Link
               to="/enterprise-solutions"
-              className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3.5 rounded-xl transition-colors shadow-lg shadow-blue-600/30"
+              className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-7 py-3 rounded-xl transition-colors shadow-lg shadow-blue-600/30 text-sm sm:text-base"
             >
               <span>View Full Enterprise Portfolio & OEM Partners</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -246,7 +246,7 @@ const Home = () => {
       <HorizontalParallax />
 
       {/* Stats Section with Smooth Counter Animation (0 -> target) */}
-      <section className="py-16 bg-transparent">
+      <section className="py-8 sm:py-10 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <Fade direction="up" cascade triggerOnce delay={50} duration={800}>
@@ -280,91 +280,91 @@ const Home = () => {
       </section>
 
       {/* Services Highlight Section */}
-      <section className="relative py-20 bg-transparent">
+      <section className="relative py-10 sm:py-12 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-3">
               Services That Keep Technology Performing
             </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
               Practical design, delivery, and lifecycle support for connected enterprise environments
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* CCTV Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-              <div className="bg-blue-500/10 border border-blue-500/30 p-3 rounded-full w-fit mb-6">
-                <Camera className="h-8 w-8 text-blue-400" />
+            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
+              <div className="bg-blue-500/10 border border-blue-500/30 p-2.5 rounded-full w-fit mb-4">
+                <Camera className="h-6 w-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-white">CCTV Security Systems</h3>
-              <p className="text-slate-300 mb-6 font-normal text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-2 text-white">CCTV Security Systems</h3>
+              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
                 Complete surveillance solutions including installation, maintenance, and monitoring for homes and businesses.
               </p>
-              <ul className="space-y-2 mb-6 text-slate-300 text-sm">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>HD & 4K Camera Installation</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Remote Monitoring Setup</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>24/7 Maintenance Support</span></li>
+              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>HD & 4K Camera Installation</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Remote Monitoring Setup</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>24/7 Maintenance Support</span></li>
               </ul>
-              <Link to="/solutions/secured-surveillance" className="text-blue-400 hover:text-blue-300 font-semibold flex items-center space-x-2">
-                <span>Learn More</span><ArrowRight className="h-4 w-4" />
+              <Link to="/solutions/secured-surveillance" className="text-blue-400 hover:text-blue-300 font-semibold flex items-center space-x-2 text-xs">
+                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
 
             {/* Computer Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-emerald-500/50">
-              <div className="bg-emerald-500/10 border border-emerald-500/30 p-3 rounded-full w-fit mb-6">
-                <Monitor className="h-8 w-8 text-emerald-400" />
+            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-emerald-500/50">
+              <div className="bg-emerald-500/10 border border-emerald-500/30 p-2.5 rounded-full w-fit mb-4">
+                <Monitor className="h-6 w-6 text-emerald-400" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Computer & Network Services</h3>
-              <p className="text-slate-300 mb-6 font-normal text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-2 text-white">Computer & Network Services</h3>
+              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
                 Expert computer repair, networking, and IT support services for all your technology needs.
               </p>
-              <ul className="space-y-2 mb-6 text-slate-300 text-sm">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Hardware & Software Repair</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Network Setup & Management</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Data Recovery Services</span></li>
+              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Hardware & Software Repair</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Network Setup & Management</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Data Recovery Services</span></li>
               </ul>
-              <Link to="/solutions/secured-it-infrastructure" className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center space-x-2">
-                <span>Learn More</span><ArrowRight className="h-4 w-4" />
+              <Link to="/solutions/secured-it-infrastructure" className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center space-x-2 text-xs">
+                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
 
             {/* Biometric Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-amber-500/50">
-              <div className="bg-amber-500/10 border border-amber-500/30 p-3 rounded-full w-fit mb-6">
-                <Fingerprint className="h-8 w-8 text-amber-400" />
+            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-amber-500/50">
+              <div className="bg-amber-500/10 border border-amber-500/30 p-2.5 rounded-full w-fit mb-4">
+                <Fingerprint className="h-6 w-6 text-amber-400" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Biometric Systems</h3>
-              <p className="text-slate-300 mb-6 font-normal text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-2 text-white">Biometric Systems</h3>
+              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
                 Expert Biometric & RFID attendance systems installation, repair, and maintenance.
               </p>
-              <ul className="space-y-2 mb-6 text-slate-300 text-sm">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Installation and Repair</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Service & Maintenance</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Advanced Systems</span></li>
+              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Installation and Repair</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Service & Maintenance</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Advanced Systems</span></li>
               </ul>
-              <Link to="/services" className="text-amber-400 hover:text-amber-300 font-semibold flex items-center space-x-2">
-                <span>Learn More</span><ArrowRight className="h-4 w-4" />
+              <Link to="/services" className="text-amber-400 hover:text-amber-300 font-semibold flex items-center space-x-2 text-xs">
+                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
 
             {/* Printer Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-purple-500/50">
-              <div className="bg-purple-500/10 border border-purple-500/30 p-3 rounded-full w-fit mb-6">
-                <Printer className="h-8 w-8 text-purple-400" />
+            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-purple-500/50">
+              <div className="bg-purple-500/10 border border-purple-500/30 p-2.5 rounded-full w-fit mb-4">
+                <Printer className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-white">Printer & Copier Solutions</h3>
-              <p className="text-slate-300 mb-6 font-normal text-sm leading-relaxed">
+              <h3 className="text-lg font-bold mb-2 text-white">Printer & Copier Solutions</h3>
+              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
                 Complete printer services including repair, maintenance, and supplies for all major brands.
               </p>
-              <ul className="space-y-2 mb-6 text-slate-300 text-sm">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>All Brand Repair Services</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Toner & Cartridge Supply</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-4 w-4 text-emerald-400" /><span>Preventive Maintenance</span></li>
+              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>All Brand Repair Services</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Toner & Cartridge Supply</span></li>
+                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Preventive Maintenance</span></li>
               </ul>
-              <Link to="/solutions/print-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center space-x-2">
-                <span>Learn More</span><ArrowRight className="h-4 w-4" />
+              <Link to="/solutions/print-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center space-x-2 text-xs">
+                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </div>
@@ -372,55 +372,55 @@ const Home = () => {
       </section>
 
       {/* Trusted Clients */}
-      <section className="py-16 bg-transparent">
+      <section className="py-8 sm:py-10 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Fade direction="down" triggerOnce cascade damping={0.2} duration={1000}>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Trusted by Leading Organizations</h2>
-              <p className="text-xl text-slate-400">
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Trusted by Leading Organizations</h2>
+              <p className="text-base sm:text-lg text-slate-400">
                 We're proud to serve government agencies, enterprises, and high-profile clients
               </p>
             </div>
           </Fade>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6">
             <Slide direction="left" triggerOnce delay={0} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
-                <div className="bg-white p-2 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+                <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={drdoLogo} alt="DRDO Logo" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="font-bold text-lg text-white mb-2">DRDO & Defense</h3>
-                <p className="text-slate-400 text-sm">Defence Research & Development Organisation AMC & Tech Partner</p>
+                <h3 className="font-bold text-base sm:text-lg text-white mb-1.5">DRDO & Defense</h3>
+                <p className="text-slate-400 text-xs sm:text-sm">Defence Research & Development Organisation AMC & Tech Partner</p>
               </div>
             </Slide>
 
             <Slide direction="up" triggerOnce delay={150} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
-                <div className="bg-white p-2 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+                <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={nabardLogo} alt="NABARD Logo" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="font-bold text-lg text-white mb-2">NABARD & National Banks</h3>
-                <p className="text-slate-400 text-sm">National Banks & Financial Institutions Infrastructure Contracts</p>
+                <h3 className="font-bold text-base sm:text-lg text-white mb-1.5">NABARD & National Banks</h3>
+                <p className="text-slate-400 text-xs sm:text-sm">National Banks & Financial Institutions Infrastructure Contracts</p>
               </div>
             </Slide>
 
             <Slide direction="up" triggerOnce delay={300} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
-                <div className="bg-white p-2 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+                <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={IMDLogo} alt="IMD Logo" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="font-bold text-lg text-white mb-2">Meteorological Dept</h3>
-                <p className="text-slate-400 text-sm">India Meteorological Department Electronics & Server AMC Contracts</p>
+                <h3 className="font-bold text-base sm:text-lg text-white mb-1.5">Meteorological Dept</h3>
+                <p className="text-slate-400 text-xs sm:text-sm">India Meteorological Department Electronics & Server AMC Contracts</p>
               </div>
             </Slide>
 
             <Slide direction="right" triggerOnce delay={450} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
-                <div className="bg-white p-2 w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+                <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={airforceschoolLogo} alt="Air Force School Logo" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="font-bold text-lg text-white mb-2">Air Force School & Edu</h3>
-                <p className="text-slate-400 text-sm">Schools, Educational Institutions, CA Firms & Software Startups</p>
+                <h3 className="font-bold text-base sm:text-lg text-white mb-1.5">Air Force School & Edu</h3>
+                <p className="text-slate-400 text-xs sm:text-sm">Schools, Educational Institutions, CA Firms & Software Startups</p>
               </div>
             </Slide>
           </div>
@@ -428,36 +428,36 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full py-24 flex items-center justify-center text-white bg-transparent">
+      <section className="relative w-full py-10 sm:py-14 flex items-center justify-center text-white bg-transparent">
         <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
           <Fade direction="up" triggerOnce duration={1000}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Ready to Connect Your Technology Ecosystem?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-blue-200 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-7 text-blue-200 max-w-2xl mx-auto">
               Get a clear plan for collaboration, infrastructure, security, print, and ongoing support.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-900/40 border border-emerald-400/30 transition-all hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-emerald-900/40 border border-emerald-400/30 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
-                <MessageCircle className="w-5 h-5 fill-current" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-current" />
                 <span>Chat on WhatsApp</span>
               </a>
 
               <a
                 href="tel:+919573376389"
-                className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-900/40 border border-blue-400/30 transition-all hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-blue-900/40 border border-blue-400/30 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Call: +91 95733 76389</span>
               </a>
 
               <Link to="/contact">
-                <GradientButton className="w-full sm:w-auto px-8 py-4 text-base">
+                <GradientButton className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base">
                   Get Free Consultation
                 </GradientButton>
               </Link>

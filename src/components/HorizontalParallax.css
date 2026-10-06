@@ -1,94 +1,115 @@
 :root {
   --line: rgba(59, 130, 246, 0.2);
   --line-hover: rgba(96, 165, 250, 0.6);
-  --surface: rgba(15, 23, 42, 0.75);
-  --surface-hover: rgba(30, 41, 59, 0.9);
+  --surface: rgba(15, 23, 42, 0.85);
+  --surface-hover: rgba(30, 41, 59, 0.95);
   --text: #f8fafc;
   --text-muted: #94a3b8;
   --accent: #3b82f6;
   --accent-glow: rgba(59, 130, 246, 0.25);
 }
 
-.hparallax {
-  padding: 80px 0 110px;
-  overflow: hidden;
+/* Pinned vertical-to-horizontal parallax container */
+.hparallax-pin-wrapper {
   position: relative;
+  height: 250vh;
   background: transparent;
+}
+
+.hparallax-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .hparallax__header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
   padding: 0 20px;
+  flex-shrink: 0;
 }
 
 .hparallax__badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 5px 14px;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   background: rgba(59, 130, 246, 0.1);
   border: 1px solid rgba(59, 130, 246, 0.3);
   color: #60a5fa;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
 }
 
 .hparallax__title {
-  font-size: 2.25rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   letter-spacing: -0.02em;
 }
 
 .hparallax__subtitle {
   color: #94a3b8;
-  font-size: 1.05rem;
-  max-width: 680px;
+  font-size: 0.92rem;
+  max-width: 650px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .hparallax__inner {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  will-change: transform, opacity;
+  gap: 16px;
+  width: 100%;
+  will-change: transform;
+}
+
+.hparallax__row-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .hparallax__row {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   width: max-content;
-  padding: 0 24px;
+  padding: 4px 24px;
   will-change: transform;
 }
 
 .hparallax__card {
-  min-width: 280px;
-  max-width: 320px;
+  min-width: 290px;
+  max-width: 330px;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--surface);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 20px 22px;
+  padding: 16px 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 1px rgba(255, 255, 255, 0.1) inset;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .hparallax__card::before {
@@ -104,10 +125,9 @@
 }
 
 .hparallax__card:hover {
-  transform: translateY(-4px);
   border-color: var(--line-hover);
   background: var(--surface-hover);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px var(--accent-glow);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-glow);
 }
 
 .hparallax__card:hover::before {
@@ -123,7 +143,7 @@
 
 .designator {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -148,12 +168,12 @@
 .hparallax__card-body {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .hparallax__card-label {
   color: var(--text);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   line-height: 1.35;
   margin: 0;
@@ -161,8 +181,8 @@
 
 .hparallax__card-desc {
   color: var(--text-muted);
-  font-size: 0.8rem;
-  line-height: 1.45;
+  font-size: 0.78rem;
+  line-height: 1.4;
   margin: 0;
 }
 
@@ -170,9 +190,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #64748b;
 }
 
@@ -181,18 +201,27 @@
 }
 
 @media (max-width: 768px) {
-  .hparallax {
-    padding: 50px 0 80px;
+  .hparallax-pin-wrapper {
+    height: 220vh;
+  }
+  .hparallax-sticky {
+    padding: 10px 0;
   }
   .hparallax__title {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
+  }
+  .hparallax__subtitle {
+    font-size: 0.8rem;
+  }
+  .hparallax__inner {
+    gap: 12px;
   }
   .hparallax__card {
-    min-width: 220px;
-    max-width: 260px;
-    padding: 14px 16px;
+    min-width: 240px;
+    max-width: 270px;
+    padding: 12px 14px;
   }
   .hparallax__card-label {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Headphones } from 'lucide-react';
 import ParticlesBackground from '../components/ParticlesBackground';
+import { SERVICES_CATALOG } from './Contact';
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -12,7 +13,17 @@ const ContactUs: React.FC = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const [service, setService] = useState('');
+  const [subService, setSubService] = useState('');
   const [message, setMessage] = useState('');
+
+  const selectedServiceObj = SERVICES_CATALOG.find((s) => s.name === service);
+  const currentSubServices = selectedServiceObj ? selectedServiceObj.subServices : [];
+
+  const handleServiceChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setService(e.target.value);
+    setSubService('');
+  };
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,6 +33,8 @@ const ContactUs: React.FC = () => {
 👤 *Customer / Org Name:* ${name || 'Not provided'}
 📱 *Phone Number:* ${phone}
 📧 *Email Address:* ${email}
+🛠️ *Primary Service:* ${service || 'General Technical Consultation'}
+🎯 *Sub-Service / Need:* ${subService || 'All / General Requirement'}
 📝 *Requirement Details:* ${message || 'N/A'}
 ---------------------------------------`;
 
@@ -34,54 +47,54 @@ const ContactUs: React.FC = () => {
     <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
       <ParticlesBackground />
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-transparent text-center">
+      <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-sm font-semibold mb-6">
+          <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs sm:text-sm font-semibold mb-4">
             <Headphones className="w-4 h-4" />
             <span>Connect with Solution Architects</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">Contact Us</h1>
-          <p className="max-w-3xl mx-auto text-lg text-slate-300 mb-8">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Contact Us</h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">
             Get in touch for site surveys, system integration BOQs, or 24/7 SLA AMC support contracts.
           </p>
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column: Contact Cards */}
-          <div className="space-y-6">
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-start space-x-4">
-              <Phone className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+          <div className="space-y-4">
+            <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl flex items-start space-x-4">
+              <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="text-lg font-bold text-white mb-1">Direct Phone Lines</h3>
+                <h3 className="text-base font-bold text-white mb-1">Direct Phone Lines</h3>
                 <p className="text-slate-300 text-sm"><a href="tel:+919573376389" className="hover:underline">+91 95733 76389</a></p>
-                <p className="text-slate-400 text-xs mt-1">Available Mon - Sat (9:00 AM - 8:00 PM)</p>
+                <p className="text-slate-400 text-xs mt-0.5">Available Mon - Sat (9:00 AM - 8:00 PM)</p>
               </div>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-start space-x-4">
-              <Mail className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+            <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl flex items-start space-x-4">
+              <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="text-lg font-bold text-white mb-1">Official Emails</h3>
+                <h3 className="text-base font-bold text-white mb-1">Official Emails</h3>
                 <p className="text-slate-300 text-sm"><a href="mailto:alekhyatechnologies7@gmail.com" className="hover:underline">alekhyatechnologies7@gmail.com</a></p>
-                <p className="text-slate-400 text-xs mt-1">Technical Inquiries & AMC Proposals</p>
+                <p className="text-slate-400 text-xs mt-0.5">Technical Inquiries & AMC Proposals</p>
               </div>
             </div>
 
-            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-start space-x-4">
-              <MapPin className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+            <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl flex items-start space-x-4">
+              <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="text-lg font-bold text-white mb-1">Corporate Headquarters</h3>
+                <h3 className="text-base font-bold text-white mb-1">Corporate Headquarters</h3>
                 <p className="text-slate-300 text-sm">Hyderabad, Telangana, India</p>
-                <p className="text-slate-400 text-xs mt-1">Serving clients Pan-India with local resident engineers</p>
+                <p className="text-slate-400 text-xs mt-0.5">Serving clients Pan-India with local resident engineers</p>
               </div>
             </div>
           </div>
 
           {/* Right Column: Form */}
-          <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-white mb-6">Send an Inquiry</h3>
+          <div className="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+            <h3 className="text-xl font-bold text-white mb-4">Send an Inquiry</h3>
             <form className="space-y-4" onSubmit={handleWhatsAppSubmit}>
               <div>
                 <label className="block text-xs font-semibold text-slate-300 mb-1">Your Name / Organization *</label>
@@ -116,6 +129,49 @@ const ContactUs: React.FC = () => {
                     className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-400 cursor-text hover:border-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
                     placeholder="name@company.com"
                   />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Primary Service *</label>
+                  <select
+                    required
+                    value={service}
+                    onChange={handleServiceChange}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
+                  >
+                    <option value="">Select a Primary Service</option>
+                    {SERVICES_CATALOG.map((s) => (
+                      <option key={s.name} value={s.name}>
+                        {s.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">Specific Sub-Service / Need</label>
+                  <select
+                    disabled={!service}
+                    value={subService}
+                    onChange={(e) => setSubService(e.target.value)}
+                    className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <option value="">
+                      {service ? '-- Select Specific Sub-Service --' : '-- Choose Service First --'}
+                    </option>
+                    {currentSubServices.map((sub, idx) => (
+                      <option key={idx} value={sub}>
+                        {sub}
+                      </option>
+                    ))}
+                    {service && (
+                      <option value="Other / Custom Need under this category">
+                        Other / Custom Need under this category
+                      </option>
+                    )}
+                  </select>
                 </div>
               </div>
               <div>

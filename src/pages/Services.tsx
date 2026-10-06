@@ -41,17 +41,17 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-transparent text-slate-100">
+    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-10">
           <Fade direction="down" triggerOnce>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
               Our Professional Services
             </h1>
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
               Comprehensive technology solutions backed by 15+ years of industry expertise. Trusted by government agencies, defense labs, educational institutions, financial firms, and tech startups.
             </p>
           </Fade>
@@ -183,24 +183,24 @@ const Services = () => {
             triggerOnce
             cascade
             damping={0.1}
-            className="mb-20"
+            className="mb-8 sm:mb-10"
           >
             <div id={service.id} className="bg-slate-900/80 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
 
               <div
-                className="relative p-8 text-white bg-slate-950/80 border-b border-slate-800"
+                className="relative p-5 sm:p-6 text-white bg-slate-950/80 border-b border-slate-800"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="bg-blue-600/20 border border-blue-500/30 text-blue-400 p-3 rounded-full">{service.icon}</div>
+                  <div className="bg-blue-600/20 border border-blue-500/30 text-blue-400 p-2.5 rounded-full">{service.icon}</div>
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-white">{service.title}</h2>
-                    <p className="text-slate-300">{service.subtitle}</p>
+                    <h2 className="text-xl sm:text-2xl font-bold text-white">{service.title}</h2>
+                    <p className="text-xs sm:text-sm text-slate-300">{service.subtitle}</p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="p-5 sm:p-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* Left Column - Services */}
                   <div>
                     <h3 className="text-xl font-semibold mb-4 text-blue-400">
@@ -274,25 +274,25 @@ const Services = () => {
 
         {/* Why Choose Us */}
         <Fade direction="up" triggerOnce delay={200}>
-          <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 border border-slate-800 text-white p-8 rounded-2xl">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Choose Alekhya Technologies?</h2>
-              <p className="text-slate-300">Experience the difference that comes with 15+ years of expertise</p>
+          <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 border border-slate-800 text-white p-6 sm:p-8 rounded-2xl">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Why Choose Alekhya Technologies?</h2>
+              <p className="text-slate-300 text-sm sm:text-base">Experience the difference that comes with 15+ years of expertise</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
                 { icon: Shield, title: 'Trusted by Government', desc: 'NABARD and DRDO certified services' },
                 { icon: Clock, title: '24/7 Support', desc: 'Round-the-clock assistance available' },
                 { icon: CheckCircle, title: 'Quality Guaranteed', desc: '100% satisfaction guarantee' },
                 { icon: Wrench, title: 'Expert Technicians', desc: 'Certified and experienced professionals' },
               ].map((item) => (
-                <div key={item.title} className="text-center bg-slate-950/60 p-6 rounded-xl border border-slate-800/80">
-                  <div className="bg-blue-600/20 border border-blue-500/30 p-3 rounded-full w-fit mx-auto mb-4">
-                    <item.icon className="h-6 w-6 text-blue-400" />
+                <div key={item.title} className="text-center bg-slate-950/60 p-5 rounded-xl border border-slate-800/80">
+                  <div className="bg-blue-600/20 border border-blue-500/30 p-2.5 rounded-full w-fit mx-auto mb-3">
+                    <item.icon className="h-5 w-5 text-blue-400" />
                   </div>
-                  <h3 className="font-semibold mb-2 text-white">{item.title}</h3>
-                  <p className="text-sm text-slate-400">{item.desc}</p>
+                  <h3 className="font-semibold mb-1 text-white text-base">{item.title}</h3>
+                  <p className="text-xs text-slate-400">{item.desc}</p>
                 </div>
               ))}
             </div>
