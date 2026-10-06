@@ -17,6 +17,7 @@ import {
 import { Fade } from 'react-awesome-reveal';
 import ParticlesBackground from '../components/ParticlesBackground';
 import { GradientButton } from '../components/ui/gradient-button';
+import { TextShimmer } from '../components/ui/text-shimmer';
 import ciscoLogo from '../Logo/Cisco_logo.svg.webp';
 import arubaLogo from '../Logo/HPE-aruba-networking-logo.webp';
 import dellLogo from '../Logo/Dell.webp';
@@ -32,6 +33,25 @@ import xeroxLogo from '../Logo/Xerox-logo.jpg';
 import konicaLogo from '../Logo/Konica1.png';
 import { SERVICES_CATALOG } from './Contact';
 
+import switchingImg from '../Logo/Enterprise L2L3 Switching  SD-WAN.jpg';
+import structuredLanImg from '../Logo/Structured LAN.jpg';
+import datacenterRacksImg from '../Logo/Data Center Racks.jpg';
+import boardroomImg from '../Logo/Executive boardroom.jpg';
+import videowallImg from '../Logo/ledvideowalls.webp';
+import techAvImg from '../Logo/TEch.jpg';
+import ipbxImg from '../Logo/ipbx.jpg';
+import teamsZoomImg from '../Logo/Teams  Zoom Room Systems.jpg';
+import contactCenterImg from '../Logo/contactcenter.jpg';
+import cctv4kImg from '../Logo/4k cctv.jpg';
+import biometricImg from '../Logo/Biometric access control.jpg';
+import gateAutomationImg from '../Logo/Gate Automation.jpg';
+import mfpImg from '../Logo/Multifunction Photocopiers.jpg';
+import mpsImg from '../Logo/Managed print services.jpg';
+import copierRentalImg from '../Logo/copier rental.jpg';
+import solutionArchImg from '../Logo/solution architecture.jpg';
+import techConsultancyImg from '../Logo/Technical Consultancy  Audits.jpg';
+import techEngImg from '../Logo/Tech1.jpg';
+
 interface SolutionCategory {
   id: string;
   title: string;
@@ -44,6 +64,7 @@ interface SolutionCategory {
     title: string;
     description: string;
     details: string[];
+    image?: string;
   }[];
   oems: string[];
   partnerIds: string[];
@@ -74,7 +95,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Redundant WAN Load Balancing & SD-WAN',
           'VLAN Segmentation & Zero-Trust Access Control',
           'Centralized Cloud Network Monitoring Dashboards'
-        ]
+        ],
+        image: switchingImg
       },
       {
         title: 'Structured Fiber & LAN Cabling',
@@ -84,7 +106,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Single-Mode & Multi-Mode Fiber Optic Networks',
           'Patch Panel Engineering & Cable Management',
           'OTDR Testing & Certification Documentation'
-        ]
+        ],
+        image: structuredLanImg
       },
       {
         title: 'Data Center & Network Security',
@@ -94,7 +117,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Server Rack Enclosures & Precision Cooling Solutions',
           'Online Uninterruptible Power Supply (UPS) Systems',
           'Network Vulnerability Audits & Intrusion Prevention'
-        ]
+        ],
+        image: datacenterRacksImg
       }
     ],
     oems: ['Cisco', 'HPE Aruba', 'Dell Technologies', 'MicroTik', 'TP-Link Omada', 'Fortinet', 'Schneider / APC'],
@@ -124,7 +148,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Acoustic Echo Cancellation (AEC) Audio DSPs',
           'Ceiling-Array Beamforming Microphones',
           'Motorized Screen Mounts & Table Cable Cubbies'
-        ]
+        ],
+        image: boardroomImg
       },
       {
         title: 'Video Walls & High-Impact Displays',
@@ -134,7 +159,8 @@ const enterpriseCategories: SolutionCategory[] = [
           '4K Ultra HD Commercial Signage Monitors',
           'Multi-Window Video Wall Processors & Controllers',
           'Centralized Cloud Digital Signage Content Management'
-        ]
+        ],
+        image: videowallImg
       },
       {
         title: 'Smart Classrooms & Auditorium AV',
@@ -144,7 +170,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Short-Throw Laser Projectors & Motorized Screens',
           'Auditorium Line-Array Speakers & Digital Mixers',
           'Podium AV Control Consoles & Lecture Capture'
-        ]
+        ],
+        image: techAvImg
       }
     ],
     oems: ['Poly', 'Logitech', 'Samsung', 'LG Commercial', 'Epson', 'Crestron', 'Kramer', 'Bose Professional'],
@@ -174,7 +201,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Multi-Level Auto-Attendant & IVR Routing',
           'Voicemail-to-Email & Mobile Softphone Extensions',
           'Call Recording, Analytics & CDR Reporting'
-        ]
+        ],
+        image: ipbxImg
       },
       {
         title: 'Unified Video Collaboration Rooms',
@@ -184,7 +212,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Touch Controller Consoles for Instant Join',
           'PTZ Optical Zoom Cameras for Large Spaces',
           'BYOD (Bring Your Own Device) Wireless AV Pass-Through'
-        ]
+        ],
+        image: teamsZoomImg
       },
       {
         title: 'Contact Center & Intercom Solutions',
@@ -194,7 +223,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'IP Video Door Phones & Access Intercoms',
           'Noise-Canceling Enterprise Headsets',
           'Emergency PA & Voice Broadcast Integration'
-        ]
+        ],
+        image: contactCenterImg
       }
     ],
     oems: ['Yealink', 'Grandstream', 'Poly', 'Cisco Webex', 'Avaya', 'Fanvil', 'Jabra'],
@@ -224,7 +254,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Deep Learning Video Analytics & Perimeter Guarding',
           'Automated License Plate Recognition (ANPR)',
           'Thermal Surveillance & Heat Mapping Cameras'
-        ]
+        ],
+        image: cctv4kImg
       },
       {
         title: 'Biometric Access Control & Attendance',
@@ -234,7 +265,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Fingerprint & RFID Smart Card Controllers',
           'Multi-Door Electro-Magnetic Lock Integration',
           'Cloud Sync Payroll & Leave Attendance Software'
-        ]
+        ],
+        image: biometricImg
       },
       {
         title: 'Intrusion Alarm & Gate Automation',
@@ -244,7 +276,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Automatic Boom Barriers & Flap Barrier Turnstiles',
           'Centralized Alarm Monitoring Panels',
           'Mobile Alert Notifications & Siren Triggers'
-        ]
+        ],
+        image: gateAutomationImg
       }
     ],
     oems: ['Hikvision', 'Dahua', 'Honeywell', 'CP Plus', 'Matrix Comsec', 'ZKTeco', 'Bosch'],
@@ -274,7 +307,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Touchscreen Android-Based Smart User Interface',
           'Cloud & Mobile Printing (AirPrint, Mopria)',
           'Secure Card-Authentication & Pull-Printing'
-        ]
+        ],
+        image: mfpImg
       },
       {
         title: 'Managed Print Services (MPS)',
@@ -284,7 +318,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Automated Fleet Monitoring & Toner Alerts',
           'User Quota Allocation & Department Billing',
           'Preventive Maintenance & Dedicated Technician'
-        ]
+        ],
+        image: mpsImg
       },
       {
         title: 'Copier Rental & Leasing',
@@ -294,7 +329,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Free Maintenance, Spares & Toner Replacement',
           'Same-Day Breakdown Service & Standby Units',
           'Upgrade Paths to Latest High-Speed Models'
-        ]
+        ],
+        image: copierRentalImg
       }
     ],
     oems: ['Canon', 'Xerox', 'Konica Minolta', 'Epson', 'HP Commercial Print'],
@@ -324,7 +360,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Security VMS & Access Control Unified Dashboards',
           'VoIP & PA System Emergency Interoperability',
           'IoT Sensor Integration for Smart Infrastructure'
-        ]
+        ],
+        image: solutionArchImg
       },
       {
         title: 'Turnkey Project Management',
@@ -334,7 +371,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'OEM Staging, Firmware Calibration & Pre-Testing',
           'On-Time Deployment adhering to ISO/SLA standards',
           'Complete As-Built Drawings & Operating Manuals'
-        ]
+        ],
+        image: techAvImg
       }
     ],
     oems: ['Multi-Vendor Ecosystem Integrations across Cisco, Poly, Hikvision, Dell, HP & Honeywell'],
@@ -364,7 +402,8 @@ const enterpriseCategories: SolutionCategory[] = [
           'Comprehensive AMC (Hardware Repair + Spare Parts)',
           'Non-Comprehensive AMC (Labor + Preventive Service)',
           'Quarterly Health Checks & Performance Tuning'
-        ]
+        ],
+        image: techConsultancyImg
       },
       {
         title: 'Managed Field & Resident Engineers',
@@ -374,7 +413,8 @@ const enterpriseCategories: SolutionCategory[] = [
           '24/7 Technical Helpdesk & Remote Diagnostics',
           'Emergency Standby Hardware & Loaner Units',
           'Detailed Service Level Reports & Log Insights'
-        ]
+        ],
+        image: techEngImg
       }
     ],
     oems: ['All Major OEM Partners (HP, Dell, Canon, Epson, Xerox, Cisco, Yealink, Hikvision)'],
@@ -460,7 +500,9 @@ const EnterpriseSolutions: React.FC = () => {
           <Fade direction="down" triggerOnce>
             <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs sm:text-sm font-semibold mb-4">
               <Sparkles className="w-4 h-4 text-blue-400" />
-              <span>Enterprise Technology Integration & Infrastructure</span>
+              <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+                Enterprise Technology Integration & Infrastructure
+              </TextShimmer>
             </div>
           </Fade>
 
@@ -597,18 +639,30 @@ const EnterpriseSolutions: React.FC = () => {
             {/* Detailed Offering Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
               {activeCategory.keyOfferings.map((offering, idx) => (
-                <div key={idx} className="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition-colors">
+                <div key={idx} className="group bg-slate-950/80 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-blue-500/50 transition-all shadow-xl">
                   <div>
-                    <h4 className="text-xl font-bold text-white mb-2">{offering.title}</h4>
-                    <p className="text-sm text-slate-400 mb-4">{offering.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {offering.details.map((detail, dIdx) => (
-                        <li key={dIdx} className="text-xs text-slate-300 flex items-center space-x-2">
-                          <CheckCircle2 className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {offering.image && (
+                      <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                        <img
+                          src={offering.image}
+                          alt={offering.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/20" />
+                      </div>
+                    )}
+                    <div className="p-6">
+                      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{offering.title}</h4>
+                      <p className="text-sm text-slate-400 mb-4">{offering.description}</p>
+                      <ul className="space-y-2 mb-2">
+                        {offering.details.map((detail, dIdx) => (
+                          <li key={dIdx} className="text-xs text-slate-300 flex items-center space-x-2">
+                            <CheckCircle2 className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -656,7 +710,9 @@ const EnterpriseSolutions: React.FC = () => {
           <div className="text-center mb-6 sm:mb-8">
             <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-xs sm:text-sm font-semibold mb-3">
               <Award className="w-4 h-4" />
-              <span>Technology Ecosystem</span>
+              <TextShimmer duration={2.5} className="[--base-color:#c084fc] [--base-gradient-color:#ffffff] dark:[--base-color:#c084fc] dark:[--base-gradient-color:#ffffff]">
+                Technology Ecosystem
+              </TextShimmer>
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white mb-2">Strategic OEM & Technology Alliances</h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-xs sm:text-base">
@@ -712,7 +768,9 @@ const EnterpriseSolutions: React.FC = () => {
             <div>
               <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-3 py-1 rounded-full text-blue-400 text-xs font-semibold mb-4">
                 <Headphones className="w-3.5 h-3.5" />
-                <span>Enterprise Technical Consultation</span>
+                <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+                  Enterprise Technical Consultation
+                </TextShimmer>
               </div>
               <h2 className="text-3xl font-extrabold text-white mb-4">Request a Customized System Integration Proposal</h2>
               <p className="text-slate-300 text-sm mb-6 leading-relaxed">

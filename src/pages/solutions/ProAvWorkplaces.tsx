@@ -3,6 +3,14 @@ import { Link } from 'react-router-dom';
 import { Tv, Monitor, ArrowRight, Sparkles, Building, Layers, Volume2 } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
+import { TextShimmer } from '../../components/ui/text-shimmer';
+
+import executiveBoardroomImg from '../../Logo/Executive boardroom.jpg';
+import interactiveDisplayImg from '../../Logo/Interactive display.jpg';
+import ledVideoWallsImg from '../../Logo/ledvideowalls.webp';
+import ceilingMicrophonesImg from '../../Logo/ceilingmicrophones.jpg';
+import signageImg from '../../Logo/signage.jpg';
+import techClassroomsImg from '../../Logo/TEch.jpg';
 
 const ProAvWorkplaces: React.FC = () => {
   return (
@@ -14,7 +22,9 @@ const ProAvWorkplaces: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-xs sm:text-sm font-semibold mb-4">
             <Tv className="w-4 h-4" />
-            <span>Enterprise Visuals & Workplaces</span>
+            <TextShimmer duration={2.5} className="[--base-color:#c084fc] [--base-gradient-color:#ffffff] dark:[--base-color:#c084fc] dark:[--base-gradient-color:#ffffff]">
+              Enterprise Visuals & Workplaces
+            </TextShimmer>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
             PRO AV & Smart Workplaces
@@ -45,45 +55,69 @@ const ProAvWorkplaces: React.FC = () => {
           <p className="text-slate-400 max-w-2xl mx-auto text-xs sm:text-base">Tailored audio-visual integration designed for enterprise scale and intuitive user experience.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               icon: Building,
               title: 'Executive Boardroom Automation',
-              desc: 'Integrated touch panel control for motorized screens, lighting scenes, acoustic microphones, and multi-display matrix switching.'
+              desc: 'Integrated touch panel control for motorized screens, lighting scenes, acoustic microphones, and multi-display matrix switching.',
+              image: executiveBoardroomImg
             },
             {
               icon: Monitor,
               title: 'Interactive Displays & IFPDs',
-              desc: 'High-resolution 4K interactive flat panels equipped with multi-touch whiteboard software for active team brainstorming.'
+              desc: 'High-resolution 4K interactive flat panels equipped with multi-touch whiteboard software for active team brainstorming.',
+              image: interactiveDisplayImg
             },
             {
               icon: Layers,
               title: 'Fine-Pitch LED & LCD Video Walls',
-              desc: 'Direct-view LED displays and narrow-bezel LCD video walls for command centers, broadcast rooms, and corporate lobbies.'
+              desc: 'Direct-view LED displays and narrow-bezel LCD video walls for command centers, broadcast rooms, and corporate lobbies.',
+              image: ledVideoWallsImg
             },
             {
               icon: Volume2,
               title: 'Acoustic DSP & Sound Systems',
-              desc: 'Digital Signal Processors with Acoustic Echo Cancellation (AEC), ceiling beamforming microphones, and line-array speakers.'
+              desc: 'Digital Signal Processors with Acoustic Echo Cancellation (AEC), ceiling beamforming microphones, and line-array speakers.',
+              image: ceilingMicrophonesImg
             },
             {
               icon: Tv,
               title: 'Digital Signage Networks',
-              desc: 'Centralized cloud-managed commercial displays for dynamic internal communications, welcome screens, and advertising.'
+              desc: 'Centralized cloud-managed commercial displays for dynamic internal communications, welcome screens, and advertising.',
+              image: signageImg
             },
             {
               icon: Sparkles,
               title: 'Smart Classrooms & Auditoriums',
-              desc: 'High-lumen laser projectors, motorized projection screens, lecturer tracking cameras, and digital mixing consoles.'
+              desc: 'High-lumen laser projectors, motorized projection screens, lecturer tracking cameras, and digital mixing consoles.',
+              image: techClassroomsImg
             }
           ].map((item, idx) => (
-            <div key={idx} className="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-purple-500/50 transition-all backdrop-blur-sm">
-              <div className="w-10 h-10 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center mb-4">
-                <item.icon className="w-5 h-5" />
+            <div key={idx} className="group bg-slate-900/80 border border-slate-800 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all backdrop-blur-sm shadow-xl flex flex-col justify-between">
+              <div>
+                <div className="relative h-48 w-full overflow-hidden bg-slate-950">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30" />
+                  <div className="absolute top-3 left-3 w-9 h-9 bg-purple-600/80 backdrop-blur-md text-white rounded-xl flex items-center justify-center shadow-lg">
+                    <item.icon className="w-5 h-5" />
+                  </div>
+                </div>
+                <div className="p-5 sm:p-6">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">{item.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.desc}</p>
+              <div className="px-5 sm:px-6 pb-5 pt-0">
+                <Link to="/contact-us" className="inline-flex items-center space-x-1.5 text-xs font-semibold text-purple-400 hover:text-purple-300">
+                  <span>Inquire for Setup</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>

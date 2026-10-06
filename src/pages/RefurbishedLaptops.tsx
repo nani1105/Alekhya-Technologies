@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { ShieldCheck, Cpu, Battery, Star, Award, Phone, Filter, CheckCircle2 } from 'lucide-react';
 import gsap from 'gsap';
 import { GradientButton } from '../components/ui/gradient-button';
+import { TextShimmer } from '../components/ui/text-shimmer';
 import lenovoT480 from '../Logo/lenovo-t480.jpg';
 import laptopImg from '../Logo/Laptop.jpeg';
 import ThinkpadImg from '../Logo/Thinkpad.jpg';
+import macImg from '../Logo/Mac.avif';
 
 const RefurbishedLaptops = () => {
   const [selectedBrand, setSelectedBrand] = useState('All');
@@ -54,7 +56,7 @@ const RefurbishedLaptops = () => {
       idealFor: 'Designers, Developers & Senior Leadership',
       warranty: '6 Months Warranty Included',
       price: '₹38,000 - ₹55,000',
-      img: laptopImg,
+      img: macImg,
     },
   ];
 
@@ -102,7 +104,9 @@ const RefurbishedLaptops = () => {
       <section className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <span className="gsap-laptop-badge bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-md">
-            100% Tested & Certified Hardware
+            <TextShimmer duration={2.5} className="[--base-color:#6ee7b7] [--base-gradient-color:#ffffff] dark:[--base-color:#6ee7b7] dark:[--base-gradient-color:#ffffff]">
+              100% Tested & Certified Hardware
+            </TextShimmer>
           </span>
           <h1 className="gsap-laptop-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
             A-Grade <span className="text-emerald-400">Refurbished Laptops</span>

@@ -19,6 +19,7 @@ import {
   Phone,
   MessageCircle,
 } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Fade, Slide } from 'react-awesome-reveal';
 import HeroProductCarousel from "../components/HeroProductCarousel";
 import HorizontalParallax from "../components/HorizontalParallax";
@@ -34,7 +35,26 @@ import logo from '../Logo/logo.png';
 import IMDLogo from '../Logo/imd.png';
 import airforceschoolLogo from '../Logo/airforceschool.jpg';
 
+import itInfraImg from '../Logo/Structured LAN.jpg';
+import proAvImg from '../Logo/Executive boardroom.jpg';
+import uccImg from '../Logo/Teams  Zoom Room Systems.jpg';
+import surveillanceImg from '../Logo/4k cctv.jpg';
+import printImg from '../Logo/Multifunction Photocopiers.jpg';
+import sysIntegImg from '../Logo/solution architecture.jpg';
+import slaSupportImg from '../Logo/Technical Consultancy  Audits.jpg';
+
+import cctvHomeImg from '../Logo/4k cctv.jpg';
+import computerHomeImg from '../Logo/computer.png';
+import biometricHomeImg from '../Logo/Biometric access control.jpg';
+import printerHomeImg from '../Logo/printer.webp';
+
 const Home = () => {
+  const { scrollY } = useScroll();
+  const heroLogoY = useTransform(scrollY, [0, 90], [0, -38]);
+  const heroLogoX = useTransform(scrollY, [0, 90], [0, -12]);
+  const heroLogoOpacity = useTransform(scrollY, [0, 60, 95], [1, 0.7, 0]);
+  const heroLogoScale = useTransform(scrollY, [0, 90], [1, 0.95]);
+
   const whatsappUrl =
     "https://wa.me/919573376389?text=Hello%20Alekhya%20Technologies%2C%20I%20would%20like%20to%20inquire%20about%20your%20IT%2C%20Surveillance%2C%20Networking%2C%20and%20Office%20Solutions.%20Please%20provide%20more%20details.";
 
@@ -52,15 +72,28 @@ const Home = () => {
             <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
               {/* Brand Logo & Pill */}
               <div className="flex items-center space-x-3 mb-2 sm:mb-4">
-                <div className="bg-white p-1.5 sm:p-2.5 rounded-full shadow-lg shadow-blue-500/20">
+                <motion.div
+                  style={{
+                    y: heroLogoY,
+                    x: heroLogoX,
+                    opacity: heroLogoOpacity,
+                    scale: heroLogoScale,
+                  }}
+                  className="relative flex items-center justify-center"
+                >
                   <img
                     src={logo}
                     alt="Alekhya Logo"
-                    className="h-8 w-8 sm:h-12 sm:w-12 object-contain"
+                    className="h-10 w-10 object-contain rounded-full drop-shadow-md"
                   />
-                </div>
-                <span className="text-[11px] sm:text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
-                  Enterprise System Integrator
+                </motion.div>
+                <span className="text-[11px] sm:text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/30 px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center">
+                  <TextShimmer
+                    duration={2.5}
+                    className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]"
+                  >
+                    Enterprise System Integrator
+                  </TextShimmer>
                 </span>
               </div>
 
@@ -136,7 +169,9 @@ const Home = () => {
           <div className="text-center mb-8 sm:mb-10">
             <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Turnkey Enterprise Integration</span>
+              <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+                Turnkey Enterprise Integration
+              </TextShimmer>
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold mb-3">
               Solutions that adapt to your needs and scale with you
@@ -154,6 +189,7 @@ const Home = () => {
                 desc: 'Network access, connectivity, monitoring, structured cabling, enterprise switching, Wi-Fi, and secure optimization.',
                 link: '/solutions/secured-it-infrastructure',
                 tag: 'Network Core',
+                image: itInfraImg
               },
               {
                 icon: Tv,
@@ -161,6 +197,7 @@ const Home = () => {
                 desc: 'AI-enabled meeting spaces, hybrid boardrooms and classrooms, digital signage, control rooms, and auditoriums.',
                 link: '/solutions/pro-av-smart-workplaces',
                 tag: 'AV Automation',
+                image: proAvImg
               },
               {
                 icon: PhoneCall,
@@ -168,6 +205,7 @@ const Home = () => {
                 desc: 'On-premise, cloud, and hybrid calling with enterprise voice, video collaboration, and contact-center solutions.',
                 link: '/solutions/unified-collaboration',
                 tag: 'Unified Voice',
+                image: uccImg
               },
               {
                 icon: ShieldCheck,
@@ -175,6 +213,7 @@ const Home = () => {
                 desc: 'IP video surveillance, AI-enabled analytics, access control, centralized monitoring, and protected storage.',
                 link: '/solutions/secured-surveillance',
                 tag: '4K Security',
+                image: surveillanceImg
               },
               {
                 icon: Printer,
@@ -182,6 +221,7 @@ const Home = () => {
                 desc: 'Multifunction photocopiers, Managed Print Services (MPS), commercial laser printers, and toner supply.',
                 link: '/solutions/print-solutions',
                 tag: 'Print & MPS',
+                image: printImg
               },
               {
                 icon: Cpu,
@@ -189,6 +229,7 @@ const Home = () => {
                 desc: 'Turnkey convergence of multi-vendor hardware, unified central monitoring dashboards, and middleware.',
                 link: '/enterprise-solutions#system-integration',
                 tag: 'System Integration',
+                image: sysIntegImg
               },
               {
                 icon: Wrench,
@@ -196,36 +237,48 @@ const Home = () => {
                 desc: 'Pre-deployment OEM staging, 24/7 SLA-backed AMC contracts, resident technicians, and rapid repair dispatch.',
                 link: '/enterprise-solutions#implementation-support',
                 tag: 'SLA Support',
+                image: slaSupportImg
               },
             ].map((vertical, idx) => (
               <div
                 key={idx}
-                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 p-6 sm:p-7 rounded-2xl flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 shadow-xl backdrop-blur-sm"
+                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 shadow-xl backdrop-blur-sm"
               >
                 <div>
-                  <div className="flex justify-between items-center mb-5">
-                    <div className="bg-blue-600/20 text-blue-400 p-3 rounded-xl border border-blue-500/30">
-                      <vertical.icon className="w-6 h-6" />
+                  <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                    <img
+                      src={vertical.image}
+                      alt={vertical.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/30" />
+                    <div className="absolute top-3 left-3 bg-blue-600/80 backdrop-blur-md text-white p-2 rounded-xl border border-blue-500/30">
+                      <vertical.icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 bg-slate-900 border border-slate-800 px-3 py-1 rounded-full">
+                    <span className="absolute top-3 right-3 text-[11px] font-bold uppercase tracking-wider text-slate-300 bg-black/70 backdrop-blur-md border border-white/10 px-2.5 py-0.5 rounded-full">
                       {vertical.tag}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                    {vertical.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
-                    {vertical.desc}
-                  </p>
+
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                      {vertical.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-2">
+                      {vertical.desc}
+                    </p>
+                  </div>
                 </div>
 
-                <Link
-                  to={vertical.link}
-                  className="inline-flex items-center space-x-2 text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors pt-3"
-                >
-                  <span>Explore Architecture</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                <div className="px-6 pb-5 pt-0">
+                  <Link
+                    to={vertical.link}
+                    className="inline-flex items-center space-x-2 text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors"
+                  >
+                    <span>Explore Architecture</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -291,81 +344,119 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* CCTV Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-blue-500/50">
-              <div className="bg-blue-500/10 border border-blue-500/30 p-2.5 rounded-full w-fit mb-4">
-                <Camera className="h-6 w-6 text-blue-400" />
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-blue-500/50 flex flex-col justify-between">
+              <div>
+                <div className="relative h-40 w-full overflow-hidden bg-slate-950">
+                  <img src={cctvHomeImg} alt="CCTV Security Systems" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30" />
+                  <div className="absolute top-2.5 left-2.5 bg-blue-500/80 backdrop-blur-md p-2 rounded-xl">
+                    <Camera className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-blue-400 transition-colors">CCTV Security Systems</h3>
+                  <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
+                    Complete surveillance solutions including installation, maintenance, and monitoring for homes and businesses.
+                  </p>
+                  <ul className="space-y-1 mb-3 text-slate-300 text-xs">
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>HD & 4K Camera Setup</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Remote Mobile Monitoring</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>24/7 SLA Maintenance</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-white">CCTV Security Systems</h3>
-              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
-                Complete surveillance solutions including installation, maintenance, and monitoring for homes and businesses.
-              </p>
-              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>HD & 4K Camera Installation</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Remote Monitoring Setup</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>24/7 Maintenance Support</span></li>
-              </ul>
-              <Link to="/solutions/secured-surveillance" className="text-blue-400 hover:text-blue-300 font-semibold flex items-center space-x-2 text-xs">
-                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              <div className="px-5 pb-5 pt-0">
+                <Link to="/solutions/secured-surveillance" className="text-blue-400 hover:text-blue-300 font-semibold flex items-center space-x-1 text-xs">
+                  <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
 
             {/* Computer Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-emerald-500/50">
-              <div className="bg-emerald-500/10 border border-emerald-500/30 p-2.5 rounded-full w-fit mb-4">
-                <Monitor className="h-6 w-6 text-emerald-400" />
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-emerald-500/50 flex flex-col justify-between">
+              <div>
+                <div className="relative h-40 w-full overflow-hidden bg-slate-950 flex items-center justify-center p-3">
+                  <img src={computerHomeImg} alt="Computer & Network Services" className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-2.5 left-2.5 bg-emerald-500/80 backdrop-blur-md p-2 rounded-xl">
+                    <Monitor className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-emerald-400 transition-colors">Computer & Networks</h3>
+                  <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
+                    Expert computer repair, networking, and IT support services for all your technology needs.
+                  </p>
+                  <ul className="space-y-1 mb-3 text-slate-300 text-xs">
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Hardware & OS Repair</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Structured LAN & WiFi</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Data Recovery & Backup</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-white">Computer & Network Services</h3>
-              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
-                Expert computer repair, networking, and IT support services for all your technology needs.
-              </p>
-              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Hardware & Software Repair</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Network Setup & Management</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Data Recovery Services</span></li>
-              </ul>
-              <Link to="/solutions/secured-it-infrastructure" className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center space-x-2 text-xs">
-                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              <div className="px-5 pb-5 pt-0">
+                <Link to="/solutions/secured-it-infrastructure" className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center space-x-1 text-xs">
+                  <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
 
             {/* Biometric Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-amber-500/50">
-              <div className="bg-amber-500/10 border border-amber-500/30 p-2.5 rounded-full w-fit mb-4">
-                <Fingerprint className="h-6 w-6 text-amber-400" />
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-amber-500/50 flex flex-col justify-between">
+              <div>
+                <div className="relative h-40 w-full overflow-hidden bg-slate-950">
+                  <img src={biometricHomeImg} alt="Biometric Systems" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30" />
+                  <div className="absolute top-2.5 left-2.5 bg-amber-500/80 backdrop-blur-md p-2 rounded-xl">
+                    <Fingerprint className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-amber-400 transition-colors">Biometric Systems</h3>
+                  <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
+                    Expert Biometric & RFID attendance systems installation, repair, and maintenance.
+                  </p>
+                  <ul className="space-y-1 mb-3 text-slate-300 text-xs">
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Fingerprint & Face Recog</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>RFID Card Access Control</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Cloud HR Sync & Reports</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-white">Biometric Systems</h3>
-              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
-                Expert Biometric & RFID attendance systems installation, repair, and maintenance.
-              </p>
-              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Installation and Repair</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Service & Maintenance</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Advanced Systems</span></li>
-              </ul>
-              <Link to="/services" className="text-amber-400 hover:text-amber-300 font-semibold flex items-center space-x-2 text-xs">
-                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              <div className="px-5 pb-5 pt-0">
+                <Link to="/services" className="text-amber-400 hover:text-amber-300 font-semibold flex items-center space-x-1 text-xs">
+                  <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
 
             {/* Printer Card */}
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-transform duration-300 hover:scale-105 hover:border-purple-500/50">
-              <div className="bg-purple-500/10 border border-purple-500/30 p-2.5 rounded-full w-fit mb-4">
-                <Printer className="h-6 w-6 text-purple-400" />
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-purple-500/50 flex flex-col justify-between">
+              <div>
+                <div className="relative h-40 w-full overflow-hidden bg-slate-950 flex items-center justify-center p-3">
+                  <img src={printerHomeImg} alt="Printer & Copier Solutions" className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-2.5 left-2.5 bg-purple-500/80 backdrop-blur-md p-2 rounded-xl">
+                    <Printer className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-purple-400 transition-colors">Printer & Copiers</h3>
+                  <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
+                    Complete printer services including repair, maintenance, and supplies for all major brands.
+                  </p>
+                  <ul className="space-y-1 mb-3 text-slate-300 text-xs">
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>All Major Brand Service</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Toner Cartridge Supply</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Rental & AMC Contracts</span></li>
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-white">Printer & Copier Solutions</h3>
-              <p className="text-slate-300 mb-4 font-normal text-xs leading-relaxed">
-                Complete printer services including repair, maintenance, and supplies for all major brands.
-              </p>
-              <ul className="space-y-1.5 mb-4 text-slate-300 text-xs">
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>All Brand Repair Services</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Toner & Cartridge Supply</span></li>
-                <li className="flex items-center space-x-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /><span>Preventive Maintenance</span></li>
-              </ul>
-              <Link to="/solutions/print-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center space-x-2 text-xs">
-                <span>Learn More</span><ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              <div className="px-5 pb-5 pt-0">
+                <Link to="/solutions/print-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center space-x-1 text-xs">
+                  <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@ import { Menu, X, ChevronDown, Phone } from 'lucide-react';
 import logo from '../Logo/logo.png';
 import { GradientButton } from "../components/ui/gradient-button";
 
+import { TextShimmer } from '../components/ui/text-shimmer';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -18,16 +20,20 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-white p-1.5 rounded-full shadow-md">
+              <div className="relative flex items-center justify-center">
                 <img
                   src={logo}
                   alt="Alekhya Logo"
-                  className="h-10 w-10 object-contain"
+                  className="h-10 w-10 object-contain rounded-full drop-shadow-md"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tight text-white leading-none">Alekhya Technologies</span>
-                <span className="text-[10px] text-blue-400 font-semibold uppercase tracking-widest mt-1">Enterprise System Integrator</span>
+                <span className="text-[10px] text-blue-400 font-semibold uppercase tracking-widest mt-1">
+                  <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+                    Enterprise System Integrator
+                  </TextShimmer>
+                </span>
               </div>
             </Link>
           </div>

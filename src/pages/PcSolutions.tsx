@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { Cpu, Server, CheckCircle, Phone, Layout } from 'lucide-react';
 import gsap from 'gsap';
 import { GradientButton } from '../components/ui/gradient-button';
+import { TextShimmer } from '../components/ui/text-shimmer';
+import aioPcImg from '../Logo/computer.png';
+import customPcImg from '../Logo/TEch.jpg';
+import serverRackImg from '../Logo/Data Center Racks.jpg';
 
 const PcSolutions = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -55,7 +59,9 @@ const PcSolutions = () => {
       <section className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <span className="gsap-pc-badge bg-blue-600/30 border border-blue-500/40 text-blue-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-md">
-            Customized Hardware Architecture
+            <TextShimmer duration={2.5} className="[--base-color:#93c5fd] [--base-gradient-color:#ffffff] dark:[--base-color:#93c5fd] dark:[--base-gradient-color:#ffffff]">
+              Customized Hardware Architecture
+            </TextShimmer>
           </span>
           <h1 className="gsap-pc-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
             Custom & <span className="text-blue-400">All-in-One PC Solutions</span>
@@ -80,72 +86,95 @@ const PcSolutions = () => {
         {/* Solution Categories */}
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Card 1: All-in-One PCs */}
-          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-6 sm:p-7 shadow-xl border border-slate-800 flex flex-col justify-between transition-shadow hover:border-blue-500/50">
+          <div className="gsap-solution-card group bg-slate-900/80 rounded-2xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between transition-all hover:border-blue-500/50">
             <div>
-              <div className="bg-blue-600/20 border border-blue-500/30 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                <Layout className="h-6 w-6 text-blue-400" />
+              <div className="relative h-48 w-full overflow-hidden bg-slate-950 flex items-center justify-center p-4">
+                <img src={aioPcImg} alt="All-in-One PCs" className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute top-3 left-3 bg-blue-600/80 backdrop-blur-md border border-blue-500/30 p-2 rounded-xl">
+                  <Layout className="h-5 w-5 text-white" />
+                </div>
               </div>
-              <h2 className="text-xl font-bold text-white mb-2">All-in-One (AIO) PCs</h2>
-              <p className="text-slate-300 mb-4 text-xs sm:text-sm">
-                Sleek, cable-free desktop solutions combining display & CPU in a single unit. Ideal for reception desks, school computer labs & CA offices.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> 21.5" & 23.8" Full HD IPS Displays</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Intel Core i3 / i5 / i7 Processors</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Built-in HD Camera, Mic & Speakers</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Low power consumption & compact footprint</li>
-              </ul>
+              <div className="p-6">
+                <h2 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">All-in-One (AIO) PCs</h2>
+                <p className="text-slate-300 mb-4 text-xs sm:text-sm">
+                  Sleek, cable-free desktop solutions combining display & CPU in a single unit. Ideal for reception desks, school computer labs & CA offices.
+                </p>
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> 21.5" & 23.8" Full HD IPS Displays</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Intel Core i3 / i5 / i7 Processors</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Built-in HD Camera, Mic & Speakers</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Low power consumption & compact footprint</li>
+                </ul>
+              </div>
             </div>
-            <Link to="/contact">
-              <GradientButton className="w-full">Order AIO PCs</GradientButton>
-            </Link>
+            <div className="p-6 pt-0">
+              <Link to="/contact">
+                <GradientButton className="w-full">Order AIO PCs</GradientButton>
+              </Link>
+            </div>
           </div>
 
           {/* Card 2: Custom PC Assemblies */}
-          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-6 sm:p-7 shadow-xl border-2 border-blue-500/70 relative flex flex-col justify-between transition-shadow">
-            <span className="absolute -top-3.5 right-6 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow">
+          <div className="gsap-solution-card group bg-slate-900/80 rounded-2xl overflow-hidden shadow-xl border-2 border-blue-500/70 relative flex flex-col justify-between transition-all">
+            <span className="absolute top-3 right-3 z-10 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase shadow">
               Most Popular
             </span>
             <div>
-              <div className="bg-blue-600/20 border border-blue-500/30 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                <Cpu className="h-6 w-6 text-blue-400" />
+              <div className="relative h-48 w-full overflow-hidden bg-slate-950">
+                <img src={customPcImg} alt="Custom Assembled PCs" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30" />
+                <div className="absolute top-3 left-3 bg-blue-600/80 backdrop-blur-md border border-blue-500/30 p-2 rounded-xl">
+                  <Cpu className="h-5 w-5 text-white" />
+                </div>
               </div>
-              <h2 className="text-xl font-bold text-white mb-2">Custom Assembled PCs</h2>
-              <p className="text-slate-300 mb-4 text-xs sm:text-sm">
-                Specially configured desktop towers for high-performance workloads such as CAD, video editing, software compilation, and heavy database work.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Custom Intel & AMD Ryzen configurations</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> High-speed NVMe SSDs + DDR4/DDR5 RAM</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Dedicated NVIDIA GPU options for rendering</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Heavy-duty power supply & liquid cooling</li>
-              </ul>
+              <div className="p-6">
+                <h2 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Custom Assembled PCs</h2>
+                <p className="text-slate-300 mb-4 text-xs sm:text-sm">
+                  Specially configured desktop towers for high-performance workloads such as CAD, video editing, software compilation, and heavy database work.
+                </p>
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Custom Intel & AMD Ryzen configurations</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> High-speed NVMe SSDs + DDR4/DDR5 RAM</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Dedicated NVIDIA GPU options for rendering</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Heavy-duty power supply & liquid cooling</li>
+                </ul>
+              </div>
             </div>
-            <Link to="/contact">
-              <GradientButton className="w-full">Configure Custom PC</GradientButton>
-            </Link>
+            <div className="p-6 pt-0">
+              <Link to="/contact">
+                <GradientButton className="w-full">Configure Custom PC</GradientButton>
+              </Link>
+            </div>
           </div>
 
           {/* Card 3: Server & Networking */}
-          <div className="gsap-solution-card bg-slate-900/80 rounded-2xl p-6 sm:p-7 shadow-xl border border-slate-800 flex flex-col justify-between transition-shadow hover:border-purple-500/50">
+          <div className="gsap-solution-card group bg-slate-900/80 rounded-2xl overflow-hidden shadow-xl border border-slate-800 flex flex-col justify-between transition-all hover:border-purple-500/50">
             <div>
-              <div className="bg-purple-600/20 border border-purple-500/30 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                <Server className="h-6 w-6 text-purple-400" />
+              <div className="relative h-48 w-full overflow-hidden bg-slate-950">
+                <img src={serverRackImg} alt="Server & Network Rigging" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30" />
+                <div className="absolute top-3 left-3 bg-purple-600/80 backdrop-blur-md border border-purple-500/30 p-2 rounded-xl">
+                  <Server className="h-5 w-5 text-white" />
+                </div>
               </div>
-              <h2 className="text-xl font-bold text-white mb-2">Server & Network Rigging</h2>
-              <p className="text-slate-300 mb-4 text-xs sm:text-sm">
-                Complete server infrastructure for multi-user office environments, central file storage, Tally server hosting, and security firewalls.
-              </p>
-              <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Windows & Linux Tower/Rack Servers</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> RAID storage setups & automated backups</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Structured CAT6 & Fiber LAN Cabling</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Firewall, Router & Switch Configs</li>
-              </ul>
+              <div className="p-6">
+                <h2 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Server & Network Rigging</h2>
+                <p className="text-slate-300 mb-4 text-xs sm:text-sm">
+                  Complete server infrastructure for multi-user office environments, central file storage, Tally server hosting, and security firewalls.
+                </p>
+                <ul className="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Windows & Linux Tower/Rack Servers</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> RAID storage setups & automated backups</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Structured CAT6 & Fiber LAN Cabling</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Firewall, Router & Switch Configs</li>
+                </ul>
+              </div>
             </div>
-            <Link to="/contact">
-              <GradientButton variant="variant" className="w-full">Consult Server Specialist</GradientButton>
-            </Link>
+            <div className="p-6 pt-0">
+              <Link to="/contact">
+                <GradientButton variant="variant" className="w-full">Consult Server Specialist</GradientButton>
+              </Link>
+            </div>
           </div>
         </section>
 

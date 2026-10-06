@@ -11,11 +11,11 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-white p-2 rounded-full shadow-md">
+              <div className="relative flex items-center justify-center">
                 <img
                   src={Logo}
                   alt="Alekhya Logo"
-                  className="h-10 w-10 object-contain"
+                  className="h-10 w-10 object-contain rounded-full drop-shadow-md"
                 />
               </div>
               <span className="text-xl font-bold text-white">Alekhya Technologies</span>

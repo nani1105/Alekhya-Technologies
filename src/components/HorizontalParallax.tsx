@@ -4,12 +4,36 @@ import { Link } from 'react-router-dom';
 import { Sparkles, ArrowRight } from 'lucide-react';
 import './HorizontalParallax.css';
 
+import hikvisionLogo from '../Logo/Hikvision_logo.svg';
+import biometricImg from '../Logo/Biometric access control.jpg';
+import ciscoLogo from '../Logo/Cisco_logo.svg.webp';
+import dahuaLogo from '../Logo/Dahua_Technology_logo.svg';
+import firewallImg from '../Logo/FIrewalls audits.jpg';
+import gateAutomationImg from '../Logo/Gate Automation.jpg';
+import honeywellLogo from '../Logo/Honeywell.jpeg';
+
+import thinkpadImg from '../Logo/Thinkpad.jpg';
+import dellLogo from '../Logo/Dell_Logo.webp';
+import hpLogo from '../Logo/Hp1.png';
+import macImg from '../Logo/Mac.avif';
+import serverRackImg from '../Logo/Data Center Racks.jpg';
+import computerImg from '../Logo/computer.png';
+
+import polyLogo from '../Logo/hppoly.jpg';
+import grandstreamLogo from '../Logo/Grandstream.png';
+import konicaLogo from '../Logo/Konica1.png';
+import yealinkLogo from '../Logo/Yealink_logo.png';
+import canonLogo from '../Logo/Canon.png';
+import ifpdImg from '../Logo/Interactive display.jpg';
+import epsonLogo from '../Logo/Epson_.png';
+
 export interface ParallaxCardItem {
   tag: string;
   label: string;
   desc?: string;
   badge?: string;
   link: string;
+  bgImage?: string;
 }
 
 export interface HorizontalParallaxProps {
@@ -29,6 +53,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Human & vehicle target classification with 24/7 vivid night color.',
       badge: 'Surveillance',
       link: '/solutions/secured-surveillance',
+      bgImage: hikvisionLogo,
     },
     {
       tag: 'ACCESS CONTROL',
@@ -36,6 +61,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Enterprise multi-door biometric access control with cloud HR sync.',
       badge: 'Security',
       link: '/services',
+      bgImage: biometricImg,
     },
     {
       tag: 'NETWORK // L3',
@@ -43,6 +69,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'High-density multi-gigabit campus switching & VLAN security.',
       badge: 'Core Network',
       link: '/solutions/secured-it-infrastructure',
+      bgImage: ciscoLogo,
     },
     {
       tag: 'PTZ SURVEILLANCE',
@@ -50,6 +77,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: '32x optical zoom with AI perimeter protection & auto-tracking.',
       badge: 'AI Vision',
       link: '/solutions/secured-surveillance',
+      bgImage: dahuaLogo,
     },
     {
       tag: 'FIREWALL // SD-WAN',
@@ -57,6 +85,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Next-Gen network threat prevention, UTM filtering & zero-trust VPN.',
       badge: 'Cybersecurity',
       link: '/solutions/secured-it-infrastructure',
+      bgImage: firewallImg,
     },
     {
       tag: 'PERIMETER',
@@ -64,6 +93,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Heavy-duty vehicle barrier gates and RFID pedestrian access.',
       badge: 'Automation',
       link: '/solutions/secured-surveillance',
+      bgImage: gateAutomationImg,
     },
     {
       tag: 'STORAGE // VMS',
@@ -71,6 +101,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Redundant RAID storage with central video management analytics.',
       badge: 'High Capacity',
       link: '/solutions/secured-surveillance',
+      bgImage: honeywellLogo,
     },
   ],
 
@@ -82,6 +113,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Intel Core i5/i7 | 16GB RAM | 512GB NVMe SSD | A-Grade Mint.',
       badge: 'Best Seller',
       link: '/refurbished-laptops',
+      bgImage: thinkpadImg,
     },
     {
       tag: 'ENTERPRISE PC',
@@ -89,6 +121,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Durable magnesium chassis with 1-year warranty & high battery life.',
       badge: 'Corporate',
       link: '/refurbished-laptops',
+      bgImage: dellLogo,
     },
     {
       tag: 'ULTRABOOK',
@@ -96,6 +129,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Slim aluminum body, Bang & Olufsen sound & FHD anti-glare display.',
       badge: 'Executive',
       link: '/refurbished-laptops',
+      bgImage: hpLogo,
     },
     {
       tag: 'APPLE // RETINA',
@@ -103,6 +137,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Retina TrueTone displays for developers, creatives & leadership.',
       badge: 'Premium',
       link: '/refurbished-laptops',
+      bgImage: macImg,
     },
     {
       tag: 'WORKSTATION',
@@ -110,6 +145,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'NVIDIA Quadro GPU power for 3D CAD, rendering & machine learning.',
       badge: 'Heavy Duty',
       link: '/pc-solutions',
+      bgImage: dellLogo,
     },
     {
       tag: 'SERVER // RACK',
@@ -117,6 +153,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Virtualization & database host servers with dual redundant power.',
       badge: 'Data Center',
       link: '/solutions/secured-it-infrastructure',
+      bgImage: dellLogo,
     },
     {
       tag: 'DESKTOP PC',
@@ -124,6 +161,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Tailored desktop PCs for universities, banks, and call centers.',
       badge: 'Custom Built',
       link: '/pc-solutions',
+      bgImage: computerImg,
     },
   ],
 
@@ -135,6 +173,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'AI acoustic fence & automatic speaker tracking for boardrooms.',
       badge: 'Smart AV',
       link: '/solutions/pro-av-smart-workplaces',
+      bgImage: polyLogo,
     },
     {
       tag: 'IP TELEPHONY',
@@ -142,6 +181,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Multi-party SIP trunking, interactive IVR & call center logging.',
       badge: 'Unified Voice',
       link: '/solutions/unified-collaboration',
+      bgImage: grandstreamLogo,
     },
     {
       tag: 'COPIER // A3',
@@ -149,6 +189,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'High-speed heavy duty duplex laser copier & network scanner.',
       badge: 'Heavy Duty',
       link: '/solutions/print-solutions',
+      bgImage: konicaLogo,
     },
     {
       tag: 'SIP PHONES',
@@ -156,6 +197,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Color touch display with dual Gigabit ports & Teams certification.',
       badge: 'VoIP',
       link: '/solutions/unified-collaboration',
+      bgImage: yealinkLogo,
     },
     {
       tag: 'PRINTER // MFP',
@@ -163,6 +205,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Secure printing, departmental accounting & cloud scan-to-email.',
       badge: 'Office Print',
       link: '/solutions/print-solutions',
+      bgImage: canonLogo,
     },
     {
       tag: 'IFPD DISPLAY',
@@ -170,6 +213,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: '20-point touch smart whiteboards with wireless screen casting.',
       badge: 'Interactive',
       link: '/solutions/pro-av-smart-workplaces',
+      bgImage: ifpdImg,
     },
     {
       tag: 'CONTINUOUS INK',
@@ -177,6 +221,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Ultra low-cost high-volume continuous ink color printing.',
       badge: 'Eco Efficiency',
       link: '/solutions/print-solutions',
+      bgImage: epsonLogo,
     },
     {
       tag: 'POWER // UPS',
@@ -184,6 +229,7 @@ const defaultAlekhyaProducts: ParallaxCardItem[][] = [
       desc: 'Zero-millisecond switchover pure sine wave power protection.',
       badge: 'Zero Downtime',
       link: '/solutions/secured-it-infrastructure',
+      bgImage: serverRackImg,
     },
   ],
 ];
@@ -252,9 +298,21 @@ export default function HorizontalParallax({
                   <Link
                     to={card.link}
                     key={`${card.label}-${idx}`}
-                    className="hparallax__card group/card block no-underline"
+                    className="hparallax__card group/card block no-underline relative"
                   >
-                    <div>
+                    {/* Transparent Brand / Product Picture Background */}
+                    {card.bgImage && (
+                      <div className="hparallax__card-bg">
+                        <img
+                          src={card.bgImage}
+                          alt=""
+                          aria-hidden="true"
+                          className="hparallax__card-bg-img"
+                        />
+                      </div>
+                    )}
+
+                    <div className="relative z-10">
                       <div className="hparallax__card-top">
                         <span className="designator mono">{card.tag}</span>
                         {card.badge && (
@@ -269,7 +327,7 @@ export default function HorizontalParallax({
                       </div>
                     </div>
 
-                    <div className="hparallax__card-footer mono">
+                    <div className="hparallax__card-footer mono relative z-10">
                       <span className="flex items-center text-blue-400 font-semibold group-hover/card:underline">
                         View Product Details
                         <ArrowRight className="w-3 h-3 ml-1 group-hover/card:translate-x-1 transition-transform" />

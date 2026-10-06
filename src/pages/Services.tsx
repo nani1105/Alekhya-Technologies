@@ -22,6 +22,15 @@ import epsonImage from '../Logo/Epson_.png';
 import brotherImage from '../Logo/brother-log.png';
 import xeroxImage from '../Logo/Xerox-logo.jpg';
 import konicaImage from '../Logo/Konica1.png';
+import amcServiceImg from '../Logo/Technical Consultancy  Audits.jpg';
+import refurbServiceImg from '../Logo/lenovo-t480.jpg';
+import networkServiceImg from '../Logo/Structured LAN.jpg';
+import cctvServiceImg from '../Logo/4k cctv.jpg';
+import computerServiceImg from '../Logo/computer.png';
+import printerServiceImg from '../Logo/printer.webp';
+import biometricServiceImg from '../Logo/Biometric access control.jpg';
+import photocopierServiceImg from '../Logo/Multifunction Photocopiers.jpg';
+
 const Services = () => {
   const location = useLocation();
 
@@ -64,6 +73,7 @@ const Services = () => {
             id: "amc",
             title: 'Annual Maintenance Contracts (AMC)',
             subtitle: 'End-to-End SLA-driven AMC contracts for electronics, computers, and office equipment',
+            image: amcServiceImg,
             audience: ['Government Organizations', 'Educational Institutions & Schools', 'CA & Financial Firms', 'Software Startups'],
             audienceColors: ['text-blue-600', 'text-green-600', 'text-purple-600', 'text-amber-600'],
             audienceDesc: [
@@ -85,6 +95,7 @@ const Services = () => {
             id: "refurbished",
             title: 'A-Grade Refurbished Laptops & Custom PCs',
             subtitle: 'Enterprise-grade refurbished laptops & customized All-in-One (AIO) desktop solutions',
+            image: refurbServiceImg,
             points: [
               'A-Grade Refurbished Laptops: Thoroughly tested, premium condition business laptops (Dell, HP, Lenovo ThinkPad, Apple MacBook) with warranty',
               'Customized PC Configurations: Built to specific workstation requirements for CAD, software development, accounting & administrative use',
@@ -98,6 +109,7 @@ const Services = () => {
             id: "networking",
             title: 'Complete Server & Networking Solutions',
             subtitle: 'Robust enterprise network setup, server management, and structured cabling',
+            image: networkServiceImg,
             points: [
               'Server Installation & Management: Windows Server, Linux Server, domain controllers, and backup systems',
               'Structured LAN & Fiber Cabling: Neat, high-speed office networking setup and rack wiring',
@@ -111,6 +123,7 @@ const Services = () => {
             id: "cctv",
             title: 'CCTV Security Systems',
             subtitle: 'Complete surveillance solutions for maximum security',
+            image: cctvServiceImg,
             audience: ['Businesses', 'Residential', 'Government & Defense'],
             audienceColors: ['text-blue-600', 'text-green-600', 'text-purple-600'],
             audienceDesc: [
@@ -131,6 +144,7 @@ const Services = () => {
             id:'Computer',
             title: 'Computer & Hardware Repair Services',
             subtitle: 'Expert IT solutions for all your computing needs',
+            image: computerServiceImg,
             expertise: [
               'Hardware Repair & Upgrade: Motherboard, RAM, storage, and component repairs',
               'Software Solutions: OS installation, virus removal, software troubleshooting',
@@ -144,6 +158,7 @@ const Services = () => {
             id: 'Printer',
             title: 'Printer Solutions & Cartridge Supply',
             subtitle: 'Complete printer repair & supply for all major brands',
+            image: printerServiceImg,
             services: [
               'All Brand Repairs: HP, Canon, Epson, Brother, Samsung, Konica Minolta and more',
               'Toner & Cartridge Supply: Original and compatible cartridges available',
@@ -157,6 +172,7 @@ const Services = () => {
             id: 'biometric',
             title: 'Biometric Attendance Systems',
             subtitle: 'Modern attendance tracking with biometric and RFID solutions',
+            image: biometricServiceImg,
             features: [
               'Fingerprint & Face Recognition: Secure and fast identity verification',
               'RFID Card Access: Touchless attendance options',
@@ -169,6 +185,7 @@ const Services = () => {
             id: 'Photo',
             title: 'Photocopy Machines & Counting Machines',
             subtitle: 'Sales, rental, and AMC for top photocopier and currency counting machine brands',
+            image: photocopierServiceImg,
             highlights: [
               'New & Refurbished Photocopiers: Authorized sales/rental of Canon, Xerox, Konica Minolta',
               'Currency & Note Counting Machines: Sales and quick repair/servicing for high-accuracy counting units',
@@ -188,7 +205,7 @@ const Services = () => {
             <div id={service.id} className="bg-slate-900/80 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
 
               <div
-                className="relative p-5 sm:p-6 text-white bg-slate-950/80 border-b border-slate-800"
+                className="relative p-5 sm:p-6 text-white bg-slate-950/80 border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"
               >
                 <div className="flex items-center space-x-4">
                   <div className="bg-blue-600/20 border border-blue-500/30 text-blue-400 p-2.5 rounded-full">{service.icon}</div>
@@ -200,9 +217,9 @@ const Services = () => {
               </div>
 
               <div className="p-5 sm:p-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {/* Left Column - Services */}
-                  <div>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                  {/* Left Column - Services Points (7 cols) */}
+                  <div className="lg:col-span-7">
                     <h3 className="text-xl font-semibold mb-4 text-blue-400">
                       {service.points ? 'What We Offer' : service.expertise ? 'Our Expertise' : service.services ? 'Comprehensive Services' : service.features ? 'Features' : 'What We Provide'}
                     </h3>
@@ -226,46 +243,47 @@ const Services = () => {
                     </ul>
                   </div>
 
-                  {/* Right Column - Additional */}
-                  {index === 0 && (
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4 text-blue-400">Perfect For</h3>
-                      <div className="space-y-4">
-                        {service.audience?.map((type, i) => (
-                          <div key={type} className="bg-slate-950/60 border border-slate-800 p-4 rounded-lg">
-                            <h4 className={`font-semibold ${service.audienceColors?.[i]}`}>{type}</h4>
-                            <p className="text-sm text-slate-400">{service.audienceDesc?.[i]}</p>
-                          </div>
-                        ))}
+                  {/* Right Column - Media / Details (5 cols) */}
+                  <div className="lg:col-span-5 flex flex-col justify-center">
+                    {service.image && (
+                      <div className="rounded-xl overflow-hidden border border-slate-800 bg-slate-950/80 mb-4 shadow-lg h-52 flex items-center justify-center">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        />
                       </div>
-                    </div>
-                  )}
+                    )}
 
-                  {index === 2 || index === 4 ? (
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4 text-blue-400">Supported Brands</h3>
-                      <div className="grid grid-cols-3 gap-4">
-                        {brandLogos.map((brand) => (
-                          <div
-                            key={brand.name}
-                            className="bg-white p-4 rounded-lg shadow flex justify-center items-center h-24"
-                          >
-                            <img src={brand.src} alt={brand.name} className="h-12 object-contain" />
-                          </div>
-                        ))}
-                      </div>
-                      {index === 2 && (
-                        <div className="mt-6 bg-purple-950/40 border border-purple-800/60 p-4 rounded-lg">
-                          <h4 className="font-semibold text-purple-300 mb-2">Special Offers</h4>
-                          <ul className="text-sm text-purple-200/80 space-y-1">
-                            <li>• Free pickup & delivery within city limits</li>
-                            <li>• 10% discount on bulk cartridge orders</li>
-                            <li>• Annual maintenance contracts available</li>
-                          </ul>
+                    {index === 0 && (
+                      <div className="space-y-2">
+                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Key Client Sectors</h4>
+                        <div className="grid grid-cols-2 gap-2">
+                          {service.audience?.map((type, i) => (
+                            <div key={type} className="bg-slate-950/60 border border-slate-800 p-2.5 rounded-lg text-xs">
+                              <span className={`font-semibold ${service.audienceColors?.[i]}`}>{type}</span>
+                            </div>
+                          ))}
                         </div>
-                      )}
-                    </div>
-                  ) : null}
+                      </div>
+                    )}
+
+                    {(index === 2 || index === 5) && (
+                      <div>
+                        <span className="text-xs uppercase font-bold tracking-wider text-slate-400 block mb-2">Supported OEM Brands</span>
+                        <div className="grid grid-cols-3 gap-2">
+                          {brandLogos.slice(0, 6).map((brand) => (
+                            <div
+                              key={brand.name}
+                              className="bg-white p-2 rounded-lg shadow flex justify-center items-center h-12"
+                            >
+                              <img src={brand.src} alt={brand.name} className="max-h-8 max-w-full object-contain" />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

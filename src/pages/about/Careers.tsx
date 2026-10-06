@@ -1,6 +1,7 @@
 import React from 'react';
 import { Briefcase, MapPin, ArrowRight } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
+import { TextShimmer } from '../../components/ui/text-shimmer';
 
 const Careers: React.FC = () => {
   return (
@@ -11,7 +12,9 @@ const Careers: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 px-4 py-1.5 rounded-full text-emerald-400 text-xs sm:text-sm font-semibold mb-4">
             <Briefcase className="w-4 h-4" />
-            <span>Join Our Engineering Team</span>
+            <TextShimmer duration={2.5} className="[--base-color:#34d399] [--base-gradient-color:#ffffff] dark:[--base-color:#34d399] dark:[--base-gradient-color:#ffffff]">
+              Join Our Engineering Team
+            </TextShimmer>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Careers</h1>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">

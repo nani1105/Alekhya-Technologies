@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import { Shield, CheckCircle, Server, Monitor, Printer, FileCheck, Phone, Users, Award } from 'lucide-react';
 import gsap from 'gsap';
 import { GradientButton } from '../components/ui/gradient-button';
+import { TextShimmer } from '../components/ui/text-shimmer';
 import drdoLogo from '../Logo/drdo.png';
 import nabardLogo from '../Logo/NABARD1.png';
+import pcSystemImg from '../Logo/computer.png';
+import photocopierImg from '../Logo/Multifunction Photocopiers.jpg';
+import countingMachineImg from '../Logo/Counting machines.jpg';
 
 const AmcServices = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -57,7 +61,9 @@ const AmcServices = () => {
       <section ref={heroRef} className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <span className="gsap-hero-badge bg-blue-600/30 border border-blue-500/40 text-blue-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-md">
-            15+ Years Industry Leader
+            <TextShimmer duration={2.5} className="[--base-color:#93c5fd] [--base-gradient-color:#ffffff] dark:[--base-color:#93c5fd] dark:[--base-gradient-color:#ffffff]">
+              15+ Years Industry Leader
+            </TextShimmer>
           </span>
           <h1 className="gsap-hero-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
             Enterprise <span className="text-blue-400">IT AMC Services</span>
@@ -131,37 +137,66 @@ const AmcServices = () => {
             <p className="text-slate-300 text-base">Single-window support for all electronic & computing assets in your institution</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="gsap-equip-card gsap-hover-card p-5 bg-slate-950/60 rounded-xl border border-slate-800">
-              <Monitor className="h-8 w-8 text-blue-400 mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-white">Computer & Server Systems</h3>
-              <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Desktops, Laptops & Workstations</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Windows & Linux Rack Servers</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Motherboard & Storage Repair</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Virus Cleanup & OS Maintenance</li>
-              </ul>
+            <div className="gsap-equip-card gsap-hover-card bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-900 flex items-center justify-center p-3">
+                  <img src={pcSystemImg} alt="Computer & Server Systems" className="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-3 left-3 bg-blue-600/80 backdrop-blur-md p-2 rounded-xl">
+                    <Monitor className="h-5 w-5 text-white" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold mb-2 text-white">Computer & Server Systems</h3>
+                  <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300">
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Desktops, Laptops & Workstations</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Windows & Linux Rack Servers</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Motherboard & Storage Repair</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Virus Cleanup & OS Maintenance</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <div className="gsap-equip-card gsap-hover-card p-5 bg-slate-950/60 rounded-xl border border-slate-800">
-              <Printer className="h-8 w-8 text-purple-400 mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-white">Photocopiers & Printers</h3>
-              <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> All-in-One Xerox & Canon Copiers</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Laser, Inkjet & Dot Matrix Printers</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Drum & Roller Replacements</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Genuine Toner & Refill Logistics</li>
-              </ul>
+            <div className="gsap-equip-card gsap-hover-card bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                  <img src={photocopierImg} alt="Photocopiers & Printers" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/20" />
+                  <div className="absolute top-3 left-3 bg-purple-600/80 backdrop-blur-md p-2 rounded-xl">
+                    <Printer className="h-5 w-5 text-white" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold mb-2 text-white">Photocopiers & Printers</h3>
+                  <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300">
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> All-in-One Xerox & Canon Copiers</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Laser, Inkjet & Dot Matrix Printers</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Drum & Roller Replacements</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Genuine Toner & Refill Logistics</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <div className="gsap-equip-card gsap-hover-card p-5 bg-slate-950/60 rounded-xl border border-slate-800">
-              <FileCheck className="h-8 w-8 text-amber-400 mb-3" />
-              <h3 className="text-lg font-bold mb-2 text-white">Counting & Security Devices</h3>
-              <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Currency & Note Counting Machines</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Fake Note Detector Calibration</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> 4K CCTV Cameras & DVR/NVR Racks</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Biometric Attendance & Access Control</li>
-              </ul>
+            <div className="gsap-equip-card gsap-hover-card bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+                  <img src={countingMachineImg} alt="Counting & Security Devices" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/20" />
+                  <div className="absolute top-3 left-3 bg-amber-600/80 backdrop-blur-md p-2 rounded-xl">
+                    <FileCheck className="h-5 w-5 text-white" />
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold mb-2 text-white">Counting & Security Devices</h3>
+                  <ul className="space-y-1.5 text-xs sm:text-sm text-slate-300">
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Currency & Note Counting Machines</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Fake Note Detector Calibration</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> 4K CCTV Cameras & DVR/NVR Racks</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-emerald-400" /> Biometric Attendance & Access Control</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>

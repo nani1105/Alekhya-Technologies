@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Headphones } from 'lucide-react';
 import ParticlesBackground from '../components/ParticlesBackground';
+import { TextShimmer } from '../components/ui/text-shimmer';
 import { SERVICES_CATALOG } from './Contact';
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
@@ -51,7 +52,9 @@ const ContactUs: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs sm:text-sm font-semibold mb-4">
             <Headphones className="w-4 h-4" />
-            <span>Connect with Solution Architects</span>
+            <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+              Connect with Solution Architects
+            </TextShimmer>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Contact Us</h1>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">
