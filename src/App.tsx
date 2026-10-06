@@ -32,15 +32,20 @@ import ContactUs from './pages/ContactUs';
 
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import SparklesBackground from './components/SparklesBackground';
+import FloatingCTA from './components/FloatingCTA';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-slate-950">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
+      <FloatingCTA />
+      <div className="min-h-screen bg-black text-slate-100 relative">
+        <SparklesBackground />
+        <div className="relative z-10">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
 
           {/* About Us Routes */}
           <Route path="/about-us/who-we-are" element={<WhoWeAre />} />
@@ -75,6 +80,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
+        </div>
       </div>
     </Router>
   );

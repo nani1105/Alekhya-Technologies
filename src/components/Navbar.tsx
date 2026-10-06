@@ -12,7 +12,7 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-800 text-white sticky top-0 z-50 shadow-xl">
+    <nav className="bg-black/80 backdrop-blur-md text-white sticky top-0 z-50 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
@@ -42,25 +42,6 @@ const Navbar = () => {
             >
               Home
             </Link>
-
-            {/* About Us Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('about')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button className="flex items-center space-x-1 py-2 text-slate-300 hover:text-blue-400 transition-colors">
-                <span>About Us</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {activeDropdown === 'about' && (
-                <div className="absolute top-full left-0 w-48 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl py-2 z-50">
-                  <Link to="/about-us/who-we-are" className="block px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 hover:text-blue-400">Who We Are</Link>
-                  <Link to="/about-us/awards" className="block px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 hover:text-blue-400">Awards & Honors</Link>
-                  <Link to="/about-us/careers" className="block px-4 py-2 text-xs text-slate-300 hover:bg-slate-800 hover:text-blue-400">Careers</Link>
-                </div>
-              )}
-            </div>
 
             {/* Solutions Dropdown */}
             <div
@@ -122,7 +103,6 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link to="/events" className="text-slate-300 hover:text-blue-400 transition-colors">Events</Link>
             <Link to="/contact-us" className="text-slate-300 hover:text-blue-400 transition-colors">Contact Us</Link>
 
             <GradientButton asChild className="px-4 py-2 text-xs flex items-center space-x-1">
@@ -162,6 +142,11 @@ const Navbar = () => {
             <Link to="/services/professional-services" onClick={() => setIsOpen(false)} className="block py-1 text-xs text-slate-300">Professional Services</Link>
             <Link to="/services/managed-services" onClick={() => setIsOpen(false)} className="block py-1 text-xs text-slate-300">Managed Services</Link>
             <Link to="/services/support-maintenance" onClick={() => setIsOpen(false)} className="block py-1 text-xs text-slate-300">Support & Maintenance</Link>
+          </div>
+          <div className="border-t border-slate-800 pt-2">
+            <span className="text-xs uppercase font-bold text-slate-400 block mb-1">Resources</span>
+            <Link to="/resources/blog" onClick={() => setIsOpen(false)} className="block py-1 text-xs text-slate-300">Blog</Link>
+            <Link to="/case-studies" onClick={() => setIsOpen(false)} className="block py-1 text-xs text-slate-300">Case Studies</Link>
           </div>
           <div className="border-t border-slate-800 pt-2">
             <Link to="/contact-us" onClick={() => setIsOpen(false)} className="block text-sm font-bold text-blue-400">Contact Us</Link>

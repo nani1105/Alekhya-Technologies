@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Cpu,
   Wrench,
+  Printer,
   CheckCircle2,
   ArrowRight,
   Sparkles,
@@ -250,6 +251,56 @@ const enterpriseCategories: SolutionCategory[] = [
     deploymentDomains: ['High-Security Govt Facilities', 'Gated Communities', 'Manufacturing Plants', 'Retail Chains']
   },
   {
+    id: 'print-solutions',
+    title: 'Commercial Print Solutions & Managed Print Services (MPS)',
+    shortDesc: 'Multifunction photocopiers (MFP), Managed Print Services, commercial laser printers, and toner consumable management.',
+    icon: Printer,
+    badge: 'Enterprise Print',
+    bannerBg: 'from-amber-950 via-yellow-950 to-slate-950',
+    highlights: [
+      'High-Speed Color & Monochrome A3/A4 Multifunction Photocopiers',
+      'Managed Print Services (MPS) with Pay-Per-Page Billing',
+      'Heavy-Duty Commercial Laser Printers & Production Machines',
+      'Currency & Note-Counting Machines with Fake Note Detection',
+      'Original OEM Toner Cartridges & Doorstep Replenishment'
+    ],
+    keyOfferings: [
+      {
+        title: 'Multifunction Photocopiers (MFP)',
+        description: 'Enterprise networked digital copiers delivering high-volume duplex printing, scanning, and secure PIN release.',
+        details: [
+          'A3/A4 Heavy-Duty Workgroup Copiers',
+          'Touchscreen Android-Based Smart User Interface',
+          'Cloud & Mobile Printing (AirPrint, Mopria)',
+          'Secure Card-Authentication & Pull-Printing'
+        ]
+      },
+      {
+        title: 'Managed Print Services (MPS)',
+        description: 'Cost-reduction print management software and proactive toner maintenance contracts.',
+        details: [
+          'Pay-Per-Page (Cost-per-Copy) Model',
+          'Automated Fleet Monitoring & Toner Alerts',
+          'User Quota Allocation & Department Billing',
+          'Preventive Maintenance & Dedicated Technician'
+        ]
+      },
+      {
+        title: 'Copier Rental & Leasing',
+        description: 'Zero upfront capital investment rental schemes tailored for offices, banks, and institutions.',
+        details: [
+          'Flexible Monthly / Yearly Lease Agreements',
+          'Free Maintenance, Spares & Toner Replacement',
+          'Same-Day Breakdown Service & Standby Units',
+          'Upgrade Paths to Latest High-Speed Models'
+        ]
+      }
+    ],
+    oems: ['Canon', 'Xerox', 'Konica Minolta', 'Epson', 'HP Commercial Print'],
+    partnerIds: ['canon', 'xerox', 'konica', 'epson'],
+    deploymentDomains: ['Banks & Financial Institutions', 'Government Departments', 'CA & Law Firms', 'Educational Campuses']
+  },
+  {
     id: 'system-integration',
     title: 'End-to-End System Integration',
     shortDesc: 'Unifying multi-vendor IT, AV, Telephony, and Security hardware into a single, cohesive, high-performance ecosystem.',
@@ -388,12 +439,12 @@ const EnterpriseSolutions: React.FC = () => {
   const activePartners = oemPartners.filter((partner) => activeCategory.partnerIds.includes(partner.id));
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
       {/* Background Effect */}
       <ParticlesBackground />
 
       {/* Hero Header Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-800 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
           <Fade direction="down" triggerOnce>
             <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-sm font-semibold mb-6">
@@ -406,14 +457,14 @@ const EnterpriseSolutions: React.FC = () => {
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
               End-to-End Enterprise <br />
               <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-                IT, AV, Telephony & Security Solutions
+                IT, AV, Telephony, Print & Security Solutions
               </span>
             </h1>
           </Fade>
 
           <Fade direction="up" delay={200} triggerOnce>
             <p className="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300 leading-relaxed mb-8">
-              Alekhya Technologies architects, builds, and maintains robust digital ecosystems. From high-density IT networks and AV boardroom automation to IP telephony, 4K security, and SLA-backed AMC support—we deliver turn-key integration engineered for enterprise scale.
+              Alekhya Technologies architects, builds, and maintains robust digital ecosystems. From high-density IT networks and AV boardroom automation to IP telephony, 4K security, print solutions, and SLA-backed AMC support—we deliver turn-key integration engineered for enterprise scale.
             </p>
           </Fade>
 
@@ -437,7 +488,7 @@ const EnterpriseSolutions: React.FC = () => {
           </Fade>
 
           {/* Quick Metrics */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto border-t border-slate-800/80 pt-10">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-10">
             <div>
               <div className="text-3xl font-extrabold text-blue-400">15+</div>
               <div className="text-sm text-slate-400 mt-1">Years Industry Expertise</div>
@@ -465,7 +516,7 @@ const EnterpriseSolutions: React.FC = () => {
           <p className="text-slate-400 text-sm sm:text-base">Select a domain to inspect detailed solutions, OEM architectures, and deployment capabilities.</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 mb-12">
           {enterpriseCategories.map((cat) => {
             const IconComp = cat.icon;
             const isSelected = activeTab === cat.id;
@@ -589,7 +640,7 @@ const EnterpriseSolutions: React.FC = () => {
       </section>
 
       {/* OEM Strategic Ecosystem & Partnerships */}
-      <section id="oem-ecosystem" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/60 border-y border-slate-800">
+      <section id="oem-ecosystem" className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-14">
             <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-sm font-semibold mb-4">
@@ -606,7 +657,7 @@ const EnterpriseSolutions: React.FC = () => {
             {oemPartners.map((oem) => (
               <div
                 key={oem.id}
-                className="bg-slate-950 border border-slate-800 hover:border-blue-500/50 p-4 rounded-xl flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-105"
+                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 p-4 rounded-xl flex flex-col items-center justify-center text-center group transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <div className="w-full h-16 bg-white rounded-md p-2 flex items-center justify-center mb-3">
                   <img src={oem.image} alt={`${oem.name} logo`} className="max-h-full max-w-full object-contain" />
@@ -634,7 +685,7 @@ const EnterpriseSolutions: React.FC = () => {
             { step: '04', title: 'Deployment & QC', desc: 'Professional cabling, rack mounting, IP configuration, and safety QA.' },
             { step: '05', title: 'Commissioning & AMC', desc: 'Handover, admin training, documentation, and SLA support kickoff.' }
           ].map((item, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative">
+            <div key={idx} className="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl relative backdrop-blur-sm">
               <div className="text-4xl font-black text-blue-500/20 mb-4">{item.step}</div>
               <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
               <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
@@ -644,7 +695,7 @@ const EnterpriseSolutions: React.FC = () => {
       </section>
 
       {/* Contact & RFQ Form Section */}
-      <section id="quote-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 border-t border-slate-800">
+      <section id="quote-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-5xl mx-auto bg-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>

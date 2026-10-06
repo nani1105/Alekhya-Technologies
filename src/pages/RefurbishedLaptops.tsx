@@ -97,17 +97,17 @@ const RefurbishedLaptops = () => {
     : laptops.filter(laptop => laptop.brand === selectedBrand);
 
   return (
-    <div ref={containerRef} className="min-h-screen py-12 bg-gray-50 overflow-hidden">
+    <div ref={containerRef} className="min-h-screen py-12 bg-transparent text-slate-100 overflow-hidden">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-slate-900 via-gray-900 to-blue-900 text-white py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-transparent text-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <span className="gsap-laptop-badge bg-emerald-600 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-4 tracking-wider shadow-md">
+          <span className="gsap-laptop-badge bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-4 tracking-wider shadow-md">
             100% Tested & Certified Hardware
           </span>
           <h1 className="gsap-laptop-title text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
             A-Grade <span className="text-emerald-400">Refurbished Laptops</span>
           </h1>
-          <p className="gsap-laptop-subtitle text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+          <p className="gsap-laptop-subtitle text-lg sm:text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8">
             Enterprise-grade commercial laptops from Lenovo ThinkPad, Dell Latitude, HP EliteBook & Apple MacBook. Certified A-Grade quality with warranty at 50-70% lower costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -127,15 +127,15 @@ const RefurbishedLaptops = () => {
         {/* Quality Guarantee Standards */}
         <section className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
-            { title: '25+ Point Inspection', desc: 'Hardware diagnostics on RAM, SSD, Ports, Screen & Keyboard.', icon: <CheckCircle2 className="h-8 w-8 text-emerald-500" /> },
-            { title: '80%+ Battery Health Guarantee', desc: 'Original battery performance tested with hours of backup.', icon: <Battery className="h-8 w-8 text-blue-500" /> },
-            { title: 'A-Grade Cosmetic State', desc: 'Zero dents, pristine screen & clean enterprise chassis.', icon: <Star className="h-8 w-8 text-amber-500" /> },
-            { title: 'Warranty & Support', desc: 'Up to 1-Year replacement warranty & dedicated tech support.', icon: <ShieldCheck className="h-8 w-8 text-purple-500" /> },
+            { title: '25+ Point Inspection', desc: 'Hardware diagnostics on RAM, SSD, Ports, Screen & Keyboard.', icon: <CheckCircle2 className="h-8 w-8 text-emerald-400" /> },
+            { title: '80%+ Battery Health Guarantee', desc: 'Original battery performance tested with hours of backup.', icon: <Battery className="h-8 w-8 text-blue-400" /> },
+            { title: 'A-Grade Cosmetic State', desc: 'Zero dents, pristine screen & clean enterprise chassis.', icon: <Star className="h-8 w-8 text-amber-400" /> },
+            { title: 'Warranty & Support', desc: 'Up to 1-Year replacement warranty & dedicated tech support.', icon: <ShieldCheck className="h-8 w-8 text-purple-400" /> },
           ].map(item => (
-            <div key={item.title} className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <div key={item.title} className="bg-slate-900/80 p-6 rounded-xl shadow-xl border border-slate-800">
               <div className="mb-4">{item.icon}</div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
+              <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+              <p className="text-slate-400 text-sm">{item.desc}</p>
             </div>
           ))}
         </section>
@@ -144,18 +144,18 @@ const RefurbishedLaptops = () => {
         <section>
           <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900">Featured A-Grade Laptops</h2>
-              <p className="text-gray-600">Perfect for schools, startups, CA firms, and corporate procurement</p>
+              <h2 className="text-3xl font-bold text-white">Featured A-Grade Laptops</h2>
+              <p className="text-slate-400">Perfect for schools, startups, CA firms, and corporate procurement</p>
             </div>
-            <div className="flex items-center gap-2 bg-white p-2 rounded-lg border shadow-sm">
-              <Filter className="h-4 w-4 text-gray-500" />
-              <span className="text-sm font-medium text-gray-700">Filter Brand:</span>
+            <div className="flex items-center gap-2 bg-slate-900/80 p-2 rounded-lg border border-slate-800 shadow-sm">
+              <Filter className="h-4 w-4 text-slate-400" />
+              <span className="text-sm font-medium text-slate-300">Filter Brand:</span>
               {['All', 'Lenovo', 'Dell', 'HP', 'Apple'].map(brand => (
                 <button
                   key={brand}
                   onClick={() => setSelectedBrand(brand)}
                   className={`px-3 py-1 text-xs font-semibold rounded-md transition-colors ${
-                    selectedBrand === brand ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    selectedBrand === brand ? 'bg-blue-600 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
                   }`}
                 >
                   {brand}
@@ -166,8 +166,8 @@ const RefurbishedLaptops = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredLaptops.map(laptop => (
-              <div key={laptop.id} className="gsap-laptop-card bg-white rounded-2xl shadow-md border overflow-hidden flex flex-col sm:flex-row transition-all">
-                <div className="sm:w-2/5 h-64 sm:h-auto bg-gray-100 relative overflow-hidden flex items-center justify-center">
+              <div key={laptop.id} className="gsap-laptop-card bg-slate-900/80 rounded-2xl shadow-xl border border-slate-800 overflow-hidden flex flex-col sm:flex-row transition-all hover:border-blue-500/50">
+                <div className="sm:w-2/5 h-64 sm:h-auto bg-slate-950 relative overflow-hidden flex items-center justify-center">
                   <img src={laptop.img} alt={laptop.name} className="w-full h-full object-cover p-2" />
                   <span className="absolute top-3 left-3 bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full">
                     {laptop.grade}
@@ -175,20 +175,20 @@ const RefurbishedLaptops = () => {
                 </div>
                 <div className="sm:w-3/5 p-6 flex flex-col justify-between">
                   <div>
-                    <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">{laptop.brand}</span>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{laptop.name}</h3>
-                    <p className="text-xs text-gray-600 mb-4 bg-gray-50 p-2.5 rounded-lg border font-mono">
+                    <span className="text-xs font-bold text-blue-400 uppercase tracking-wider">{laptop.brand}</span>
+                    <h3 className="text-xl font-bold text-white mb-2">{laptop.name}</h3>
+                    <p className="text-xs text-slate-300 mb-4 bg-slate-950/80 p-2.5 rounded-lg border border-slate-800 font-mono">
                       {laptop.specs}
                     </p>
-                    <div className="space-y-1 mb-4 text-xs text-gray-600">
+                    <div className="space-y-1 mb-4 text-xs text-slate-300">
                       <p><strong>Ideal For:</strong> {laptop.idealFor}</p>
-                      <p className="text-emerald-700 font-medium"><strong>Warranty:</strong> {laptop.warranty}</p>
+                      <p className="text-emerald-400 font-medium"><strong>Warranty:</strong> {laptop.warranty}</p>
                     </div>
                   </div>
-                  <div className="pt-4 border-t flex items-center justify-between">
+                  <div className="pt-4 border-t border-slate-800 flex items-center justify-between">
                     <div>
-                      <span className="text-xs text-gray-500 block">Bulk Price Range</span>
-                      <span className="text-lg font-extrabold text-blue-600">{laptop.price}</span>
+                      <span className="text-xs text-slate-400 block">Bulk Price Range</span>
+                      <span className="text-lg font-extrabold text-blue-400">{laptop.price}</span>
                     </div>
                     <Link to="/contact">
                       <GradientButton className="text-xs px-4 py-2">Get Quote</GradientButton>
@@ -201,23 +201,23 @@ const RefurbishedLaptops = () => {
         </section>
 
         {/* Why Buy Refurbished Laptops From Us */}
-        <section className="bg-white p-8 sm:p-12 rounded-2xl shadow-md border">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Why Buy Refurbished From Alekhya Technologies?</h2>
+        <section className="bg-slate-900/80 p-8 sm:p-12 rounded-2xl shadow-xl border border-slate-800">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Why Buy Refurbished From Alekhya Technologies?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-4">
-              <Award className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-              <h3 className="font-bold text-lg mb-2">Commercial Build Quality</h3>
-              <p className="text-gray-600 text-sm">We only stock enterprise series (ThinkPad, Latitude, EliteBook) engineered for 8-10 years of durable performance.</p>
+            <div className="text-center p-4 bg-slate-950/60 rounded-xl border border-slate-800/80">
+              <Award className="h-12 w-12 text-blue-400 mx-auto mb-3" />
+              <h3 className="font-bold text-lg text-white mb-2">Commercial Build Quality</h3>
+              <p className="text-slate-300 text-sm">We only stock enterprise series (ThinkPad, Latitude, EliteBook) engineered for 8-10 years of durable performance.</p>
             </div>
-            <div className="text-center p-4">
-              <Cpu className="h-12 w-12 text-green-600 mx-auto mb-3" />
-              <h3 className="font-bold text-lg mb-2">Pre-Configured & Loaded</h3>
-              <p className="text-gray-600 text-sm">Delivered ready-to-use with Windows 10/11 Pro, MS Office, and security software installed.</p>
+            <div className="text-center p-4 bg-slate-950/60 rounded-xl border border-slate-800/80">
+              <Cpu className="h-12 w-12 text-emerald-400 mx-auto mb-3" />
+              <h3 className="font-bold text-lg text-white mb-2">Pre-Configured & Loaded</h3>
+              <p className="text-slate-300 text-sm">Delivered ready-to-use with Windows 10/11 Pro, MS Office, and security software installed.</p>
             </div>
-            <div className="text-center p-4">
-              <ShieldCheck className="h-12 w-12 text-purple-600 mx-auto mb-3" />
-              <h3 className="font-bold text-lg mb-2">Bulk School & Startup Orders</h3>
-              <p className="text-gray-600 text-sm">Special discounted tier pricing for orders of 5 to 100+ units with hassle-free replacement warranties.</p>
+            <div className="text-center p-4 bg-slate-950/60 rounded-xl border border-slate-800/80">
+              <ShieldCheck className="h-12 w-12 text-purple-400 mx-auto mb-3" />
+              <h3 className="font-bold text-lg text-white mb-2">Bulk School & Startup Orders</h3>
+              <p className="text-slate-300 text-sm">Special discounted tier pricing for orders of 5 to 100+ units with hassle-free replacement warranties.</p>
             </div>
           </div>
         </section>

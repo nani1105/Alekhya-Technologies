@@ -3,16 +3,14 @@ import { Link } from 'react-router-dom';
 import { PhoneCall, Video, Headphones, Shield, Globe, Users } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
-import adobeImage from '../../Logo/adobe1.jpg';
 
 const UnifiedCollaboration: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
       <ParticlesBackground />
 
       <section
-        className="relative py-24 px-4 sm:px-6 lg:px-8 bg-cover bg-center border-b border-slate-800"
-        style={{ backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.98)), url(${adobeImage})` }}
+        className="relative py-24 px-4 sm:px-6 lg:px-8 bg-transparent"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/30 px-4 py-1.5 rounded-full text-cyan-400 text-sm font-semibold mb-6">
@@ -68,7 +66,7 @@ const UnifiedCollaboration: React.FC = () => {
               desc: 'Session Border Controllers (SBC) protecting voice networks against SIP hacking and toll fraud.'
             }
           ].map((item, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-cyan-500/50 transition-all">
+            <div key={idx} className="bg-slate-900/80 border border-slate-800 p-8 rounded-2xl hover:border-cyan-500/50 transition-all backdrop-blur-sm">
               <div className="w-12 h-12 bg-cyan-600/20 text-cyan-400 rounded-xl flex items-center justify-center mb-6">
                 <item.icon className="w-6 h-6" />
               </div>

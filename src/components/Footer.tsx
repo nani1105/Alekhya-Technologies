@@ -5,7 +5,7 @@ import Logo from '../Logo/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-slate-950 border-t border-slate-800 text-slate-300 overflow-hidden">
+    <footer className="relative bg-black/60 text-slate-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Brand Info */}
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
 
         {/* Contact Strip */}
-        <div className="border-t border-slate-800 pt-8 pb-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-400">
+        <div className="pt-8 pb-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-400">
           <div className="flex items-center space-x-2">
             <Phone className="w-4 h-4 text-blue-400" />
             <span><a href="tel:+919573376389" className="hover:text-white">+91 95733 76389</a></span>
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-slate-900 mt-6 pt-6 text-center text-xs text-slate-500">
+        <div className="mt-6 pt-6 text-center text-xs text-slate-500">
           © 2026 Alekhya Technologies Private Limited. All rights reserved. Built for enterprise scale across India.
         </div>
       </div>

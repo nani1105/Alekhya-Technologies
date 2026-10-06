@@ -3,16 +3,14 @@ import { Link } from 'react-router-dom';
 import { ShieldCheck, Camera, Eye, Lock, Fingerprint } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
-import cctvImage from '../../Logo/cctv1.jpg';
 
 const SecuredSurveillance: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
       <ParticlesBackground />
 
       <section
-        className="relative py-24 px-4 sm:px-6 lg:px-8 bg-cover bg-center border-b border-slate-800"
-        style={{ backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.98)), url(${cctvImage})` }}
+        className="relative py-24 px-4 sm:px-6 lg:px-8 bg-transparent"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-rose-500/10 border border-rose-500/30 px-4 py-1.5 rounded-full text-rose-400 text-sm font-semibold mb-6">
@@ -68,7 +66,7 @@ const SecuredSurveillance: React.FC = () => {
               desc: 'Infrared thermal cameras for high-security facilities, fire boundary monitoring, and fence intrusion beams.'
             }
           ].map((item, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-rose-500/50 transition-all">
+            <div key={idx} className="bg-slate-900/80 border border-slate-800 p-8 rounded-2xl hover:border-rose-500/50 transition-all backdrop-blur-sm">
               <div className="w-12 h-12 bg-rose-600/20 text-rose-400 rounded-xl flex items-center justify-center mb-6">
                 <item.icon className="w-6 h-6" />
               </div>

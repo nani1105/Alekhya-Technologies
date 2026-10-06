@@ -16,7 +16,6 @@ const scrollToHash = (hash: string) => {
   }
 };
 
-import adobeImage from '../Logo/adobe2.jpg';
 import hpImage from '../Logo/Hp1.png';
 import canonImage from '../Logo/Canon.png';
 import epsonImage from '../Logo/Epson_.png';
@@ -41,21 +40,18 @@ const Services = () => {
     { name: 'Konica', src: konicaImage },
   ];
 
-
-
-
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-20 bg-transparent text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <Fade direction="down" triggerOnce>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Professional Services
             </h1>
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Comprehensive technology solutions backed by 15+ years of industry expertise. Trusted by government agencies, defense labs, educational institutions, financial firms, and tech startups.
             </p>
           </Fade>
@@ -189,17 +185,16 @@ const Services = () => {
             damping={0.1}
             className="mb-20"
           >
-            <div id={service.id} className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div id={service.id} className="bg-slate-900/80 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
 
               <div
-                className="relative p-8 text-white bg-cover bg-center"
-                style={{ backgroundImage: `url(${adobeImage})` }}
+                className="relative p-8 text-white bg-slate-950/80 border-b border-slate-800"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="bg-white/20 p-3 rounded-full">{service.icon}</div>
+                  <div className="bg-blue-600/20 border border-blue-500/30 text-blue-400 p-3 rounded-full">{service.icon}</div>
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-bold">{service.title}</h2>
-                    <p className="text-blue-100">{service.subtitle}</p>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">{service.title}</h2>
+                    <p className="text-slate-300">{service.subtitle}</p>
                   </div>
                 </div>
               </div>
@@ -208,7 +203,7 @@ const Services = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Left Column - Services */}
                   <div>
-                    <h3 className="text-xl font-semibold mb-4">
+                    <h3 className="text-xl font-semibold mb-4 text-blue-400">
                       {service.points ? 'What We Offer' : service.expertise ? 'Our Expertise' : service.services ? 'Comprehensive Services' : service.features ? 'Features' : 'What We Provide'}
                     </h3>
                     <ul className="space-y-3">
@@ -220,10 +215,10 @@ const Services = () => {
                       )?.map((item) => {
                         const [label, ...rest] = item.split(':');
                         return (
-                          <li key={item} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
+                          <li key={item} className="flex items-start space-x-3 text-slate-300">
+                            <CheckCircle className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
                             <div>
-                              <strong>{label}:</strong> {rest.join(':').trim()}
+                              <strong className="text-white">{label}:</strong> {rest.join(':').trim()}
                             </div>
                           </li>
                         );
@@ -234,12 +229,12 @@ const Services = () => {
                   {/* Right Column - Additional */}
                   {index === 0 && (
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Perfect For</h3>
+                      <h3 className="text-xl font-semibold mb-4 text-blue-400">Perfect For</h3>
                       <div className="space-y-4">
                         {service.audience?.map((type, i) => (
-                          <div key={type} className="bg-gray-50 p-4 rounded-lg">
+                          <div key={type} className="bg-slate-950/60 border border-slate-800 p-4 rounded-lg">
                             <h4 className={`font-semibold ${service.audienceColors?.[i]}`}>{type}</h4>
-                            <p className="text-sm text-gray-600">{service.audienceDesc?.[i]}</p>
+                            <p className="text-sm text-slate-400">{service.audienceDesc?.[i]}</p>
                           </div>
                         ))}
                       </div>
@@ -248,7 +243,7 @@ const Services = () => {
 
                   {index === 2 || index === 4 ? (
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Supported Brands</h3>
+                      <h3 className="text-xl font-semibold mb-4 text-blue-400">Supported Brands</h3>
                       <div className="grid grid-cols-3 gap-4">
                         {brandLogos.map((brand) => (
                           <div
@@ -260,9 +255,9 @@ const Services = () => {
                         ))}
                       </div>
                       {index === 2 && (
-                        <div className="mt-6 bg-purple-50 p-4 rounded-lg">
-                          <h4 className="font-semibold text-purple-800 mb-2">Special Offers</h4>
-                          <ul className="text-sm text-purple-700 space-y-1">
+                        <div className="mt-6 bg-purple-950/40 border border-purple-800/60 p-4 rounded-lg">
+                          <h4 className="font-semibold text-purple-300 mb-2">Special Offers</h4>
+                          <ul className="text-sm text-purple-200/80 space-y-1">
                             <li>• Free pickup & delivery within city limits</li>
                             <li>• 10% discount on bulk cartridge orders</li>
                             <li>• Annual maintenance contracts available</li>
@@ -279,10 +274,10 @@ const Services = () => {
 
         {/* Why Choose Us */}
         <Fade direction="up" triggerOnce delay={200}>
-          <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white p-8 rounded-2xl">
+          <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 border border-slate-800 text-white p-8 rounded-2xl">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">Why Choose Alekhya Technologies?</h2>
-              <p className="text-blue-100">Experience the difference that comes with 10+ years of expertise</p>
+              <p className="text-slate-300">Experience the difference that comes with 15+ years of expertise</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -292,12 +287,12 @@ const Services = () => {
                 { icon: CheckCircle, title: 'Quality Guaranteed', desc: '100% satisfaction guarantee' },
                 { icon: Wrench, title: 'Expert Technicians', desc: 'Certified and experienced professionals' },
               ].map((item) => (
-                <div key={item.title} className="text-center">
-                  <div className="bg-white/20 p-3 rounded-full w-fit mx-auto mb-4">
-                    <item.icon className="h-6 w-6" />
+                <div key={item.title} className="text-center bg-slate-950/60 p-6 rounded-xl border border-slate-800/80">
+                  <div className="bg-blue-600/20 border border-blue-500/30 p-3 rounded-full w-fit mx-auto mb-4">
+                    <item.icon className="h-6 w-6 text-blue-400" />
                   </div>
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-blue-100">{item.desc}</p>
+                  <h3 className="font-semibold mb-2 text-white">{item.title}</h3>
+                  <p className="text-sm text-slate-400">{item.desc}</p>
                 </div>
               ))}
             </div>

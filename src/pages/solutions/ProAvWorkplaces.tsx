@@ -3,17 +3,15 @@ import { Link } from 'react-router-dom';
 import { Tv, Monitor, ArrowRight, Sparkles, Building, Layers, Volume2 } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { GradientButton } from '../../components/ui/gradient-button';
-import adobeImage from '../../Logo/adobe2.jpg';
 
 const ProAvWorkplaces: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
       <ParticlesBackground />
 
       {/* Hero Banner */}
       <section
-        className="relative py-24 px-4 sm:px-6 lg:px-8 bg-cover bg-center border-b border-slate-800"
-        style={{ backgroundImage: `linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.98)), url(${adobeImage})` }}
+        className="relative py-24 px-4 sm:px-6 lg:px-8 bg-transparent"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-sm font-semibold mb-6">
@@ -33,7 +31,7 @@ const ProAvWorkplaces: React.FC = () => {
             </GradientButton>
             <a
               href="#av-offerings"
-              className="inline-flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-700"
+              className="inline-flex items-center space-x-2 bg-slate-800/80 hover:bg-slate-700 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-700"
             >
               <span>Explore AV Solutions</span>
               <ArrowRight className="w-4 h-4" />
@@ -82,7 +80,7 @@ const ProAvWorkplaces: React.FC = () => {
               desc: 'High-lumen laser projectors, motorized projection screens, lecturer tracking cameras, and digital mixing consoles.'
             }
           ].map((item, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-purple-500/50 transition-all">
+            <div key={idx} className="bg-slate-900/80 border border-slate-800 p-8 rounded-2xl hover:border-purple-500/50 transition-all backdrop-blur-sm">
               <div className="w-12 h-12 bg-purple-600/20 text-purple-400 rounded-xl flex items-center justify-center mb-6">
                 <item.icon className="w-6 h-6" />
               </div>
@@ -94,17 +92,17 @@ const ProAvWorkplaces: React.FC = () => {
       </section>
 
       {/* OEM Partners Bar */}
-      <section className="py-16 bg-slate-900/60 border-t border-slate-800">
+      <section className="py-16 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <span className="text-xs uppercase font-bold tracking-widest text-purple-400 block mb-6">Featured AV OEM Partners</span>
           <div className="flex flex-wrap justify-center items-center gap-8 text-slate-300 text-sm font-semibold">
-            <span className="px-4 py-2 bg-slate-950 border border-slate-800 rounded-lg">Poly</span>
-            <span className="px-4 py-2 bg-slate-950 border border-slate-800 rounded-lg">Logitech</span>
-            <span className="px-4 py-2 bg-slate-950 border border-slate-800 rounded-lg">Samsung Commercial</span>
-            <span className="px-4 py-2 bg-slate-950 border border-slate-800 rounded-lg">LG Business</span>
-            <span className="px-4 py-2 bg-slate-950 border border-slate-800 rounded-lg">Epson</span>
-            <span className="px-4 py-2 bg-slate-950 border border-slate-800 rounded-lg">Crestron</span>
-            <span className="px-4 py-2 bg-slate-950 border border-slate-800 rounded-lg">Bose Professional</span>
+            <span className="px-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg backdrop-blur-sm">Poly</span>
+            <span className="px-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg backdrop-blur-sm">Logitech</span>
+            <span className="px-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg backdrop-blur-sm">Samsung Commercial</span>
+            <span className="px-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg backdrop-blur-sm">LG Business</span>
+            <span className="px-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg backdrop-blur-sm">Epson</span>
+            <span className="px-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg backdrop-blur-sm">Crestron</span>
+            <span className="px-4 py-2 bg-slate-950/80 border border-slate-800 rounded-lg backdrop-blur-sm">Bose Professional</span>
           </div>
         </div>
       </section>
