@@ -46,7 +46,7 @@ const FloatingCTA: React.FC = () => {
         {/* Call Button */}
         <a
           href="tel:+919573376389"
-          className="group relative flex items-center bg-blue-600 hover:bg-blue-500 text-white p-3.5 sm:p-4 rounded-full shadow-2xl shadow-blue-900/60 border border-blue-400/40 transition-all duration-300 hover:scale-110 active:scale-95"
+          className="group relative flex items-center bg-gradient-to-r from-[#0077b6] to-[#00b4d8] hover:from-[#0284c7] hover:to-[#38bdf8] text-white p-3.5 sm:p-4 rounded-full shadow-2xl shadow-cyan-950/60 border border-cyan-400/40 transition-all duration-300 hover:scale-110 active:scale-95"
           aria-label="Call Alekhya Technologies"
         >
           <span className="absolute right-full mr-3 hidden sm:group-hover:inline-block px-3 py-1.5 bg-slate-900/95 text-white text-xs font-semibold rounded-lg shadow-xl border border-slate-700 whitespace-nowrap backdrop-blur-sm">

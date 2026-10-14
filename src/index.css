@@ -29,31 +29,31 @@
 
   @property --color-1 {
     syntax: '<color>';
-    initial-value: #000;
+    initial-value: #00B4D8;
     inherits: false;
   }
 
   @property --color-2 {
     syntax: '<color>';
-    initial-value: #08012c;
+    initial-value: #0096C7;
     inherits: false;
   }
 
   @property --color-3 {
     syntax: '<color>';
-    initial-value: #4e1e40;
+    initial-value: #0077B6;
     inherits: false;
   }
 
   @property --color-4 {
     syntax: '<color>';
-    initial-value: #70464e;
+    initial-value: #023E8A;
     inherits: false;
   }
 
   @property --color-5 {
     syntax: '<color>';
-    initial-value: #88394c;
+    initial-value: #03045E;
     inherits: false;
   }
 
@@ -65,13 +65,13 @@
 
   @property --border-color-1 {
     syntax: '<color>';
-    initial-value: hsla(340, 75%, 60%, 0.2);
+    initial-value: rgba(0, 180, 216, 0.4);
     inherits: true;
   }
 
   @property --border-color-2 {
     syntax: '<color>';
-    initial-value: hsla(340, 75%, 40%, 0.75);
+    initial-value: rgba(0, 119, 182, 0.85);
     inherits: true;
   }
 
@@ -165,14 +165,14 @@
     --pos-y: 91.51%;
     --spread-x: 120.24%;
     --spread-y: 103.18%;
-    --color-1: #c96287;
-    --color-2: #c66c64;
-    --color-3: #cc7d23;
-    --color-4: #37140a;
-    --color-5: #000;
+    --color-1: #38bdf8;
+    --color-2: #00b4d8;
+    --color-3: #0077b6;
+    --color-4: #023e8a;
+    --color-5: #03045e;
     --border-angle: 190deg;
-    --border-color-1: hsla(340, 78%, 90%, 0.1);
-    --border-color-2: hsla(340, 75%, 90%, 0.6);
+    --border-color-1: rgba(56, 189, 248, 0.6);
+    --border-color-2: rgba(0, 180, 216, 0.95);
     --stop-1: 0%;
     --stop-2: 8.8%;
     --stop-3: 21.44%;
@@ -181,13 +181,13 @@
   }
 
   .gradient-button-variant {
-    --color-1: #000022;
-    --color-2: #1f3f6d;
-    --color-3: #469396;
-    --color-4: #f1ffa5;
+    --color-1: #0f172a;
+    --color-2: #1e293b;
+    --color-3: #0077b6;
+    --color-4: #00b4d8;
     --border-angle: 200deg;
-    --border-color-1: hsla(320, 75%, 90%, 0.6);
-    --border-color-2: hsla(320, 50%, 90%, 0.15);
+    --border-color-1: rgba(0, 180, 216, 0.5);
+    --border-color-2: rgba(0, 119, 182, 0.3);
   }
 
   .gradient-button-variant:hover {
@@ -195,18 +195,105 @@
     --pos-y: 95.51%;
     --spread-x: 110.24%;
     --spread-y: 110.2%;
-    --color-1: #000020;
-    --color-2: #f1ffa5;
-    --color-3: #469396;
-    --color-4: #1f3f6d;
-    --color-5: #000;
+    --color-1: #0077b6;
+    --color-2: #00b4d8;
+    --color-3: #0284c7;
+    --color-4: #0f172a;
+    --color-5: #03045e;
     --stop-1: 0%;
     --stop-2: 10%;
     --stop-3: 35.44%;
     --stop-4: 71.34%;
     --stop-5: 90.76%;
     --border-angle: 210deg;
-    --border-color-1: hsla(320, 75%, 90%, 0.2);
-    --border-color-2: hsla(320, 50%, 90%, 0.75);
+    --border-color-1: rgba(0, 180, 216, 0.7);
+    --border-color-2: rgba(56, 189, 248, 0.9);
   }
 }
+
+/* =========================================================
+   Mobile Touch & Tap Hover Interactions
+   Enables desktop-like hover animations on touch/tap on mobile screens
+   ========================================================= */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Base smooth transition for interactive card containers */
+.group,
+.gsap-laptop-card,
+.gsap-solution-card,
+.gsap-hover-card,
+.gsap-equip-card,
+.gsap-step-card,
+.hparallax__card {
+  touch-action: pan-y manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.28s ease,
+              background-color 0.25s ease;
+}
+
+/* Active touch feedback on mobile screens */
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  /* When touched or pressed on mobile */
+  .group:active,
+  .gsap-laptop-card:active,
+  .gsap-solution-card:active,
+  .gsap-hover-card:active,
+  .gsap-equip-card:active {
+    transform: translateY(-3px) scale(1.02) !important;
+    border-color: rgba(0, 180, 216, 0.7) !important;
+    box-shadow: 0 16px 32px -6px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 180, 216, 0.3) !important;
+  }
+
+  /* Image zooming on mobile touch active */
+  .group:active img,
+  .gsap-laptop-card:active img,
+  .gsap-solution-card:active img,
+  .gsap-equip-card:active img {
+    transform: scale(1.06) !important;
+    transition: transform 0.35s ease !important;
+  }
+
+  /* Title & Text color highlights on mobile touch */
+  .group:active h2,
+  .group:active h3,
+  .group:active h4,
+  .group:active .text-white {
+    color: #00b4d8 !important;
+    transition: color 0.2s ease !important;
+  }
+
+  /* Arrow icon translation on touch */
+  .group:active svg,
+  .group:active .group-hover\:translate-x-1,
+  .group:active .group-hover\/card\:translate-x-1 {
+    transform: translateX(4px) !important;
+    transition: transform 0.25s ease !important;
+  }
+
+  /* Gradient button touch interaction */
+  .gradient-button:active,
+  .gradient-button-variant:active {
+    transform: scale(0.97) !important;
+    filter: brightness(1.15);
+  }
+}
+
+/* Typewriter Cursor Blink */
+@keyframes typewriterBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: typewriterBlink 0.85s steps(2, start) infinite;
+}
+

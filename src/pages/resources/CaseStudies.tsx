@@ -11,7 +11,7 @@ import boardroomImg from '../../Logo/Executive boardroom.jpg';
 
 const CaseStudies: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="Enterprise Case Studies & Deployments in Hyderabad | DRDO, NABARD & Institutions"
         description="Explore real-world case studies of mission-critical IT infrastructure, surveillance, and smart boardroom deployments for DRDO, NABARD, Air Force School, and national enterprises."
@@ -22,14 +22,14 @@ const CaseStudies: React.FC = () => {
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center space-x-2 bg-indigo-500/10 border border-indigo-500/30 px-4 py-1.5 rounded-full text-indigo-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-indigo-600/10 border border-indigo-600/30 px-4 py-1.5 rounded-full text-indigo-700 text-xs sm:text-sm font-semibold mb-4">
             <Layers className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#818cf8] [--base-gradient-color:#ffffff] dark:[--base-color:#818cf8] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#4338ca] [--base-gradient-color:#6366f1] dark:[--base-color:#4338ca] dark:[--base-gradient-color:#6366f1]">
               Proven Enterprise Success Stories
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Case Studies</h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">Case Studies</h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 mb-6">
             Real-world system integration deployments for defense laboratories, national banks, universities, and corporate headquarters.
           </p>
         </div>

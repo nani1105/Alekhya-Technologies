@@ -10,7 +10,7 @@ import preventiveCareImg from '../../Logo/Tech1.jpg';
 
 const SupportMaintenance: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="Enterprise Support & IT AMC Maintenance in Hyderabad"
         description="Comprehensive IT AMC contracts with guaranteed SLAs, fast hardware replacement, standby buffer equipment, and periodic preventive health checks across Hyderabad."
@@ -21,14 +21,14 @@ const SupportMaintenance: React.FC = () => {
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 px-4 py-1.5 rounded-full text-amber-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-amber-600/10 border border-amber-600/30 px-4 py-1.5 rounded-full text-amber-800 text-xs sm:text-sm font-semibold mb-4">
             <Clock className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#fbbf24] [--base-gradient-color:#ffffff] dark:[--base-color:#fbbf24] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#b45309] [--base-gradient-color:#d97706] dark:[--base-color:#b45309] dark:[--base-gradient-color:#d97706]">
               SLA-Backed Annual Contracts
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Support & Maintenance (AMC)</h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">Support & Maintenance (AMC)</h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 mb-6">
             Comprehensive & non-comprehensive AMC support contracts backed by strict SLAs, emergency technical dispatch, and buffer spare stock management.
           </p>
         </div>

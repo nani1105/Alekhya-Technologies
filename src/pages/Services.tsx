@@ -19,14 +19,14 @@ const scrollToHash = (hash: string) => {
 import hpImage from '../Logo/Hp1.png';
 import canonImage from '../Logo/Canon.png';
 import epsonImage from '../Logo/Epson_.png';
-import brotherImage from '../Logo/brother-log.png';
-import xeroxImage from '../Logo/Xerox-logo.jpg';
+import brotherImage from '../Logo/brother-log-transparent.png';
+import xeroxImage from '../Logo/Xerox-logo-transparent.png';
 import konicaImage from '../Logo/Konica1.png';
 import amcServiceImg from '../Logo/Technical Consultancy  Audits.jpg';
 import refurbServiceImg from '../Logo/lenovo-t480.jpg';
 import networkServiceImg from '../Logo/Structured LAN.jpg';
 import cctvServiceImg from '../Logo/4k cctv.jpg';
-import computerServiceImg from '../Logo/computer.png';
+import computerServiceImg from '../Logo/computer-transparent.png';
 import printerServiceImg from '../Logo/printer.webp';
 import biometricServiceImg from '../Logo/Biometric access control.jpg';
 import photocopierServiceImg from '../Logo/Multifunction Photocopiers.jpg';
@@ -51,7 +51,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-100">
+    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-900">
       <SEO 
         title="Enterprise IT, CCTV, Computer Repair & AMC Services in Hyderabad"
         description="Comprehensive IT services in Hyderabad: Computer & server repairs, structured networking, CCTV camera installation, photocopier rental/AMC, and biometric attendance systems."
@@ -62,12 +62,12 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10">
           <Fade direction="down" triggerOnce>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
               Our Professional Services
             </h1>
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto">
               Comprehensive technology solutions backed by 15+ years of industry expertise. Trusted by government agencies, defense labs, educational institutions, financial firms, and tech startups.
             </p>
           </Fade>

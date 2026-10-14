@@ -15,7 +15,7 @@ import techClassroomsImg from '../../Logo/TEch.jpg';
 
 const ProAvWorkplaces: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="PRO AV & Smart Boardroom Solutions in Hyderabad | Video Walls & Audio DSP"
         description="Transform corporate meeting spaces, auditoriums, and executive boardrooms in Hyderabad with Microsoft Teams / Zoom rooms, active LED video walls, acoustic DSP engineering, and 4K interactive flat panels."
@@ -27,16 +27,16 @@ const ProAvWorkplaces: React.FC = () => {
       {/* Hero Banner */}
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-purple-600/10 border border-purple-600/30 px-4 py-1.5 rounded-full text-purple-700 text-xs sm:text-sm font-semibold mb-4">
             <Tv className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#c084fc] [--base-gradient-color:#ffffff] dark:[--base-color:#c084fc] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#7e22ce] [--base-gradient-color:#a855f7] dark:[--base-color:#7e22ce] dark:[--base-gradient-color:#a855f7]">
               Enterprise Visuals & Workplaces
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">
             PRO AV & Smart Workplaces
           </h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
             Transforming corporate meeting spaces, auditoriums, and executive boardrooms into intelligent, automated digital environments with state-of-the-art visual displays, acoustic DSP engineering, and one-touch collaboration controls.
           </p>
 
@@ -58,8 +58,8 @@ const ProAvWorkplaces: React.FC = () => {
       {/* Solutions Grid */}
       <section id="av-offerings" className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white mb-2">Pro AV Practice Areas</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-xs sm:text-base">Tailored audio-visual integration designed for enterprise scale and intuitive user experience.</p>
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-2">Pro AV Practice Areas</h2>
+          <p className="text-slate-700 max-w-2xl mx-auto text-xs sm:text-base">Tailored audio-visual integration designed for enterprise scale and intuitive user experience.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

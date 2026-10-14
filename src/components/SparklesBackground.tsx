@@ -15,12 +15,13 @@ interface Sparkle {
 }
 
 const SPARKLE_COLORS = [
-  '#ffffff',
-  '#60a5fa', // Light blue
-  '#93c5fd', // Soft blue
-  '#c084fc', // Purple sparkle
-  '#38bdf8', // Sky blue
-  '#e0f2fe', // Ice white
+  '#00b4d8', // Electric Cyan (Logo Primary)
+  '#0077b6', // Vivid Royal Blue (Logo Primary)
+  '#0284c7', // Cobalt / Sky Blue
+  '#38bdf8', // Light Electric Cyan
+  '#0ea5e9', // Ocean Blue
+  '#06b6d4', // Bright Cyan
+  '#ffffff', // Crisp Star White
 ];
 
 export const SparklesBackground: React.FC<{ className?: string }> = ({ className = '' }) => {
@@ -156,13 +157,18 @@ export const SparklesBackground: React.FC<{ className?: string }> = ({ className
 
   return (
     <div className={`fixed inset-0 pointer-events-none overflow-hidden -z-10 select-none ${className}`}>
-      {/* Deep Obsidian Black Base */}
-      <div className="absolute inset-0 bg-black pointer-events-none -z-20" />
+      {/* Clean High-Tech Canvas Base */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F0F9FF] via-[#F8FAFC] to-[#EFF6FF] pointer-events-none -z-20" />
 
-      {/* Subtle Ambient Cosmic Glow Orbs */}
-      <div className="absolute -top-40 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-indigo-600/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-purple-600/8 rounded-full blur-3xl pointer-events-none" />
+      {/* Alekhya Logo Ambient Glow Orbs */}
+      {/* Electric Cyan Glow Orb (Upper Left) */}
+      <div className="absolute -top-36 -left-36 w-[450px] h-[450px] bg-[#00B4D8]/20 rounded-full blur-3xl pointer-events-none" />
+      {/* Vivid Royal Blue Glow Orb (Right Center) */}
+      <div className="absolute top-1/3 -right-36 w-[550px] h-[550px] bg-[#0077B6]/18 rounded-full blur-3xl pointer-events-none" />
+      {/* Deep Ocean Blue Glow Orb (Bottom Left) */}
+      <div className="absolute bottom-10 left-1/4 w-[450px] h-[450px] bg-[#0284C7]/16 rounded-full blur-3xl pointer-events-none" />
+      {/* Soft Sky Blue Glow Orb (Center-Top) */}
+      <div className="absolute top-1/2 left-1/3 w-[360px] h-[360px] bg-[#38BDF8]/12 rounded-full blur-3xl pointer-events-none" />
 
       {/* Sparkle Canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block pointer-events-none" />

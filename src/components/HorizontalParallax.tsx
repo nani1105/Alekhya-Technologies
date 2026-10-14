@@ -6,23 +6,23 @@ import './HorizontalParallax.css';
 
 import hikvisionLogo from '../Logo/Hikvision_logo.svg';
 import biometricImg from '../Logo/Biometric access control.jpg';
-import ciscoLogo from '../Logo/Cisco_logo.svg.webp';
+import ciscoLogo from '../Logo/Cisco_logo.svg-transparent.png';
 import dahuaLogo from '../Logo/Dahua_Technology_logo.svg';
 import firewallImg from '../Logo/FIrewalls audits.jpg';
 import gateAutomationImg from '../Logo/Gate Automation.jpg';
-import honeywellLogo from '../Logo/Honeywell.jpeg';
+import honeywellLogo from '../Logo/Honeywell-transparent.png';
 
 import thinkpadImg from '../Logo/Thinkpad.jpg';
 import dellLogo from '../Logo/Dell_Logo.webp';
 import hpLogo from '../Logo/Hp1.png';
 import macImg from '../Logo/Mac.avif';
 import serverRackImg from '../Logo/Data Center Racks.jpg';
-import computerImg from '../Logo/computer.png';
+import computerImg from '../Logo/computer-transparent.png';
 
-import polyLogo from '../Logo/hppoly.jpg';
-import grandstreamLogo from '../Logo/Grandstream.png';
+import polyLogo from '../Logo/hppoly-transparent.png';
+import grandstreamLogo from '../Logo/Grandstream-transparent.png';
 import konicaLogo from '../Logo/Konica1.png';
-import yealinkLogo from '../Logo/Yealink_logo.png';
+import yealinkLogo from '../Logo/Yealink_logo-transparent.png';
 import canonLogo from '../Logo/Canon.png';
 import ifpdImg from '../Logo/Interactive display.jpg';
 import epsonLogo from '../Logo/Epson_.png';

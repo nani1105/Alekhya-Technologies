@@ -10,7 +10,7 @@ import turnkeyImplImg from '../../Logo/Tech1.jpg';
 
 const ProfessionalServices: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="Enterprise Professional Services & IT Consultancy in Hyderabad"
         description="Engineering design, technical audits, site assessments, BOQ scoping, staging, and turnkey installation commissioning for enterprise IT & AV projects in Hyderabad."
@@ -21,14 +21,14 @@ const ProfessionalServices: React.FC = () => {
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-blue-600/10 border border-blue-600/30 px-4 py-1.5 rounded-full text-blue-700 text-xs sm:text-sm font-semibold mb-4">
             <Wrench className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#1d4ed8] [--base-gradient-color:#2563eb] dark:[--base-color:#1d4ed8] dark:[--base-gradient-color:#2563eb]">
               Turnkey Project Execution
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Professional Services</h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">Professional Services</h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 mb-6">
             Expert engineering design, technical consultancy, site assessments, staging, installation, testing, and project commissioning.
           </p>
         </div>

@@ -5,19 +5,19 @@ import { TextShimmer } from '../../components/ui/text-shimmer';
 
 const Awards: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/30 px-4 py-1.5 rounded-full text-purple-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-purple-600/10 border border-purple-600/30 px-4 py-1.5 rounded-full text-purple-700 text-xs sm:text-sm font-semibold mb-4">
             <Trophy className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#c084fc] [--base-gradient-color:#ffffff] dark:[--base-color:#c084fc] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#7e22ce] [--base-gradient-color:#a855f7] dark:[--base-color:#7e22ce] dark:[--base-gradient-color:#a855f7]">
               OEM Recognition & Honors
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Awards & Achievements</h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">Awards & Achievements</h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 mb-6">
             Recognized by global technology leaders for outstanding system integration excellence, certified engineering deployment, and customer satisfaction.
           </p>
         </div>

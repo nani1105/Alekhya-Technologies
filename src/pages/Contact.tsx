@@ -153,17 +153,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-100">
+    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10">
           <Fade direction="down" triggerOnce>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
               Get In Touch
             </h1>
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto">
               Ready to secure your business with professional technology solutions? 
               Contact us for a free consultation and customized quote.
             </p>

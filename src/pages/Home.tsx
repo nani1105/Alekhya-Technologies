@@ -26,6 +26,7 @@ import HorizontalParallax from "../components/HorizontalParallax";
 import AnimatedCounter from "../components/AnimatedCounter";
 import { GradientButton } from "../components/ui/gradient-button";
 import { TextShimmer } from '../components/ui/text-shimmer';
+import TypewriterProducts from '../components/ui/TypewriterProducts';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -44,7 +45,7 @@ import sysIntegImg from '../Logo/solution architecture.jpg';
 import slaSupportImg from '../Logo/Technical Consultancy  Audits.jpg';
 
 import cctvHomeImg from '../Logo/4k cctv.jpg';
-import computerHomeImg from '../Logo/computer.png';
+import computerHomeImg from '../Logo/computer-transparent.png';
 import biometricHomeImg from '../Logo/Biometric access control.jpg';
 import printerHomeImg from '../Logo/printer.webp';
 
@@ -69,7 +70,7 @@ const Home = () => {
         canonicalPath="/"
       />
       {/* Hero Section */}
-     <section className="relative w-full min-h-[60vh] sm:min-h-[85vh] flex items-start justify-center text-white overflow-hidden pt-6 sm:pt-8 pb-8">
+     <section className="relative w-full min-h-[60vh] sm:min-h-[85vh] flex items-start justify-center text-slate-900 overflow-hidden pt-6 sm:pt-8 pb-8">
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
           {/* Desktop & Tablet Layout: 2 Columns (Left: Brand/Description/CTAs, Right: Glass Product Carousel)
@@ -87,18 +88,18 @@ const Home = () => {
                     opacity: heroLogoOpacity,
                     scale: heroLogoScale,
                   }}
-                  className="relative flex items-center justify-center"
+                  className="relative flex items-center justify-center p-0.5 rounded-full bg-gradient-to-br from-[#00b4d8] to-[#0077b6] shadow-sm"
                 >
                   <img
                     src={logo}
                     alt="Alekhya Logo"
-                    className="h-10 w-10 object-contain rounded-full drop-shadow-md"
+                    className="h-10 w-10 object-contain rounded-full bg-white p-0.5"
                   />
                 </motion.div>
-                <span className="text-[11px] sm:text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/30 px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center">
+                <span className="text-[11px] sm:text-xs font-semibold text-[#0077B6] bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center">
                   <TextShimmer
                     duration={2.5}
-                    className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]"
+                    className="[--base-color:#0077b6] [--base-gradient-color:#00b4d8] dark:[--base-color:#0077b6] dark:[--base-gradient-color:#00b4d8]"
                   >
                     Enterprise System Integrator
                   </TextShimmer>
@@ -106,46 +107,33 @@ const Home = () => {
               </div>
 
               {/* Brand Name */}
-              <div className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-2 sm:mb-3">
+              <div className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight mb-4 sm:mb-6 lg:mb-7">
                 <span className="inline-block">
                   <TextShimmer
                     duration={3.2}
-                    className="block [--base-color:theme(colors.blue.500)] [--base-gradient-color:theme(colors.blue.200)] dark:[--base-color:theme(colors.blue.500)] dark:[--base-gradient-color:theme(colors.blue.300)]"
+                    className="block [--base-color:#0077b6] [--base-gradient-color:#00b4d8] dark:[--base-color:#0077b6] dark:[--base-gradient-color:#00b4d8]"
                   >
-                    Alekhya Technologies
+                    <span className="text-[#00B4D8]">Alekhya</span>{" "}
+                    <span className="text-[#0077B6]">Technologies</span>
                   </TextShimmer>
                 </span>
               </div>
 
               {/* Subheading */}
-              <h2 className="text-base sm:text-2xl lg:text-3xl font-bold text-blue-300 mb-2 sm:mb-3">
+              <h2 className="text-base sm:text-2xl lg:text-3xl font-bold text-[#004B75] mb-2 sm:mb-6">
                 Technology That Works Together
               </h2>
 
-              {/* Description (concise on mobile, rich on desktop) */}
-              <p className="text-xs sm:text-base lg:text-lg text-slate-300 mb-4 sm:mb-6 max-w-xl leading-relaxed">
-                We bring AV, unified communications, secured IT infrastructure, surveillance, print, and managed AMC support together into one dependable technology ecosystem. Trusted by DRDO, NABARD, banks & enterprises.
+              {/* Description (concise on mobile, rich on desktop with Typewriter) */}
+              <p className="text-xs sm:text-base lg:text-lg text-slate-700 mb-4 sm:mb-6 max-w-xl leading-relaxed">
+                We bring{' '}
+                <TypewriterProducts badgeClassName="px-2 sm:px-2.5 py-0.5 rounded-lg bg-cyan-500/10 border border-cyan-500/30 shadow-sm hover:border-cyan-500/60 hover:bg-cyan-500/15 mx-0.5" />{' '}
+                together into one dependable technology ecosystem. Trusted by DRDO, NABARD, banks & enterprises.
               </p>
 
               {/* CTAs: Call, WhatsApp, Enterprise & Quotes */}
               <div className="flex flex-wrap gap-2.5 sm:gap-3.5 justify-center lg:justify-start w-full">
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl shadow-lg shadow-emerald-900/40 border border-emerald-400/30 transition-all hover:scale-105 active:scale-95"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>WhatsApp Chat</span>
-                </a>
-
-                <a
-                  href="tel:+919573376389"
-                  className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl shadow-lg shadow-blue-900/40 border border-blue-400/30 transition-all hover:scale-105 active:scale-95"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>Call: +91 95733 76389</span>
-                </a>
+                
 
                 <Link to="/enterprise-solutions" className="hidden sm:inline-flex">
                   <GradientButton className="w-full sm:w-auto flex items-center justify-center space-x-2 text-xs sm:text-sm px-4 py-2.5">
@@ -172,19 +160,19 @@ const Home = () => {
       </section>
 
       {/* Enterprise Verticals Grid Section */}
-      <section className="py-10 sm:py-12 bg-transparent text-white">
+      <section className="py-10 sm:py-12 bg-transparent text-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10">
-            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs font-semibold mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+            <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/30 px-4 py-1.5 rounded-full text-[#0077B6] text-xs font-semibold mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-[#00B4D8]" />
+              <TextShimmer duration={2.5} className="[--base-color:#0077b6] [--base-gradient-color:#00b4d8] dark:[--base-color:#0077b6] dark:[--base-gradient-color:#00b4d8]">
                 Turnkey Enterprise Integration
               </TextShimmer>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-extrabold mb-3">
+            <h2 className="text-2xl sm:text-4xl font-extrabold mb-3 text-slate-900">
               Solutions that adapt to your needs and scale with you
             </h2>
-            <p className="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base">
+            <p className="text-slate-700 max-w-3xl mx-auto text-sm sm:text-base">
               From collaboration spaces and voice platforms to secure networks, surveillance, and print workflows, we design technology around how your teams operate.
             </p>
           </div>
@@ -250,7 +238,7 @@ const Home = () => {
             ].map((vertical, idx) => (
               <div
                 key={idx}
-                className="bg-slate-950/80 border border-slate-800 hover:border-blue-500/50 rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 shadow-xl backdrop-blur-sm"
+                className="bg-slate-950/80 border border-slate-800 hover:border-cyan-400/60 rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1 shadow-xl hover:shadow-[0_10px_30px_rgba(0,180,216,0.15)] backdrop-blur-sm"
               >
                 <div>
                   <div className="relative h-44 w-full overflow-hidden bg-slate-900">
@@ -260,7 +248,7 @@ const Home = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/30" />
-                    <div className="absolute top-3 left-3 bg-blue-600/80 backdrop-blur-md text-white p-2 rounded-xl border border-blue-500/30">
+                    <div className="absolute top-3 left-3 bg-gradient-to-br from-[#00b4d8] to-[#0077b6] backdrop-blur-md text-white p-2 rounded-xl border border-white/20 shadow-md">
                       <vertical.icon className="w-5 h-5" />
                     </div>
                     <span className="absolute top-3 right-3 text-[11px] font-bold uppercase tracking-wider text-slate-300 bg-black/70 backdrop-blur-md border border-white/10 px-2.5 py-0.5 rounded-full">
@@ -269,7 +257,7 @@ const Home = () => {
                   </div>
 
                   <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#00B4D8] transition-colors">
                       {vertical.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-2">
@@ -281,7 +269,7 @@ const Home = () => {
                 <div className="px-6 pb-5 pt-0">
                   <Link
                     to={vertical.link}
-                    className="inline-flex items-center space-x-2 text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors"
+                    className="inline-flex items-center space-x-2 text-[#00B4D8] text-sm font-semibold hover:text-[#38BDF8] transition-colors"
                   >
                     <span>Explore Architecture</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -294,7 +282,7 @@ const Home = () => {
           <div className="mt-8 text-center">
             <Link
               to="/enterprise-solutions"
-              className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-7 py-3 rounded-xl transition-colors shadow-lg shadow-blue-600/30 text-sm sm:text-base"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#0077b6] via-[#0284c7] to-[#00b4d8] hover:from-[#0284c7] hover:to-[#38bdf8] text-white font-bold px-7 py-3 rounded-xl transition-all shadow-lg shadow-cyan-900/30 hover:scale-[1.02] text-sm sm:text-base"
             >
               <span>View Full Enterprise Portfolio & OEM Partners</span>
               <ArrowRight className="w-4 h-4" />
@@ -311,26 +299,26 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <Fade direction="up" cascade triggerOnce delay={50} duration={800}>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-                <div className="text-4xl font-extrabold text-blue-400 mb-2">
+              <div className="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+                <div className="text-4xl font-extrabold text-[#00B4D8] mb-2">
                   <AnimatedCounter end={15} suffix="+" duration={1800} />
                 </div>
                 <div className="text-slate-300 font-medium">Years Experience</div>
               </div>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-                <div className="text-4xl font-extrabold text-emerald-400 mb-2">
+              <div className="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+                <div className="text-4xl font-extrabold text-[#38BDF8] mb-2">
                   <AnimatedCounter end={500} suffix="+" duration={2000} />
                 </div>
                 <div className="text-slate-300 font-medium">Happy Clients</div>
               </div>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-                <div className="text-4xl font-extrabold text-purple-400 mb-2">
+              <div className="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+                <div className="text-4xl font-extrabold text-[#0077B6] mb-2">
                   <AnimatedCounter end={24} suffix="/7" duration={1500} />
                 </div>
                 <div className="text-slate-300 font-medium">Support Available</div>
               </div>
-              <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
-                <div className="text-4xl font-extrabold text-cyan-400 mb-2">
+              <div className="bg-slate-900/80 border border-slate-800 hover:border-cyan-500/50 p-6 rounded-xl shadow-lg hover:scale-105 transition-all">
+                <div className="text-4xl font-extrabold text-[#00B4D8] mb-2">
                   <AnimatedCounter end={100} suffix="%" duration={2000} />
                 </div>
                 <div className="text-slate-300 font-medium">Satisfaction Rate</div>
@@ -344,124 +332,124 @@ const Home = () => {
       <section className="relative py-10 sm:py-12 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10">
-            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 mb-3">
               Services That Keep Technology Performing
             </h2>
-            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-700 max-w-2xl mx-auto">
               Practical design, delivery, and lifecycle support for connected enterprise environments
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* CCTV Card */}
-            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-blue-500/50 flex flex-col justify-between">
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-cyan-400/60 flex flex-col justify-between">
               <div>
                 <div className="relative h-40 w-full overflow-hidden bg-slate-950">
                   <img src={cctvHomeImg} alt="CCTV Security Systems" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30" />
-                  <div className="absolute top-2.5 left-2.5 bg-blue-500/80 backdrop-blur-md p-2 rounded-xl">
+                  <div className="absolute top-2.5 left-2.5 bg-gradient-to-br from-[#00b4d8] to-[#0077b6] backdrop-blur-md p-2 rounded-xl border border-white/20">
                     <Camera className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-blue-400 transition-colors">CCTV Security Systems</h3>
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-[#00B4D8] transition-colors">CCTV Security Systems</h3>
                   <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
                     Complete surveillance solutions including installation, maintenance, and monitoring for homes and businesses.
                   </p>
                   <ul className="space-y-1 mb-3 text-slate-300 text-xs">
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>HD & 4K Camera Setup</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Remote Mobile Monitoring</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>24/7 SLA Maintenance</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>HD & 4K Camera Setup</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Remote Mobile Monitoring</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>24/7 SLA Maintenance</span></li>
                   </ul>
                 </div>
               </div>
               <div className="px-5 pb-5 pt-0">
-                <Link to="/solutions/secured-surveillance" className="text-blue-400 hover:text-blue-300 font-semibold flex items-center space-x-1 text-xs">
+                <Link to="/solutions/secured-surveillance" className="text-[#00B4D8] hover:text-[#38BDF8] font-semibold flex items-center space-x-1 text-xs">
                   <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
 
             {/* Computer Card */}
-            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-emerald-500/50 flex flex-col justify-between">
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-cyan-400/60 flex flex-col justify-between">
               <div>
                 <div className="relative h-40 w-full overflow-hidden bg-slate-950 flex items-center justify-center p-3">
                   <img src={computerHomeImg} alt="Computer & Network Services" className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-2.5 left-2.5 bg-emerald-500/80 backdrop-blur-md p-2 rounded-xl">
+                  <div className="absolute top-2.5 left-2.5 bg-gradient-to-br from-[#0077b6] to-[#00b4d8] backdrop-blur-md p-2 rounded-xl border border-white/20">
                     <Monitor className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-emerald-400 transition-colors">Computer & Networks</h3>
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-[#00B4D8] transition-colors">Computer & Networks</h3>
                   <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
                     Expert computer repair, networking, and IT support services for all your technology needs.
                   </p>
                   <ul className="space-y-1 mb-3 text-slate-300 text-xs">
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Hardware & OS Repair</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Structured LAN & WiFi</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Data Recovery & Backup</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Hardware & OS Repair</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Structured LAN & WiFi</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Data Recovery & Backup</span></li>
                   </ul>
                 </div>
               </div>
               <div className="px-5 pb-5 pt-0">
-                <Link to="/solutions/secured-it-infrastructure" className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center space-x-1 text-xs">
+                <Link to="/solutions/secured-it-infrastructure" className="text-[#00B4D8] hover:text-[#38BDF8] font-semibold flex items-center space-x-1 text-xs">
                   <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
 
             {/* Biometric Card */}
-            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-amber-500/50 flex flex-col justify-between">
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-cyan-400/60 flex flex-col justify-between">
               <div>
                 <div className="relative h-40 w-full overflow-hidden bg-slate-950">
                   <img src={biometricHomeImg} alt="Biometric Systems" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-black/30" />
-                  <div className="absolute top-2.5 left-2.5 bg-amber-500/80 backdrop-blur-md p-2 rounded-xl">
+                  <div className="absolute top-2.5 left-2.5 bg-gradient-to-br from-[#0284c7] to-[#0077b6] backdrop-blur-md p-2 rounded-xl border border-white/20">
                     <Fingerprint className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-amber-400 transition-colors">Biometric Systems</h3>
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-[#00B4D8] transition-colors">Biometric Systems</h3>
                   <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
                     Expert Biometric & RFID attendance systems installation, repair, and maintenance.
                   </p>
                   <ul className="space-y-1 mb-3 text-slate-300 text-xs">
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Fingerprint & Face Recog</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>RFID Card Access Control</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Cloud HR Sync & Reports</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Fingerprint & Face Recog</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>RFID Card Access Control</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Cloud HR Sync & Reports</span></li>
                   </ul>
                 </div>
               </div>
               <div className="px-5 pb-5 pt-0">
-                <Link to="/services" className="text-amber-400 hover:text-amber-300 font-semibold flex items-center space-x-1 text-xs">
+                <Link to="/services" className="text-[#00B4D8] hover:text-[#38BDF8] font-semibold flex items-center space-x-1 text-xs">
                   <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
 
             {/* Printer Card */}
-            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-purple-500/50 flex flex-col justify-between">
+            <div className="group bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:border-cyan-400/60 flex flex-col justify-between">
               <div>
                 <div className="relative h-40 w-full overflow-hidden bg-slate-950 flex items-center justify-center p-3">
                   <img src={printerHomeImg} alt="Printer & Copier Solutions" className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-2.5 left-2.5 bg-purple-500/80 backdrop-blur-md p-2 rounded-xl">
+                  <div className="absolute top-2.5 left-2.5 bg-gradient-to-br from-[#00b4d8] to-[#0284c7] backdrop-blur-md p-2 rounded-xl border border-white/20">
                     <Printer className="h-4 w-4 text-white" />
                   </div>
                 </div>
                 <div className="p-5">
-                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-purple-400 transition-colors">Printer & Copiers</h3>
+                  <h3 className="text-base font-bold mb-1.5 text-white group-hover:text-[#00B4D8] transition-colors">Printer & Copiers</h3>
                   <p className="text-slate-300 mb-3 font-normal text-xs leading-relaxed">
                     Complete printer services including repair, maintenance, and supplies for all major brands.
                   </p>
                   <ul className="space-y-1 mb-3 text-slate-300 text-xs">
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>All Major Brand Service</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Toner Cartridge Supply</span></li>
-                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400 flex-shrink-0" /><span>Rental & AMC Contracts</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>All Major Brand Service</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Toner Cartridge Supply</span></li>
+                    <li className="flex items-center space-x-1.5"><CheckCircle className="h-3.5 w-3.5 text-[#00B4D8] flex-shrink-0" /><span>Rental & AMC Contracts</span></li>
                   </ul>
                 </div>
               </div>
               <div className="px-5 pb-5 pt-0">
-                <Link to="/solutions/print-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center space-x-1 text-xs">
+                <Link to="/solutions/print-solutions" className="text-[#00B4D8] hover:text-[#38BDF8] font-semibold flex items-center space-x-1 text-xs">
                   <span>Learn More</span><ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -471,12 +459,12 @@ const Home = () => {
       </section>
 
       {/* Trusted Clients */}
-      <section className="py-8 sm:py-10 bg-transparent">
+      <section id="clients" className="py-8 sm:py-10 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Fade direction="down" triggerOnce cascade damping={0.2} duration={1000}>
             <div className="text-center mb-6 sm:mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Trusted by Leading Organizations</h2>
-              <p className="text-base sm:text-lg text-slate-400">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Trusted by Leading Organizations</h2>
+              <p className="text-base sm:text-lg text-slate-700">
                 We're proud to serve government agencies, enterprises, and high-profile clients
               </p>
             </div>
@@ -484,7 +472,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6">
             <Slide direction="left" triggerOnce delay={0} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-cyan-500/40 transition-colors">
                 <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={drdoLogo} alt="DRDO Logo" className="w-full h-full object-contain" />
                 </div>
@@ -494,7 +482,7 @@ const Home = () => {
             </Slide>
 
             <Slide direction="up" triggerOnce delay={150} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-cyan-500/40 transition-colors">
                 <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={nabardLogo} alt="NABARD Logo" className="w-full h-full object-contain" />
                 </div>
@@ -504,7 +492,7 @@ const Home = () => {
             </Slide>
 
             <Slide direction="up" triggerOnce delay={300} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-cyan-500/40 transition-colors">
                 <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={IMDLogo} alt="IMD Logo" className="w-full h-full object-contain" />
                 </div>
@@ -514,7 +502,7 @@ const Home = () => {
             </Slide>
 
             <Slide direction="right" triggerOnce delay={450} duration={1000}>
-              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-blue-500/40 transition-colors">
+              <div className="bg-slate-900/80 border border-slate-800 p-5 sm:p-6 rounded-xl shadow-lg text-center h-full hover:border-cyan-500/40 transition-colors">
                 <div className="bg-white p-2 w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 sm:mb-4 flex items-center justify-center overflow-hidden">
                   <img src={airforceschoolLogo} alt="Air Force School Logo" className="w-full h-full object-contain" />
                 </div>
@@ -528,12 +516,12 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="relative w-full py-10 sm:py-14 flex items-center justify-center text-white bg-transparent">
-        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center z-10">
+        <div className="w-full max-w-7xl px-6 sm:px-10 py-10 sm:py-14 text-center z-10 bg-slate-950/95 border border-cyan-500/30 rounded-3xl shadow-2xl shadow-cyan-950/40 mx-4 sm:mx-6 lg:mx-8">
           <Fade direction="up" triggerOnce duration={1000}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Ready to Connect Your Technology Ecosystem?
             </h2>
-            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-7 text-blue-200 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-7 text-cyan-100 max-w-2xl mx-auto">
               Get a clear plan for collaboration, infrastructure, security, print, and ongoing support.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
@@ -549,7 +537,7 @@ const Home = () => {
 
               <a
                 href="tel:+919573376389"
-                className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-blue-900/40 border border-blue-400/30 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
+                className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#0077b6] to-[#00b4d8] hover:from-[#0284c7] hover:to-[#38bdf8] text-white font-bold px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl shadow-lg shadow-cyan-950/40 border border-cyan-400/30 transition-all hover:scale-105 active:scale-95 text-sm sm:text-base"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Call: +91 95733 76389</span>

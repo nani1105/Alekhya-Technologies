@@ -100,7 +100,7 @@ const RefurbishedLaptops = () => {
     : laptops.filter(laptop => laptop.brand === selectedBrand);
 
   return (
-    <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-100 overflow-hidden">
+    <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="A-Grade Refurbished Laptops in Hyderabad | ThinkPad, Dell, HP & Apple"
         description="Buy certified A-grade commercial refurbished laptops in Hyderabad. Bulk discounts for startups, IT companies, and schools. 1-Year Warranty on Lenovo ThinkPad, Dell Latitude, HP EliteBook & MacBook."
@@ -108,17 +108,17 @@ const RefurbishedLaptops = () => {
         canonicalPath="/refurbished-laptops"
       />
       {/* Hero Section */}
-      <section className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <section className="bg-transparent text-slate-900 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <span className="gsap-laptop-badge bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-md">
-            <TextShimmer duration={2.5} className="[--base-color:#6ee7b7] [--base-gradient-color:#ffffff] dark:[--base-color:#6ee7b7] dark:[--base-gradient-color:#ffffff]">
+          <span className="gsap-laptop-badge bg-emerald-600/10 border border-emerald-600/30 text-emerald-700 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-sm">
+            <TextShimmer duration={2.5} className="[--base-color:#059669] [--base-gradient-color:#10b981] dark:[--base-color:#059669] dark:[--base-gradient-color:#10b981]">
               100% Tested & Certified Hardware
             </TextShimmer>
           </span>
-          <h1 className="gsap-laptop-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-            A-Grade <span className="text-emerald-400">Refurbished Laptops</span>
+          <h1 className="gsap-laptop-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-slate-900">
+            A-Grade <span className="text-emerald-700">Refurbished Laptops</span>
           </h1>
-          <p className="gsap-laptop-subtitle text-base sm:text-lg md:text-xl text-slate-300 max-w-4xl mx-auto mb-6">
+          <p className="gsap-laptop-subtitle text-base sm:text-lg md:text-xl text-slate-700 max-w-4xl mx-auto mb-6">
             Enterprise-grade commercial laptops from Lenovo ThinkPad, Dell Latitude, HP EliteBook & Apple MacBook. Certified A-Grade quality with warranty at 50-70% lower costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

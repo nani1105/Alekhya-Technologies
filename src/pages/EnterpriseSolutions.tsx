@@ -19,18 +19,18 @@ import ParticlesBackground from '../components/ParticlesBackground';
 import { GradientButton } from '../components/ui/gradient-button';
 import { TextShimmer } from '../components/ui/text-shimmer';
 import SEO from '../components/SEO';
-import ciscoLogo from '../Logo/Cisco_logo.svg.webp';
-import arubaLogo from '../Logo/HPE-aruba-networking-logo.webp';
-import dellLogo from '../Logo/Dell.webp';
-import polyLogo from '../Logo/hppoly.jpg';
-import yealinkLogo from '../Logo/Yealink_logo.png';
-import grandstreamLogo from '../Logo/Grandstream.png';
+import ciscoLogo from '../Logo/Cisco_logo.svg-transparent.png';
+import arubaLogo from '../Logo/HPE-aruba-networking-logo-transparent.png';
+import dellLogo from '../Logo/Dell_Logo.webp';
+import polyLogo from '../Logo/hppoly-transparent.png';
+import yealinkLogo from '../Logo/Yealink_logo-transparent.png';
+import grandstreamLogo from '../Logo/Grandstream-transparent.png';
 import hikvisionLogo from '../Logo/Hikvision_logo.svg';
 import dahuaLogo from '../Logo/Dahua_Technology_logo.svg';
-import honeywellLogo from '../Logo/Honeywell.jpeg';
+import honeywellLogo from '../Logo/Honeywell-transparent.png';
 import canonLogo from '../Logo/Canon.png';
 import epsonLogo from '../Logo/Epson_.png';
-import xeroxLogo from '../Logo/Xerox-logo.jpg';
+import xeroxLogo from '../Logo/Xerox-logo-transparent.png';
 import konicaLogo from '../Logo/Konica1.png';
 import { SERVICES_CATALOG } from './Contact';
 
@@ -491,7 +491,7 @@ const EnterpriseSolutions: React.FC = () => {
   const activePartners = oemPartners.filter((partner) => activeCategory.partnerIds.includes(partner.id));
 
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="Enterprise IT Solutions & Strategic OEM System Integrator in Hyderabad"
         description="Full-lifecycle enterprise system integration across Hyderabad and India. Cisco networking, Poly AV automation, Grandstream telephony, Hikvision AI CCTV, Canon MPS, and SLA AMC maintenance."
@@ -505,25 +505,25 @@ const EnterpriseSolutions: React.FC = () => {
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
           <Fade direction="down" triggerOnce>
-            <div className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full text-blue-400 text-xs sm:text-sm font-semibold mb-4">
-              <Sparkles className="w-4 h-4 text-blue-400" />
-              <TextShimmer duration={2.5} className="[--base-color:#60a5fa] [--base-gradient-color:#ffffff] dark:[--base-color:#60a5fa] dark:[--base-gradient-color:#ffffff]">
+            <div className="inline-flex items-center space-x-2 bg-blue-600/10 border border-blue-600/30 px-4 py-1.5 rounded-full text-blue-700 text-xs sm:text-sm font-semibold mb-4">
+              <Sparkles className="w-4 h-4 text-blue-700" />
+              <TextShimmer duration={2.5} className="[--base-color:#1d4ed8] [--base-gradient-color:#2563eb] dark:[--base-color:#1d4ed8] dark:[--base-gradient-color:#2563eb]">
                 Enterprise Technology Integration & Infrastructure
               </TextShimmer>
             </div>
           </Fade>
 
           <Fade direction="up" delay={100} triggerOnce>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight text-slate-900">
               End-to-End Enterprise <br />
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
                 IT, AV, Telephony, Print & Security Solutions
               </span>
             </h1>
           </Fade>
 
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+            <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
               Alekhya Technologies architects, builds, and maintains robust digital ecosystems. From high-density IT networks and AV boardroom automation to IP telephony, 4K security, print solutions, and SLA-backed AMC support—we deliver turn-key integration engineered for enterprise scale.
             </p>
           </Fade>

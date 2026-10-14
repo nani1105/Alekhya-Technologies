@@ -7,7 +7,7 @@ import { TextShimmer } from '../components/ui/text-shimmer';
 import SEO from '../components/SEO';
 import drdoLogo from '../Logo/drdo.png';
 import nabardLogo from '../Logo/NABARD1.png';
-import pcSystemImg from '../Logo/computer.png';
+import pcSystemImg from '../Logo/computer-transparent.png';
 import photocopierImg from '../Logo/Multifunction Photocopiers.jpg';
 import countingMachineImg from '../Logo/Counting machines.jpg';
 
@@ -57,7 +57,7 @@ const AmcServices = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-100 overflow-hidden">
+    <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="Enterprise IT AMC Services in Hyderabad | Computer, Server & CCTV AMC"
         description="Comprehensive & Non-Comprehensive Enterprise IT AMC Services in Hyderabad. Guaranteed 2-4 hr SLA response, buffer spare parts, resident engineers for computers, servers, printers & CCTV."
@@ -65,17 +65,17 @@ const AmcServices = () => {
         canonicalPath="/amc"
       />
       {/* Hero Section */}
-      <section ref={heroRef} className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <section ref={heroRef} className="bg-transparent text-slate-900 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <span className="gsap-hero-badge bg-blue-600/30 border border-blue-500/40 text-blue-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-md">
-            <TextShimmer duration={2.5} className="[--base-color:#93c5fd] [--base-gradient-color:#ffffff] dark:[--base-color:#93c5fd] dark:[--base-gradient-color:#ffffff]">
+          <span className="gsap-hero-badge bg-blue-600/10 border border-blue-600/30 text-blue-700 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-sm">
+            <TextShimmer duration={2.5} className="[--base-color:#1d4ed8] [--base-gradient-color:#2563eb] dark:[--base-color:#1d4ed8] dark:[--base-gradient-color:#2563eb]">
               15+ Years Industry Leader
             </TextShimmer>
           </span>
-          <h1 className="gsap-hero-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-            Enterprise <span className="text-blue-400">IT AMC Services</span>
+          <h1 className="gsap-hero-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-slate-900">
+            Enterprise <span className="text-blue-700">IT AMC Services</span>
           </h1>
-          <p className="gsap-hero-desc text-base sm:text-lg md:text-xl text-slate-300 max-w-4xl mx-auto mb-6">
+          <p className="gsap-hero-desc text-base sm:text-lg md:text-xl text-slate-700 max-w-4xl mx-auto mb-6">
             SLA-Driven Annual Maintenance Contracts for Computer Systems, Servers, Photocopiers, Currency Counting Machines, Printers, & CCTV Infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
@@ -95,8 +95,8 @@ const AmcServices = () => {
         {/* Target Sectors */}
         <section>
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Who Needs Our AMC Solutions?</h2>
-            <p className="text-slate-300 text-base max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Who Needs Our AMC Solutions?</h2>
+            <p className="text-slate-700 text-base max-w-2xl mx-auto">
               Customized maintenance agreements tailored for organization-specific uptime requirements.
             </p>
           </div>

@@ -15,7 +15,7 @@ import thermalSecurityImg from '../../Logo/Thermal perimeter security.jpg';
 
 const SecuredSurveillance: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="4K AI CCTV Camera Installation & Maintenance in Hyderabad"
         description="Professional 4K Ultra-HD CCTV surveillance, Hikvision & Dahua AI cameras, ANPR, biometric access control, boom barrier automation, and central VMS storage systems in Hyderabad."
@@ -26,16 +26,16 @@ const SecuredSurveillance: React.FC = () => {
 
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-rose-500/10 border border-rose-500/30 px-4 py-1.5 rounded-full text-rose-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-rose-600/10 border border-rose-600/30 px-4 py-1.5 rounded-full text-rose-700 text-xs sm:text-sm font-semibold mb-4">
             <ShieldCheck className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#fb7185] [--base-gradient-color:#ffffff] dark:[--base-color:#fb7185] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#be123c] [--base-gradient-color:#e11d48] dark:[--base-color:#be123c] dark:[--base-gradient-color:#e11d48]">
               AI CCTV & Electronic Security
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">
             Secured Surveillance
           </h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
             Deploying 4K AI-powered IP CCTV surveillance, automated license plate recognition (ANPR), biometric access control, perimeter barriers, and central Video Management Systems (VMS).
           </p>
 

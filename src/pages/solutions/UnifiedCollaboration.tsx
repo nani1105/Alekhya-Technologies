@@ -15,7 +15,7 @@ import voiceSecurityImg from '../../Logo/Voice Security & SBC.jpg';
 
 const UnifiedCollaboration: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="IP PBX Telephony, VoIP & Video Collaboration in Hyderabad"
         description="Enterprise IP PBX telephony, VoIP SIP gateways, Yealink desk phones, Grandstream communication servers, and MS Teams / Zoom Rooms for enterprises in Hyderabad & Cyberabad."
@@ -26,16 +26,16 @@ const UnifiedCollaboration: React.FC = () => {
 
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-cyan-500/10 border border-cyan-500/30 px-4 py-1.5 rounded-full text-cyan-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-cyan-600/10 border border-cyan-600/30 px-4 py-1.5 rounded-full text-cyan-700 text-xs sm:text-sm font-semibold mb-4">
             <PhoneCall className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#22d3ee] [--base-gradient-color:#ffffff] dark:[--base-color:#22d3ee] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#0e7490] [--base-gradient-color:#06b6d4] dark:[--base-color:#0e7490] dark:[--base-gradient-color:#06b6d4]">
               Unified Voice & Video Communication
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">
             Unified Collaboration (UCC)
           </h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
             Empowering hybrid teams with seamless IP PBX telephony, certified Microsoft Teams & Zoom video rooms, enterprise headsets, and cloud contact center architectures.
           </p>
 

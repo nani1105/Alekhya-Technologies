@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { GradientButton } from '../components/ui/gradient-button';
 import { TextShimmer } from '../components/ui/text-shimmer';
 import SEO from '../components/SEO';
-import aioPcImg from '../Logo/computer.png';
+import aioPcImg from '../Logo/computer-transparent.png';
 import customPcImg from '../Logo/TEch.jpg';
 import serverRackImg from '../Logo/Data Center Racks.jpg';
 
@@ -55,7 +55,7 @@ const PcSolutions = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-100 overflow-hidden">
+    <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="Custom Assembled Desktops & All-in-One PC Solutions in Hyderabad"
         description="Custom desktop PCs, high-performance CAD workstations, space-saving All-in-One (AIO) computers, and server rigging for enterprises, schools, and offices across Hyderabad."
@@ -63,17 +63,17 @@ const PcSolutions = () => {
         canonicalPath="/pc-solutions"
       />
       {/* Hero Section */}
-      <section className="bg-transparent text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <section className="bg-transparent text-slate-900 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <span className="gsap-pc-badge bg-blue-600/30 border border-blue-500/40 text-blue-300 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-md">
-            <TextShimmer duration={2.5} className="[--base-color:#93c5fd] [--base-gradient-color:#ffffff] dark:[--base-color:#93c5fd] dark:[--base-gradient-color:#ffffff]">
+          <span className="gsap-pc-badge bg-blue-600/10 border border-blue-600/30 text-blue-700 text-xs sm:text-sm font-semibold uppercase px-4 py-1.5 rounded-full inline-block mb-3 tracking-wider shadow-sm">
+            <TextShimmer duration={2.5} className="[--base-color:#1d4ed8] [--base-gradient-color:#2563eb] dark:[--base-color:#1d4ed8] dark:[--base-gradient-color:#2563eb]">
               Customized Hardware Architecture
             </TextShimmer>
           </span>
-          <h1 className="gsap-pc-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-            Custom & <span className="text-blue-400">All-in-One PC Solutions</span>
+          <h1 className="gsap-pc-title text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-slate-900">
+            Custom & <span className="text-blue-700">All-in-One PC Solutions</span>
           </h1>
-          <p className="gsap-pc-subtitle text-base sm:text-lg md:text-xl text-slate-300 max-w-4xl mx-auto mb-6">
+          <p className="gsap-pc-subtitle text-base sm:text-lg md:text-xl text-slate-700 max-w-4xl mx-auto mb-6">
             Tailored Desktop Workstations, Space-Saving All-in-One (AIO) PCs, and Rack Server Installations for Government Offices, Schools, CA Firms & Startups.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

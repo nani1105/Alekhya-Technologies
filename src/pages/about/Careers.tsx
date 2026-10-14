@@ -5,19 +5,19 @@ import { TextShimmer } from '../../components/ui/text-shimmer';
 
 const Careers: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">
         <div className="max-w-7xl mx-auto">
-          <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 px-4 py-1.5 rounded-full text-emerald-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-emerald-600/10 border border-emerald-600/30 px-4 py-1.5 rounded-full text-emerald-700 text-xs sm:text-sm font-semibold mb-4">
             <Briefcase className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#34d399] [--base-gradient-color:#ffffff] dark:[--base-color:#34d399] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#059669] [--base-gradient-color:#10b981] dark:[--base-color:#059669] dark:[--base-gradient-color:#10b981]">
               Join Our Engineering Team
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Careers</h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 mb-6">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">Careers</h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 mb-6">
             Build your career with India's leading technology system integrator. Explore current opportunities across IT networking, AV automation, and field engineering.
           </p>
         </div>

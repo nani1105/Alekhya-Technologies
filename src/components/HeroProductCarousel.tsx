@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import CCtv from "../Logo/Cctv2.jpg";
-import Computer from "../Logo/computer.png";
+import Computer from "../Logo/computer-transparent.png";
 import printer from "../Logo/printer.webp";
 import photocopy from "../Logo/photocopy.webp";
 import biometric from "../Logo/biometric.webp";
@@ -107,16 +107,16 @@ const HeroProductCarousel: React.FC = () => {
       {/* Glass card container box */}
       <div className="relative rounded-2xl sm:rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/20 p-3 sm:p-5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] overflow-hidden">
         {/* Glow ambient background */}
-        <div className="absolute -top-20 -right-20 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-20 -right-20 w-48 h-48 bg-[#00B4D8]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-[#0077B6]/25 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex items-center justify-between mb-2 sm:mb-3 px-1">
           <div className="flex items-center space-x-2">
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B4D8] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00B4D8]"></span>
             </span>
-            <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-blue-300 font-semibold">
+            <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-[#00B4D8] font-semibold">
               Live Product Portfolio
             </span>
           </div>
@@ -130,7 +130,7 @@ const HeroProductCarousel: React.FC = () => {
             <div key={p.id} className="outline-none">
               <Link
                 to={p.link}
-                className="group block relative rounded-xl sm:rounded-2xl overflow-hidden bg-slate-950/80 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+                className="group block relative rounded-xl sm:rounded-2xl overflow-hidden bg-slate-950/80 border border-white/10 hover:border-cyan-400/60 transition-all duration-300"
               >
                 {/* Image Box Container */}
                 <div className="relative w-full h-44 sm:h-64 md:h-72 bg-gradient-to-b from-slate-900/90 to-black flex items-center justify-center p-3 sm:p-6 overflow-hidden">
@@ -147,16 +147,16 @@ const HeroProductCarousel: React.FC = () => {
                   </div>
 
                   {/* Tag Name & Label INSIDE the image box at the bottom */}
-                  <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 bg-black/80 backdrop-blur-md border border-white/15 rounded-xl p-2 sm:p-3 shadow-lg flex items-center justify-between transition-all duration-300 group-hover:bg-slate-900/90 group-hover:border-blue-500/40">
+                  <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3 bg-black/80 backdrop-blur-md border border-white/15 rounded-xl p-2 sm:p-3 shadow-lg flex items-center justify-between transition-all duration-300 group-hover:bg-slate-900/90 group-hover:border-cyan-400/50">
                     <div className="truncate pr-2">
-                      <div className="text-[9px] sm:text-[11px] font-mono text-blue-400 uppercase tracking-wider truncate font-semibold">
+                      <div className="text-[9px] sm:text-[11px] font-mono text-[#00B4D8] uppercase tracking-wider truncate font-semibold">
                         {p.tag}
                       </div>
-                      <div className="text-xs sm:text-sm md:text-base font-bold text-white truncate group-hover:text-blue-300 transition-colors">
+                      <div className="text-xs sm:text-sm md:text-base font-bold text-white truncate group-hover:text-cyan-200 transition-colors">
                         {p.title}
                       </div>
                     </div>
-                    <div className="flex-shrink-0 bg-blue-600/80 group-hover:bg-blue-600 text-white p-1.5 sm:p-2 rounded-lg transition-transform group-hover:translate-x-0.5">
+                    <div className="flex-shrink-0 bg-gradient-to-r from-[#0077b6] to-[#00b4d8] group-hover:from-[#0284c7] group-hover:to-[#38bdf8] text-white p-1.5 sm:p-2 rounded-lg transition-transform group-hover:translate-x-0.5 shadow-sm">
                       <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
                   </div>

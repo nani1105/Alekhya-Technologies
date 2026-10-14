@@ -30,6 +30,17 @@ import CaseStudies from './pages/resources/CaseStudies';
 
 import ContactUs from './pages/ContactUs';
 
+// Products Pages (Matching SVS Technologies navbar structure)
+import ProductsOverview from './pages/products/ProductsOverview';
+import Photocopier from './pages/products/Photocopier';
+import LaptopDesktops from './pages/products/LaptopDesktops';
+import LaserjetDotmatrix from './pages/products/LaserjetDotmatrix';
+import CctvVideoWall from './pages/products/CctvVideoWall';
+import BiometricDevices from './pages/products/BiometricDevices';
+import Projectors from './pages/products/Projectors';
+import IpIntercomSystem from './pages/products/IpIntercomSystem';
+import LargeLedDisplayPanel from './pages/products/LargeLedDisplayPanel';
+
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SparklesBackground from './components/SparklesBackground';
@@ -40,12 +51,27 @@ function App() {
     <Router>
       <ScrollToTop />
       <FloatingCTA />
-      <div className="min-h-screen bg-black text-slate-100 relative">
+      <div className="min-h-screen bg-[#F8FAFC] text-slate-900 relative">
         <SparklesBackground />
         <div className="relative z-10">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            
+            {/* Products Routes (Matching SVS Technologies Navbar Structure) */}
+            <Route path="/products" element={<ProductsOverview />} />
+            <Route path="/products/photocopier" element={<Photocopier />} />
+            <Route path="/products/photocopiers" element={<Photocopier />} />
+            <Route path="/products/laptop-desktops" element={<LaptopDesktops />} />
+            <Route path="/products/laptops-desktops" element={<LaptopDesktops />} />
+            <Route path="/products/laserjet-dot-matrix" element={<LaserjetDotmatrix />} />
+            <Route path="/products/cctv-video-wall" element={<CctvVideoWall />} />
+            <Route path="/products/biometric-devices" element={<BiometricDevices />} />
+            <Route path="/products/projectors" element={<Projectors />} />
+            <Route path="/products/ip-intercom-systems" element={<IpIntercomSystem />} />
+            <Route path="/products/ip-intercom-system" element={<IpIntercomSystem />} />
+            <Route path="/products/large-led-display-panel" element={<LargeLedDisplayPanel />} />
+            <Route path="/products/large-led-display-panels" element={<LargeLedDisplayPanel />} />
 
           {/* About Us Routes */}
           <Route path="/about-us/who-we-are" element={<WhoWeAre />} />

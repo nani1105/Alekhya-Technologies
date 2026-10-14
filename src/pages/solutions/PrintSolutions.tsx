@@ -15,7 +15,7 @@ import copierRentalImg from '../../Logo/copier rental.jpg';
 
 const PrintSolutions: React.FC = () => {
   return (
-    <div className="min-h-screen bg-transparent text-slate-100 overflow-hidden">
+    <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
         title="Photocopier AMC, Rental & Managed Print Services in Hyderabad"
         description="Multifunction A3/A4 digital photocopiers, Managed Print Services (MPS), commercial laser printers, note counting machines, OEM toner cartridges, and corporate copier rentals in Hyderabad."
@@ -26,16 +26,16 @@ const PrintSolutions: React.FC = () => {
 
       <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 px-4 py-1.5 rounded-full text-amber-400 text-xs sm:text-sm font-semibold mb-4">
+          <div className="inline-flex items-center space-x-2 bg-amber-600/10 border border-amber-600/30 px-4 py-1.5 rounded-full text-amber-800 text-xs sm:text-sm font-semibold mb-4">
             <Printer className="w-4 h-4" />
-            <TextShimmer duration={2.5} className="[--base-color:#fbbf24] [--base-gradient-color:#ffffff] dark:[--base-color:#fbbf24] dark:[--base-gradient-color:#ffffff]">
+            <TextShimmer duration={2.5} className="[--base-color:#b45309] [--base-gradient-color:#d97706] dark:[--base-color:#b45309] dark:[--base-gradient-color:#d97706]">
               Commercial Printing & Managed Services
             </TextShimmer>
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900">
             Print Solutions
           </h1>
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-slate-700 leading-relaxed mb-6">
             Providing enterprise multifunction photocopiers (MFP), Managed Print Services (MPS), production printers, note-counting machines, toner cartridges, and rental options.
           </p>
 

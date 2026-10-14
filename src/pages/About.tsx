@@ -9,7 +9,7 @@ import Logo from '../Logo/Alekhya.png';
 
 const About = () => {
   return (
-    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-100">
+    <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-10">
@@ -24,12 +24,12 @@ const About = () => {
           </div>
 
           <Fade direction="down" triggerOnce>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-3">
-              About <span className="text-blue-400">Alekhya Technologies</span>
+            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-3">
+              About <span className="text-blue-700">Alekhya Technologies</span>
             </h1>
           </Fade>
           <Fade direction="up" delay={200} triggerOnce>
-            <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto">
               15 years of industry excellence in enterprise technology solutions, IT AMC contracts, and security infrastructure. Trusted by DRDO, Meteorological Dept, Air Force School, NABARD & National Banks.
             </p>
           </Fade>
