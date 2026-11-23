@@ -2,10 +2,17 @@ import React from 'react';
 import { Briefcase, MapPin, ArrowRight } from 'lucide-react';
 import ParticlesBackground from '../../components/ParticlesBackground';
 import { TextShimmer } from '../../components/ui/text-shimmer';
+import SEO from '../../components/SEO';
 
 const Careers: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
+      <SEO
+        title="Careers — Join India's Leading IT System Integrator"
+        description="Join Alekhya Technologies in Hyderabad. Open roles in IT networking, AV automation, field engineering, CCTV installation & enterprise support. Build your career with India's top system integrator."
+        keywords="Alekhya Technologies careers, IT jobs Hyderabad, system integrator jobs, network engineer Hyderabad, CCTV technician jobs, AV engineer openings Telangana"
+        canonicalPath="/about-us/careers"
+      />
       <ParticlesBackground />
 
       <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-transparent text-center">

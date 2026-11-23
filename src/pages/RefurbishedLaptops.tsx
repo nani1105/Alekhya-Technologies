@@ -99,13 +99,57 @@ const RefurbishedLaptops = () => {
     ? laptops 
     : laptops.filter(laptop => laptop.brand === selectedBrand);
 
+  const refurbishedLaptopsSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Certified A-Grade Commercial Refurbished Laptops in Hyderabad",
+    "image": [
+      "https://alekhyatechnologies.in/logo.png"
+    ],
+    "description": "Certified A-grade commercial refurbished laptops in Hyderabad with 1-Year Warranty. Lenovo ThinkPad T480/T490, Dell Latitude 5400/7400, HP EliteBook 840 G5/G6, Apple MacBook. Pre-loaded with original OS, tested 25+ hardware checkpoints.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Lenovo, Dell, HP, Apple"
+    },
+    "category": "Electronics > Computers > Laptops",
+    "itemCondition": "https://schema.org/RefurbishedCondition",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": "22999",
+      "highPrice": "55000",
+      "offerCount": "150",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Alekhya Technologies",
+        "telephone": "+919573376389",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Plot No. 42, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "postalCode": "500081",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "142",
+      "bestRating": "5"
+    }
+  };
+
   return (
     <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="A-Grade Refurbished Laptops in Hyderabad | ThinkPad, Dell, HP & Apple"
-        description="Buy certified A-grade commercial refurbished laptops in Hyderabad. Bulk discounts for startups, IT companies, and schools. 1-Year Warranty on Lenovo ThinkPad, Dell Latitude, HP EliteBook & MacBook."
-        keywords="Refurbished Laptops Hyderabad, Second hand laptops Hyderabad, Used ThinkPad Hyderabad, Dell Latitude refurbished HITEC City, Used laptops Madhapur, Commercial laptops bulk Hyderabad"
+        title="Buy A-Grade Refurbished Laptops in Hyderabad | ThinkPad, Dell, HP, Mac from ₹22,999"
+        description="Certified A-grade refurbished laptops in Hyderabad with 1-Year Warranty. Lenovo ThinkPad, Dell Latitude, HP EliteBook & Apple MacBook. 25+ checkpoint tested, preloaded OS. Bulk deals for startups, schools & BPOs. Call +91 95733 76389."
+        keywords="Refurbished laptops Hyderabad, Buy used laptops Hyderabad, Second hand ThinkPad Hyderabad, Dell Latitude refurbished Madhapur, HP EliteBook refurbished HITEC City, Refurbished MacBook Hyderabad, Bulk refurbished laptops for startups, Commercial used laptops with warranty Hyderabad, Cheap laptops Hyderabad, Laptop dealers in Madhapur"
         canonicalPath="/refurbished-laptops"
+        schema={refurbishedLaptopsSchema}
       />
       {/* Hero Section */}
       <section className="bg-transparent text-slate-900 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import SEO from '../components/SEO';
 
 const WhatsAppIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -154,6 +155,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-900">
+      <SEO
+        title="Get Free IT Quote — CCTV, AMC, Laptops & Enterprise Solutions"
+        description="Contact Alekhya Technologies for a free IT consultation & quote. CCTV installation, IT AMC, refurbished laptops, photocopier rental, biometric devices & networking in Hyderabad. Call +91 95733 76389."
+        keywords="Contact Alekhya Technologies, IT quote Hyderabad, free CCTV survey Hyderabad, AMC quote, refurbished laptop dealer contact, photocopier rental enquiry Hyderabad"
+        canonicalPath="/contact"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10">

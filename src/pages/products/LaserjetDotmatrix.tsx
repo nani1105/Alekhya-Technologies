@@ -26,13 +26,33 @@ import canonLogo from '../../Logo/Canon.png';
 import brotherLogo from '../../Logo/brother-log-transparent.png';
 
 const LaserjetDotmatrix: React.FC = () => {
+  const printerSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "LaserJet Printers, Dot Matrix Printers, Repairs & Toner Cartridges in Hyderabad",
+    "description": "Commercial laser printer repair, dot matrix continuous paper printer service, passbook printer repair, and original toner cartridges for HP, Canon, Epson & Brother across Hyderabad.",
+    "brand": {
+      "@type": "Brand",
+      "name": "HP, Canon, Epson, Brother, TVS"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": "450",
+      "highPrice": "48000",
+      "offerCount": "80",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="LaserJet & Dot Matrix Printers Sales, Service & Supplies in Hyderabad | Alekhya Technologies"
-        description="Authorized dealer for HP LaserJet, Canon, Epson EcoTank, TVS, and Epson Dot Matrix continuous form printers in Hyderabad. High-yield toners, printer ribbons, passbook printers & repair services."
-        keywords="LaserJet printer Hyderabad, Dot Matrix printer dealers Hyderabad, HP printer repair Secunderabad, Epson passbook printer Hyderabad, Printer toner cartridges HITEC City, Commercial barcode printer"
+        title="Printer Repair, Toner Cartridges & LaserJet Service in Hyderabad | Alekhya Tech"
+        description="Fast doorstep printer repairs & OEM toner cartridge supply in Hyderabad. HP LaserJet, Canon, Epson, Brother & Dot Matrix printers. Passbook printer repair, toner refilling & ribbon cartridges. Call +91 95733 76389."
+        keywords="Printer repair Hyderabad, Printer cartridges supplier Hyderabad, LaserJet printer repair Madhapur, HP printer toner refill HITEC City, Dot Matrix printer repair Hyderabad, Canon printer service Secunderabad, Passbook printer service Hyderabad, Toner cartridge refilling Hyderabad"
         canonicalPath="/products/laserjet-dot-matrix"
+        schema={printerSchema}
       />
       <ParticlesBackground />
 

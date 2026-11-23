@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import SEO from '../components/SEO';
 
 // Import images
 import nabardImg from '../Logo/Nabard.png';
@@ -10,6 +11,12 @@ import Logo from '../Logo/Alekhya.png';
 const About = () => {
   return (
     <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-900">
+      <SEO
+        title="About Us — 15+ Years of Enterprise IT Excellence"
+        description="Learn about Alekhya Technologies — Hyderabad's trusted Enterprise System Integrator since 2009. 15+ years serving DRDO, NABARD, IMD & Air Force Schools with IT AMC, CCTV, AV & networking solutions."
+        keywords="About Alekhya Technologies, IT company Hyderabad, System Integrator Hyderabad, DRDO IT partner, NABARD technology vendor, Enterprise IT services India"
+        canonicalPath="/about"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-10">

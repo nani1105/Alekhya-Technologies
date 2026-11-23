@@ -28,13 +28,33 @@ import hpLogo from '../../Logo/Hp1.png';
 import macImg from '../../Logo/Mac.avif';
 
 const LaptopDesktops: React.FC = () => {
+  const laptopProductSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Laptops, Desktops, Refurbished Systems & Laptop Repair in Hyderabad",
+    "description": "Authorized sales and service for ThinkPad, Dell, HP & Apple laptops. Certified refurbished corporate laptops, custom workstations, motherboard chip-level repair, OS installation and laptop screen/battery replacement.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Lenovo, Dell, HP, Apple"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": "1500",
+      "highPrice": "65000",
+      "offerCount": "200",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="Laptops & Desktops Sales, Refurbished & AMC in Hyderabad | Alekhya Technologies"
-        description="Enterprise ThinkPad, Dell Latitude, HP EliteBook, Apple MacBook, custom workstation PCs, and certified refurbished corporate laptops in Hyderabad. Bulk corporate supply, rentals, and hardware repair."
-        keywords="Laptops sales Hyderabad, ThinkPad dealers Hyderabad, Refurbished laptops Secunderabad, Dell Latitude laptops HITEC City, HP desktop AMC, Custom PC build Hyderabad, Corporate laptop rental"
+        title="Refurbished Laptops, Desktops & Laptop Repair in Hyderabad | Alekhya Technologies"
+        description="Buy A-grade refurbished laptops (ThinkPad, Dell, HP, Mac), custom desktop PCs & get expert laptop chip-level repair in Hyderabad. OS installation, motherboard service, SSD upgrades & 1-Yr warranty. Call +91 95733 76389."
+        keywords="Refurbished laptops Hyderabad, Laptop repair Hyderabad, Laptop motherboard repair Madhapur, ThinkPad refurbished Hyderabad, Dell Latitude laptop sales HITEC City, Laptop screen replacement Hyderabad, OS installation Hyderabad, Second hand laptop with warranty"
         canonicalPath="/products/laptop-desktops"
+        schema={laptopProductSchema}
       />
       <ParticlesBackground />
 

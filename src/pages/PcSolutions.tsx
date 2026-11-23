@@ -57,9 +57,9 @@ const PcSolutions = () => {
   return (
     <div ref={containerRef} className="min-h-screen py-6 sm:py-8 bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="Custom Assembled Desktops & All-in-One PC Solutions in Hyderabad"
-        description="Custom desktop PCs, high-performance CAD workstations, space-saving All-in-One (AIO) computers, and server rigging for enterprises, schools, and offices across Hyderabad."
-        keywords="Custom PC Hyderabad, Assembled computers Hyderabad, All in one PC Hyderabad, CAD workstation Gachibowli, Computer hardware vendor HITEC City, Office desktop setups Telangana"
+        title="Custom Assembled Desktops, All-in-One PCs & OS Installation in Hyderabad"
+        description="Custom assembled desktop PCs, CAD workstations, All-in-One computers, genuine OS installation, SSD upgrades, and motherboard repairs in Hyderabad. Commercial & home setups. Call +91 95733 76389."
+        keywords="Custom PC Hyderabad, Assembled computers Hyderabad, All in one PC Hyderabad, OS installation Hyderabad, Windows 11 installation service, PC repair Madhapur, CAD workstation Gachibowli, Computer hardware vendor HITEC City"
         canonicalPath="/pc-solutions"
       />
       {/* Hero Section */}

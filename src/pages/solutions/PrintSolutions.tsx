@@ -17,9 +17,9 @@ const PrintSolutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="Photocopier AMC, Rental & Managed Print Services in Hyderabad"
-        description="Multifunction A3/A4 digital photocopiers, Managed Print Services (MPS), commercial laser printers, note counting machines, OEM toner cartridges, and corporate copier rentals in Hyderabad."
-        keywords="Photocopier AMC Hyderabad, Copier rental Hyderabad, Konica Minolta dealers Hyderabad, Canon photocopier repair HITEC City, Managed print services Telangana, Note counting machine service Hyderabad"
+        title="Printer Repairs, Toner Cartridges & Copier Rental in Hyderabad | Alekhya Tech"
+        description="Enterprise printer repairs, OEM toner cartridges supply, passbook printers & multifunction copier rentals in Hyderabad. Per-click managed print services (MPS) with free toner & maintenance. Call +91 95733 76389."
+        keywords="Printer repair service Hyderabad, Printer cartridge refilling Hyderabad, Toner cartridges supplier HITEC City, Photocopier rental Hyderabad, Konica Minolta Canon dealer Madhapur, Managed print services Hyderabad"
         canonicalPath="/solutions/print-solutions"
       />
       <ParticlesBackground />

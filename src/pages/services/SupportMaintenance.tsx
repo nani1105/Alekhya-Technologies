@@ -12,9 +12,9 @@ const SupportMaintenance: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="Enterprise Support & IT AMC Maintenance in Hyderabad"
-        description="Comprehensive IT AMC contracts with guaranteed SLAs, fast hardware replacement, standby buffer equipment, and periodic preventive health checks across Hyderabad."
-        keywords="IT AMC support Hyderabad, Hardware maintenance contract Hyderabad, Computer repair AMC HITEC City, Server emergency maintenance Gachibowli, Annual maintenance SLA Telangana"
+        title="Laptop Repair, OS Setup & Enterprise IT AMC Maintenance in Hyderabad"
+        description="Fast SLA-backed laptop repair, motherboard service, OS installation, printer repair, and enterprise IT AMC maintenance in Hyderabad. Standby buffer equipment & resident engineers. Call +91 95733 76389."
+        keywords="Laptop repair AMC Hyderabad, OS installation maintenance, Printer repair SLA, Hardware maintenance contract Hyderabad, Computer repair AMC HITEC City, Server maintenance Gachibowli"
         canonicalPath="/services/support-maintenance"
       />
       <ParticlesBackground />

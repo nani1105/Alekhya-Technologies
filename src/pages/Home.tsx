@@ -64,9 +64,9 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-transparent">
       <SEO 
-        title="Enterprise System Integrator, IT AMC & CCTV Solutions in Hyderabad"
-        description="Alekhya Technologies is Hyderabad's leading Enterprise System Integrator providing IT AMC contracts, 4K CCTV surveillance, boardroom AV, IP telephony, refurbished laptops, and networking across HITEC City, Gachibowli, Madhapur, Secunderabad & Pan-India."
-        keywords="Enterprise System Integrator Hyderabad, IT AMC Services Hyderabad, Computer AMC Hyderabad, CCTV installation Hyderabad, Refurbished Laptops Hyderabad, Photocopier machine rental Hyderabad, Structured Cabling Hyderabad"
+        title="Refurbished Laptops, Laptop Repair, IT AMC & CCTV in Hyderabad"
+        description="Alekhya Technologies — Hyderabad's #1 hub for Certified A-Grade Refurbished Laptops (ThinkPad, Dell, HP from ₹22,999), Doorstep Laptop Repair, OS Installation, Printer Cartridges & CCTV Surveillance across HITEC City, Madhapur & Pan-India."
+        keywords="Refurbished Laptops Hyderabad, Buy used laptops Hyderabad, Laptop repair Hyderabad, OS installation Hyderabad, Printer repair Hyderabad, Toner cartridges supplier Hyderabad, IT AMC Services Hyderabad, CCTV installation Hyderabad, Photocopier rental Hyderabad"
         canonicalPath="/"
       />
       {/* Hero Section */}

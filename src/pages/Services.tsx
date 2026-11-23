@@ -50,13 +50,72 @@ const Services = () => {
     { name: 'Konica', src: konicaImage },
   ];
 
+  const itServicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "IT Hardware Repair, Laptop Service, OS Installation & Printer Maintenance",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Alekhya Technologies",
+      "telephone": "+919573376389",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot No. 42, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500081",
+        "addressCountry": "IN"
+      }
+    },
+    "areaServed": ["Hyderabad", "Secunderabad", "HITEC City", "Gachibowli", "Madhapur", "Telangana"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Computer, Laptop, OS & Printer Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Laptop Motherboard & Hardware Repair",
+            "description": "Chip-level motherboard repair, screen replacement, battery/keyboard replacement, and SSD/RAM upgrades for Dell, HP, Lenovo ThinkPad & MacBook."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "OS Installation & Software Repair",
+            "description": "Genuine Windows 11 / Windows 10 & Linux OS installation, disk formatting, driver configuration, data backup, and deep virus removal."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Printer Repair & Cartridge Supply",
+            "description": "HP, Canon, Epson, Brother laser & dot matrix printer repair, paper jam fixes, logic board repair, and OEM/compatible toner cartridge refill & supply."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "A-Grade Refurbished Laptops & Desktops",
+            "description": "Certified refurbished commercial laptops and custom-built PC desktops with 1-Year replacement warranty."
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen py-10 sm:py-12 bg-transparent text-slate-900">
       <SEO 
-        title="Enterprise IT, CCTV, Computer Repair & AMC Services in Hyderabad"
-        description="Comprehensive IT services in Hyderabad: Computer & server repairs, structured networking, CCTV camera installation, photocopier rental/AMC, and biometric attendance systems."
-        keywords="IT services Hyderabad, Computer repair service Hyderabad, CCTV repair technician Hyderabad, Photocopier service HITEC City, Biometric machine installation Gachibowli, Annual Maintenance Contracts Telangana"
+        title="Laptop Repair, OS Installation, Printer Repair & Cartridges in Hyderabad | Alekhya Tech"
+        description="Top-rated laptop repair, chip-level motherboard service, Windows 10/11 OS installation, printer repair & OEM toner cartridge supply in Hyderabad. Certified refurbished laptops with 1-Year warranty. Fast doorstep service! Call +91 95733 76389."
+        keywords="Laptop repair Hyderabad, OS installation Hyderabad, Windows 11 installation service Madhapur, Laptop motherboard repair HITEC City, Printer repair Hyderabad, Printer cartridges supplier Hyderabad, Toner cartridge refill Hyderabad, Refurbished laptops Hyderabad, Computer repair doorstep service, Dell HP Lenovo repair Hyderabad"
         canonicalPath="/services"
+        schema={itServicesSchema}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

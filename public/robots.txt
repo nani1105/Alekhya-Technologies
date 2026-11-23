@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://alekhyatechnologies.com/sitemap.xml
+Sitemap: https://alekhyatechnologies.in/sitemap.xml

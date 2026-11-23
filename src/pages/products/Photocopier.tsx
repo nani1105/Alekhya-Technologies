@@ -29,13 +29,33 @@ import xeroxLogo from '../../Logo/Xerox-logo-transparent.png';
 import tonerImg from '../../Logo/Toner supply.jpg';
 
 const Photocopier: React.FC = () => {
+  const photocopierSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Photocopier Machine Sales, Rentals, Repairs & Toner Cartridges in Hyderabad",
+    "description": "Authorized dealer for Konica Minolta bizhub, Canon imageRUNNER, and Xerox digital photocopiers. Doorstep repair, toner cartridge supply, drum unit replacement, and flexible rental plans.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Konica Minolta, Canon, Xerox"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": "1200",
+      "highPrice": "180000",
+      "offerCount": "45",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="Photocopier Machines Sales, Rentals & AMC in Hyderabad | Alekhya Technologies"
-        description="Authorized sales, rental, and AMC dealer for Konica Minolta bizhub, Canon imageRUNNER, and Xerox digital photocopiers in Hyderabad. A3/A4 color & monochrome multifunction printers with 24/7 SLA repair."
-        keywords="Photocopier sales Hyderabad, Konica Minolta bizhub dealer Hyderabad, Canon photocopier AMC HITEC City, Xerox copier rental Hyderabad, Multifunction A3 printer Secunderabad, Office photocopier repair"
+        title="Photocopier Sales, Rentals, Repairs & Toner Cartridges in Hyderabad | Alekhya Tech"
+        description="Authorized Konica Minolta bizhub, Canon & Xerox photocopier dealer in Hyderabad. Quick photocopier repairs, original toner cartridges, drum units & per-copy rental schemes. Call +91 95733 76389."
+        keywords="Photocopier repair Hyderabad, Copier toner cartridges Hyderabad, Konica Minolta bizhub toner Madhapur, Canon photocopier repair HITEC City, Xerox copier rental Hyderabad, Multifunction A3 printer service, Copier drum replacement"
         canonicalPath="/products/photocopier"
+        schema={photocopierSchema}
       />
       <ParticlesBackground />
 

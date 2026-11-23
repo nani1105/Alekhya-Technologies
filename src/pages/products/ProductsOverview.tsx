@@ -117,9 +117,9 @@ const ProductsOverview: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent text-slate-900 overflow-hidden">
       <SEO 
-        title="Products Portfolio | Alekhya Technologies Hyderabad"
-        description="Explore Alekhya Technologies' commercial products catalog: Photocopiers, Laptops, Desktops, LaserJet & Dot Matrix printers, 4K CCTV systems, Video Walls, Biometrics, Projectors, IP Intercoms & Large LED Panels."
-        keywords="Electronics sales Hyderabad, Office equipment Hyderabad, Photocopiers, Laptops, CCTV, Biometric, Projectors, Intercom, LED displays"
+        title="Products & Hardware | Refurbished Laptops, Printers, Copiers & CCTV in Hyderabad"
+        description="Wholesale and corporate IT products in Hyderabad: A-Grade Refurbished Laptops, LaserJet & Dot Matrix Printers, Toner Cartridges, Photocopiers, 4K CCTV Systems, Biometrics & LED Video Walls. Call +91 95733 76389."
+        keywords="Refurbished laptops Hyderabad, Commercial printers Hyderabad, Toner cartridges supplier, Photocopier machines Hyderabad, CCTV systems Madhapur, Biometric attendance machines, Projector dealers, IT hardware products Telangana"
         canonicalPath="/products"
       />
       <ParticlesBackground />
